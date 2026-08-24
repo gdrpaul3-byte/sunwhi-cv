@@ -1,7 +1,7 @@
 {
   "$schema": "https://raw.githubusercontent.com/jsonresume/resume-schema/v1.0.0/schema.json",
   "meta": {
-    "lastModified": "2026-08-24",
+    "lastModified": "2026-08-25",
     "source": "cv.yaml",
     "canonical": "https://gdrpaul3-byte.github.io/sunwhi-cv/"
   },
@@ -11,7 +11,7 @@
     "email": "skim@hsmu.ac.kr",
     "phone": null,
     "url": "https://gdrpaul3-byte.github.io/sunwhikim-lab-page/",
-    "summary": "Behavioural neuroscientist working at the junction of neural-circuit biology and human–AI interaction. Circuit-specific dissection of social and defensive behaviour in mouse models of autism (Cell Reports cover article; Nature Communications), now extended to large-scale human experiments on how people judge AI-generated media. Currently Department Chair of Bio-Healthcare at Hwasung Medi-Science University, where I built the department's experimental teaching programme.",
+    "summary": "Behavioural neuroscientist working at the junction of neural-circuit biology and human–AI interaction. Circuit-specific dissection of social and defensive behaviour in mouse models of autism (Cell Reports cover article; Nature Communications), now extended to large-scale human experiments on how people judge AI-generated media. Currently Department Chair of Bio-Healthcare at Hwasung Medi-Science University, where I built the department's experimental teaching programme. Alongside the research, I lecture and advise on AI-agent adoption for companies and institutions, and build agent-driven automation for university operations.",
     "location": {
       "countryCode": "KR",
       "region": "Gyeonggi-do"

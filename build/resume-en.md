@@ -9,7 +9,7 @@ office 031-369-9100
 
 ## Summary
 
-Behavioural neuroscientist working at the junction of neural-circuit biology and human–AI interaction. Circuit-specific dissection of social and defensive behaviour in mouse models of autism (Cell Reports cover article; Nature Communications), now extended to large-scale human experiments on how people judge AI-generated media. Currently Department Chair of Bio-Healthcare at Hwasung Medi-Science University, where I built the department's experimental teaching programme.
+Behavioural neuroscientist working at the junction of neural-circuit biology and human–AI interaction. Circuit-specific dissection of social and defensive behaviour in mouse models of autism (Cell Reports cover article; Nature Communications), now extended to large-scale human experiments on how people judge AI-generated media. Currently Department Chair of Bio-Healthcare at Hwasung Medi-Science University, where I built the department's experimental teaching programme. Alongside the research, I lecture and advise on AI-agent adoption for companies and institutions, and build agent-driven automation for university operations.
 
 ## Appointments
 
@@ -43,6 +43,10 @@ Citations 162 · h-index 6 · i10-index 4 (Google Scholar, 2026-08-24)
 ## Teaching
 
 13 courses across 2026-1, 2025-2, 2025-1, 2024 Spring, 2022 Spring, 2016-1 at Hwasung Medi-Science University: Cognitive-Behavioral Experiment and Design, Introduction to Neuroscience, Introduction to Preclinical Studies, Understanding Genetic Engineering, Animal Behavior Experiment, Basic Animal Experiment, General Biology, Physiology, Guest lecture: “Autism spectrum disorder” — Developmental and Molecular Neurobiology, Guest lecture: “Autism spectrum disorder and neural circuit-based approach” — Developmental and Molecular Neurobiology
+
+## AI Agent Onboarding & Consulting
+
+Lectures, workshops and advisory engagements on AI-agent adoption (2026): Hwasung Medi-Science University, Wecruit, Sae-Seoul CBMC, Zespa, TheAstory
 
 ## Skills
 

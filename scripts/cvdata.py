@@ -85,7 +85,8 @@ def _normalize(d: dict) -> None:
     d.setdefault("person", {})
     for key in ("appointments", "education", "grants", "teaching", "invited_talks",
                 "posters", "software", "service", "peer_review", "mentoring",
-                "awards", "certifications", "media", "outreach", "references"):
+                "awards", "certifications", "media", "outreach", "consulting",
+                "references"):
         d.setdefault(key, [])
     pubs = d.setdefault("publications", {})
     for kind in PUB_KINDS:

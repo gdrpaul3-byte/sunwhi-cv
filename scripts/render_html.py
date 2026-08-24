@@ -366,6 +366,18 @@ def web_cv(d: dict) -> str:
                              for s in opensrc]))
 
     # -- the rest ---------------------------------------------------------
+    if d["consulting"]:
+        S.append("<h2>AI Agent Onboarding &amp; Consulting</h2>")
+        for c in d["consulting"]:
+            org = esc(c.get("org_en") or c.get("org_kr") or "")
+            if c.get("org_en") and c.get("org_kr") and c["org_en"] != c["org_kr"]:
+                org = "%s <span style='font-weight:400'>(%s)</span>" % (
+                    esc(c["org_en"]), esc(c["org_kr"]))
+            S.append(_entry(str(c.get("period") or c.get("year", "")), org,
+                            " · ".join(filter(None, [esc(c.get("kind_en") or ""),
+                                                     esc(c.get("topic_en") or "")])),
+                            esc(c.get("note") or "")))
+
     simple = [
         ("mentoring", "Mentoring &amp; Advising",
          lambda m: (m.get("period", ""), esc(m.get("name", "")), esc(m.get("role", "")))),
@@ -382,7 +394,9 @@ def web_cv(d: dict) -> str:
          lambda m: (m.get("year", ""), esc(m.get("title", "")), esc(m.get("outlet", "")))),
         ("outreach", "Outreach",
          lambda o: (o.get("period") or o.get("year", ""),
-                    esc(o.get("name_en") or o.get("name_kr") or ""),
+                    ('<a href="%s">%s</a>' % (esc(o["url"]),
+                                              esc(o.get("name_en") or o.get("name_kr") or "")))
+                    if o.get("url") else esc(o.get("name_en") or o.get("name_kr") or ""),
                     esc(o.get("description_en") or o.get("description_kr") or ""))),
     ]
     for key, heading, fn in simple:

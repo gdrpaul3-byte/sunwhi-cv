@@ -19,7 +19,7 @@
 # ---------------------------------------------------------------------------
 
 meta:
-  updated: "2026-08-24"
+  updated: "2026-08-25"
   author_note_en: >-
     Published under both “Kim” and “Kimm”. Each work is listed under the surname used
     in the original publication. * equal contribution; † corresponding author.
@@ -32,6 +32,8 @@ meta:
       now extended to large-scale human experiments on how people judge AI-generated
       media. Currently Department Chair of Bio-Healthcare at Hwasung Medi-Science
       University, where I built the department's experimental teaching programme.
+      Alongside the research, I lecture and advise on AI-agent adoption for companies
+      and institutions, and build agent-driven automation for university operations.
 
 person:
   name_en: Sunwhi Kim
@@ -757,6 +759,77 @@ software:
       circuit-specific gene-manipulation reagents distributed to the community
     description_kr: 신경회로 특이적 유전자 조작용 split-Cre 플라스미드 기탁
 
+# ---------------------------------------------------------------------------
+# AI agent onboarding, lectures, workshops and advisory work.
+# Year-level for now — add months/titles as they are confirmed.
+# ---------------------------------------------------------------------------
+consulting:
+  - org_kr: 화성의과학대학교
+    org_en: Hwasung Medi-Science University
+    period: 2026.07–
+    year: 2026
+    kind_en: Institutional automation programme (ongoing)
+    kind_kr: 교내 자동화 프로젝트 (진행 중)
+    topic_en: >-
+      AI-agent-driven automation of institutional research (IR) reporting and
+      course-level CQI workflows
+    topic_kr: AI 에이전트 기반 기관연구(IR) 리포팅 및 교과목 CQI 자동화
+    note: Repositories hsmu-cqi-automation (from 2026.07), hsmu-ir-dashboard (from 2026.08)
+
+  - org_kr: 위크루트
+    org_en: Wecruit
+    year: 2026
+    period: "2026.08.06"
+    kind_en: Invited corporate lecture
+    kind_kr: 초청 강연
+    topic_en: What AI agents are and what they make possible
+    topic_kr: AI 에이전트란 무엇이며 어떤 것들이 가능한가
+    note: Bundang, Seongnam · ~15 staff and executives · 90 min
+
+  - org_kr: 새서울CBMC
+    org_en: Sae-Seoul CBMC
+    year: 2026
+    period: "2026.07.31"
+    kind_en: Invited lecture
+    kind_kr: 초청 강연 (제1393회 아름다운 만남)
+    topic_en: >-
+      What AI agents are and what they make possible: using AI in a small business,
+      and the wisdom of stewardship
+    topic_kr: >-
+      AI 에이전트란 무엇이며 어떤 것들이 가능한가 — 작은 사업장을 위한 AI 활용과
+      청지기의 지혜
+    note: 1393rd meeting · Chunghyun Church, Seoul
+
+  - org_kr: 화성의과학대학교
+    org_en: Hwasung Medi-Science University
+    year: 2026
+    period: "2026.07.14"
+    kind_en: Keynote, all-staff summer workshop
+    kind_kr: 전 교직원 하계 워크숍 특강
+    topic_en: Automating everyday work with AI agents
+    topic_kr: AI 에이전트를 활용한 업무 자동화
+    note: >-
+      2026 all-faculty-and-staff summer workshop, Chungho HRD Institute, Hwaseong ·
+      90 min
+
+  - org_kr: 제스파
+    org_en: Zespa
+    year: 2026
+    kind_en: Lecture, workshop and consulting
+    kind_kr: 강연·워크샵·컨설팅
+    topic_en: AI agent onboarding for business operations
+    topic_kr: AI 에이전트 도입 및 실무 활용
+    # TODO: add date and talk title.
+
+  - org_kr: 디아스토리
+    org_en: TheAstory
+    year: 2026
+    kind_en: Lecture, workshop and consulting
+    kind_kr: 강연·워크샵·컨설팅
+    topic_en: AI agent onboarding for business operations
+    topic_kr: AI 에이전트 도입 및 실무 활용
+    # TODO: add date and talk title.
+
 service:
   - period: 2025.09–2027.08
     role_kr: 학과장 (임명 2025.9.1.–2027.8.31.)
@@ -917,6 +990,7 @@ outreach:
   - period: 2026–
     name_en: Makers — student maker & technology club
     name_kr: 메이커스(Makers)
+    url: https://gdrpaul3-byte.github.io/hsmu_makers_page/
     description_en: >-
       Faculty advisor. Student club for AI coding, generative media, 3D printing,
       Arduino and automation, run as a bridge between the lab's human–AI research and

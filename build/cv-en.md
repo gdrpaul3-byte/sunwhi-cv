@@ -10,7 +10,7 @@ office 031-369-9100
 
 [ORCID 0000-0001-5009-5544](https://orcid.org/0000-0001-5009-5544) · [Google Scholar](https://scholar.google.com/citations?user=64RRH9QAAAAJ) · [Lab website](https://gdrpaul3-byte.github.io/sunwhikim-lab-page/) · [Web CV](https://gdrpaul3-byte.github.io/sunwhi-cv/) · [CV source](https://github.com/gdrpaul3-byte/sunwhi-cv) · [YouTube](https://www.youtube.com/@swkim_n)
 
-*Last updated: 2026-08-24*
+*Last updated: 2026-08-25*
 
 ---
 
@@ -140,6 +140,34 @@ HSMU New Faculty Research Grant · Role: Principal Investigator · ₩5,000,000
 - **hsmu_ai_detection_public** (2026). Open stimulus set, metadata and de-identified trial-level behavioural data for the AI-generated portrait detection study — https://github.com/gdrpaul3-byte/hsmu_ai_detection_public
 - **Addgene plasmid deposition: split-Cre toolkit** (2022). pAAV-Ef1a-CreN-InteinN (#187614) and pAAV-Ef1a-InteinC-CreC (#187615) — circuit-specific gene-manipulation reagents distributed to the community — https://www.addgene.org/browse/article/28219553/
 
+## AI Agent Onboarding & Consulting
+
+**2026.07–** — Hwasung Medi-Science University (화성의과학대학교)  
+Institutional automation programme (ongoing) · AI-agent-driven automation of institutional research (IR) reporting and course-level CQI workflows
+  
+*Repositories hsmu-cqi-automation (from 2026.07), hsmu-ir-dashboard (from 2026.08)*
+
+**2026.08.06** — Wecruit (위크루트)  
+Invited corporate lecture · What AI agents are and what they make possible
+  
+*Bundang, Seongnam · ~15 staff and executives · 90 min*
+
+**2026.07.31** — Sae-Seoul CBMC (새서울CBMC)  
+Invited lecture · What AI agents are and what they make possible: using AI in a small business, and the wisdom of stewardship
+  
+*1393rd meeting · Chunghyun Church, Seoul*
+
+**2026.07.14** — Hwasung Medi-Science University (화성의과학대학교)  
+Keynote, all-staff summer workshop · Automating everyday work with AI agents
+  
+*2026 all-faculty-and-staff summer workshop, Chungho HRD Institute, Hwaseong · 90 min*
+
+**2026** — Zespa (제스파)  
+Lecture, workshop and consulting · AI agent onboarding for business operations
+
+**2026** — TheAstory (디아스토리)  
+Lecture, workshop and consulting · AI agent onboarding for business operations
+
 ## Mentoring & Advising
 
 - **2025–** — 11 undergraduate advisees, Dept. of Bio-Healthcare, Faculty academic advisor, Hwasung Medi-Science University
@@ -195,7 +223,7 @@ HSMU New Faculty Research Grant · Role: Principal Investigator · ₩5,000,000
 
 ## Outreach
 
-- **2026–** — Makers — student maker & technology club. Faculty advisor. Student club for AI coding, generative media, 3D printing, Arduino and automation, run as a bridge between the lab's human–AI research and hands-on student prototyping.
+- **2026–** — [Makers — student maker & technology club](https://gdrpaul3-byte.github.io/hsmu_makers_page/). Faculty advisor. Student club for AI coding, generative media, 3D printing, Arduino and automation, run as a bridge between the lab's human–AI research and hands-on student prototyping.
 - **2025** — Public participant-recruitment campaign, AI-portrait perception study. Campus and online science-engagement campaign that recruited 1,843 public participants for the AI-generated portrait detection experiment.
 - **2025** — 화성왭성 AI creative contest — video entry “꿈속의 화성”. Generative-AI music video produced as team lead; an applied companion to the lab's generative-media research.
 

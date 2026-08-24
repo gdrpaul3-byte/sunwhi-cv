@@ -192,6 +192,21 @@ def cv_en(d: dict) -> str:
                     s.get("description_en") or s.get("description_kr") or "", url))
             L.append("")
 
+    if d["consulting"]:
+        L.append(_h(2, "AI Agent Onboarding & Consulting"))
+        for c in d["consulting"]:
+            when = c.get("period") or c.get("year", "")
+            org = c.get("org_en") or c.get("org_kr", "")
+            if c.get("org_en") and c.get("org_kr") and c["org_en"] != c["org_kr"]:
+                org = "%s (%s)" % (c["org_en"], c["org_kr"])
+            L.append("**%s** — %s  " % (when, org))
+            detail = " · ".join(filter(None, [c.get("kind_en"), c.get("topic_en")]))
+            if detail:
+                L.append(detail)
+            if c.get("note"):
+                L.append("  \n*%s*" % c["note"])
+            L.append("")
+
     if d["mentoring"]:
         L.append(_h(2, "Mentoring & Advising"))
         for m in d["mentoring"]:
@@ -240,8 +255,11 @@ def cv_en(d: dict) -> str:
     if d["outreach"]:
         L.append(_h(2, "Outreach"))
         for o in d["outreach"]:
+            name = o.get("name_en") or o.get("name_kr")
+            if o.get("url"):
+                name = "[%s](%s)" % (name, o["url"])
             L.append("- **%s** — %s. %s" % (o.get("period") or o.get("year", ""),
-                                            o.get("name_en") or o.get("name_kr"),
+                                            name,
                                             o.get("description_en") or o.get("description_kr") or ""))
         L.append("")
 
@@ -361,8 +379,19 @@ def cv_kr(d: dict) -> str:
                 s.get("description_kr") or s.get("description_en", "")))
         L.append("\n\\* 요청 시 등록 증명서 제공")
 
+    if d["consulting"]:
+        L.append("\n## 8. 외부 강연·워크샵·컨설팅\n")
+        L.append("| 기간 | 기관 | 형태 | 주제 |")
+        L.append("|---|---|---|---|")
+        for c in d["consulting"]:
+            L.append("| %s | %s | %s | %s |" % (
+                c.get("period") or c.get("year", ""),
+                c.get("org_kr") or c.get("org_en", ""),
+                c.get("kind_kr") or c.get("kind_en", ""),
+                c.get("topic_kr") or c.get("topic_en", "")))
+
     if d["service"]:
-        L.append("\n## 8. 교내·학회 활동\n")
+        L.append("\n## 9. 교내·학회 활동\n")
         L.append("| 기간 | 활동 | 기관 |")
         L.append("|---|---|---|")
         for s in d["service"]:
@@ -371,7 +400,7 @@ def cv_kr(d: dict) -> str:
                                            s.get("org", "")))
 
     if d["certifications"]:
-        L.append("\n## 9. 교육 이수 및 자격\n")
+        L.append("\n## 10. 교육 이수 및 자격\n")
         L.append("| 일자 | 명칭 | 발급기관 |")
         L.append("|---|---|---|")
         for c in d["certifications"]:
@@ -380,7 +409,7 @@ def cv_kr(d: dict) -> str:
                                            c.get("issuer", "")))
 
     if d["media"]:
-        L.append("\n## 10. 언론 보도\n")
+        L.append("\n## 11. 언론 보도\n")
         L.append("| 연도 | 언론사 | 기사 제목 |")
         L.append("|---|---|---|")
         for m in d["media"]:
@@ -389,7 +418,7 @@ def cv_kr(d: dict) -> str:
 
     mil = d.get("military")
     if mil:
-        L.append("\n## 11. 병역사항\n")
+        L.append("\n## 12. 병역사항\n")
         L.append("| 항목 | 내용 |")
         L.append("|---|---|")
         for k, v in mil.items():
@@ -468,6 +497,25 @@ def resume_en(d: dict) -> str:
         L.append("%d courses across %s at %s: %s"
                  % (len(d["teaching"]), ", ".join(terms[:6]),
                     p.get("institution_en", ""), ", ".join(names[:10])))
+
+    if d["consulting"]:
+        L.append(_h(2, "AI Agent Onboarding & Consulting"))
+        orgs, years = [], set()
+        for c in d["consulting"]:
+            o = c.get("org_en") or c.get("org_kr")
+            if o and o not in orgs:
+                orgs.append(o)
+            # Accept either `year: 2026` or `period: 2026.07–`.
+            for token in str(c.get("year") or c.get("period") or "").split("–"):
+                token = token.strip()[:4]
+                if token.isdigit():
+                    years.add(int(token))
+        span = ""
+        if years:
+            lo, hi = min(years), max(years)
+            span = " (%s)" % (lo if lo == hi else "%s–%s" % (lo, hi))
+        L.append("Lectures, workshops and advisory engagements on AI-agent adoption%s: %s"
+                 % (span, ", ".join(orgs)))
 
     if d["skills"]:
         L.append(_h(2, "Skills"))

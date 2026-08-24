@@ -147,27 +147,36 @@ def korean_resume(d: dict, out_dir: str) -> str:
         note = doc.add_paragraph()
         note.add_run("* 요청 시 등록 증명서 제공").font.size = Pt(8)
 
+    if d["consulting"]:
+        _heading(doc, "8. 외부 강연·워크샵·컨설팅")
+        _grid(doc, ["기간", "기관", "형태", "주제"],
+              [[c.get("period") or c.get("year", ""),
+                c.get("org_kr") or c.get("org_en", ""),
+                c.get("kind_kr") or c.get("kind_en", ""),
+                c.get("topic_kr") or c.get("topic_en", "")]
+               for c in d["consulting"]])
+
     if d["service"]:
-        _heading(doc, "8. 교내·학회 활동")
+        _heading(doc, "9. 교내·학회 활동")
         _grid(doc, ["기간", "활동", "기관"],
               [[s.get("period") or s.get("year", ""),
                 s.get("role_kr") or s.get("role_en", ""), s.get("org", "")]
                for s in d["service"]])
 
     if d["certifications"]:
-        _heading(doc, "9. 교육 이수 및 자격")
+        _heading(doc, "10. 교육 이수 및 자격")
         _grid(doc, ["일자", "명칭", "발급기관"],
               [[c.get("date", ""), c.get("name_kr") or c.get("name_en", ""),
                 c.get("issuer", "")] for c in d["certifications"]])
 
     if d["media"]:
-        _heading(doc, "10. 언론 보도")
+        _heading(doc, "11. 언론 보도")
         _grid(doc, ["연도", "언론사", "기사 제목"],
               [[m.get("year", ""), m.get("outlet", ""), m.get("title", "")]
                for m in d["media"]])
 
     if d.get("military"):
-        _heading(doc, "11. 병역사항")
+        _heading(doc, "12. 병역사항")
         _grid(doc, ["항목", "내용"], [[k, v] for k, v in d["military"].items()])
 
     doc.add_paragraph()
@@ -270,6 +279,11 @@ def english_cv(d: dict, out_dir: str) -> str:
          lambda s: "%s — %s%s" % (s.get("period") or s.get("year", ""),
                                   s.get("role_en") or s.get("role_kr"),
                                   ", %s" % s["org"] if s.get("org") else "")),
+        ("consulting", "AI AGENT ONBOARDING & CONSULTING",
+         lambda c: "%s — %s%s%s" % (c.get("period") or c.get("year", ""),
+                                    c.get("org_en") or c.get("org_kr"),
+                                    ", %s" % c["kind_en"] if c.get("kind_en") else "",
+                                    ": %s" % c["topic_en"] if c.get("topic_en") else "")),
         ("mentoring", "MENTORING",
          lambda m: "%s — %s%s" % (m.get("period", ""), m.get("name", ""),
                                   ", %s" % m["role"] if m.get("role") else "")),
