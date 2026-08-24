@@ -46,7 +46,7 @@ Citations 162 · h-index 6 · i10-index 4 (Google Scholar, 2026-08-24)
 
 ## AI Agent Onboarding & Consulting
 
-Lectures, workshops and advisory engagements on AI-agent adoption (2026): Hwasung Medi-Science University, Wecruit, Sae-Seoul CBMC, Zespa, TheAstory
+Lectures, workshops and advisory engagements on AI-agent adoption (2026): Hwasung Medi-Science University, Wecruit, TheAstory, Sae-Seoul CBMC, Zespa
 
 ## Skills
 

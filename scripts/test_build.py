@@ -190,6 +190,21 @@ def _rejected_grants_never_render():
     assert not leaks, "rejected grant rendered into: %s" % ", ".join(leaks)
 
 
+@check("consulting entries sort ongoing-first, then newest-first")
+def _consulting_order():
+    items = PUBLIC.get("consulting") or []
+    keys = [cvdata._engagement_key(c) for c in items]
+    assert keys == sorted(keys, reverse=True), \
+        "consulting is not ordered: %s" % [
+            (c.get("period") or c.get("year"), c.get("org_en")) for c in items]
+    # Precision rule: a month-only date sorts to the start of its month.
+    assert cvdata._engagement_key({"period": "2026.08"}) \
+        < cvdata._engagement_key({"period": "2026.08.06"})
+    # An open-ended engagement outranks any finished one.
+    assert cvdata._engagement_key({"period": "2020.01–"}) \
+        > cvdata._engagement_key({"period": "2026.12.31"})
+
+
 @check("JSON artifacts are serializable and complete")
 def _json():
     resume = render_json.json_resume(PUBLIC)

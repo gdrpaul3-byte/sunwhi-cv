@@ -152,6 +152,9 @@ Invited corporate lecture · What AI agents are and what they make possible
   
 *Bundang, Seongnam · ~15 staff and executives · 90 min*
 
+**2026.08** — TheAstory (디아스토리)  
+Lecture, workshop and consulting · AI agent onboarding for business operations
+
 **2026.07.31** — Sae-Seoul CBMC (새서울CBMC)  
 Invited lecture · What AI agents are and what they make possible: using AI in a small business, and the wisdom of stewardship
   
@@ -162,10 +165,7 @@ Keynote, all-staff summer workshop · Automating everyday work with AI agents
   
 *2026 all-faculty-and-staff summer workshop, Chungho HRD Institute, Hwaseong · 90 min*
 
-**2026** — Zespa (제스파)  
-Lecture, workshop and consulting · AI agent onboarding for business operations
-
-**2026** — TheAstory (디아스토리)  
+**2026.06** — Zespa (제스파)  
 Lecture, workshop and consulting · AI agent onboarding for business operations
 
 ## Mentoring & Advising

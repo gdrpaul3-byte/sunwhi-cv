@@ -815,20 +815,22 @@ consulting:
   - org_kr: 제스파
     org_en: Zespa
     year: 2026
+    period: "2026.06"
     kind_en: Lecture, workshop and consulting
     kind_kr: 강연·워크샵·컨설팅
     topic_en: AI agent onboarding for business operations
     topic_kr: AI 에이전트 도입 및 실무 활용
-    # TODO: add date and talk title.
+    # TODO: add the exact talk title and day.
 
   - org_kr: 디아스토리
     org_en: TheAstory
     year: 2026
+    period: "2026.08"
     kind_en: Lecture, workshop and consulting
     kind_kr: 강연·워크샵·컨설팅
     topic_en: AI agent onboarding for business operations
     topic_kr: AI 에이전트 도입 및 실무 활용
-    # TODO: add date and talk title.
+    # TODO: add the exact talk title and day.
 
 service:
   - period: 2025.09–2027.08

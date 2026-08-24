@@ -108,6 +108,25 @@ def _normalize(d: dict) -> None:
     for kind in PUB_KINDS:
         pubs[kind].sort(key=lambda p: (_year_key(p.get("year")),), reverse=True)
 
+    # Same for consulting, so entries can be appended in any order.
+    d["consulting"].sort(key=_engagement_key, reverse=True)
+
+
+def _engagement_key(item: dict) -> tuple:
+    """Sort key for a consulting entry: ongoing work first, then newest.
+
+    Accepts '2026.08.06', '2026.08', '2026.07–' (ongoing) or a bare `year`.
+    Missing precision sorts to the start of its period, so '2026.08' comes
+    before '2026.08.06'.
+    """
+    raw = str(item.get("period") or item.get("year") or "").strip()
+    ongoing = raw.endswith("–") or raw.endswith("-")
+    parts = [p for p in re.split(r"[.\-–/]", raw) if p.isdigit()]
+    nums = [int(p) for p in parts[:3]]
+    while len(nums) < 3:
+        nums.append(0)
+    return (1 if ongoing else 0, nums[0], nums[1], nums[2])
+
 
 def _year_key(y) -> int:
     try:
