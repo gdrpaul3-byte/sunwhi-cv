@@ -7,23 +7,20 @@
 <meta name="description" content="Academic CV of Sunwhi Kim, Assistant Professor, Hwasung Medi-Science University.">
 <meta name="author" content="Sunwhi Kim">
 <style>
+/* A CV should read like paper, so this page is light by DEFAULT — it
+   deliberately does not follow prefers-color-scheme. Dark is still one click
+   away via the toggle, which writes data-theme and remembers the choice. */
 :root{
-  --bg:#ffffff; --panel:#f7f7f5; --ink:#16181d; --muted:#5c6270; --faint:#8b91a0;
-  --rule:#e3e5ea; --accent:#7a1f2b; --accent-soft:#f3e7e9; --link:#1f4f8b;
+  --bg:#ffffff; --panel:#f4f7fa; --ink:#141922; --muted:#4d5666; --faint:#7b8595;
+  --rule:#e4e9f0; --accent:#0d6ea8; --accent-soft:#e2f0fa; --link:#0d6ea8;
   --serif:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,"Noto Serif KR",serif;
   --sans:"Inter",-apple-system,BlinkMacSystemFont,"Segoe UI","Pretendard","Noto Sans KR",sans-serif;
   --mono:ui-monospace,SFMono-Regular,"SF Mono",Menlo,Consolas,monospace;
   --measure:44rem;
 }
-@media (prefers-color-scheme:dark){
-  :root:not([data-theme="light"]){
-    --bg:#101216; --panel:#171a20; --ink:#e8eaef; --muted:#a2a9b8; --faint:#767d8d;
-    --rule:#272b34; --accent:#e0919c; --accent-soft:#2a1e21; --link:#8fb6e8;
-  }
-}
 :root[data-theme="dark"]{
-  --bg:#101216; --panel:#171a20; --ink:#e8eaef; --muted:#a2a9b8; --faint:#767d8d;
-  --rule:#272b34; --accent:#e0919c; --accent-soft:#2a1e21; --link:#8fb6e8;
+  --bg:#0f1319; --panel:#171c24; --ink:#e9edf3; --muted:#a5aebd; --faint:#78828f;
+  --rule:#252c37; --accent:#5cb3e8; --accent-soft:#12283a; --link:#7cc3ee;
 }
 *{box-sizing:border-box}
 body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);
@@ -246,9 +243,8 @@ footer{margin-top:3.5rem;padding-top:1.2rem;border-top:1px solid var(--rule);
   try{var s=localStorage.getItem(K); if(s) root.setAttribute('data-theme',s);}catch(e){}
   var t=document.getElementById('theme');
   if(t) t.addEventListener('click',function(){
-    var cur=root.getAttribute('data-theme');
-    if(!cur) cur = matchMedia('(prefers-color-scheme:dark)').matches ? 'dark' : 'light';
-    var next = cur==='dark' ? 'light' : 'dark';
+    // Light is the default, so an unset attribute means light.
+    var next = root.getAttribute('data-theme')==='dark' ? 'light' : 'dark';
     root.setAttribute('data-theme',next);
     try{localStorage.setItem(K,next);}catch(e){}
   });

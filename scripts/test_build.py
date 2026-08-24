@@ -201,13 +201,20 @@ def _json():
     assert len(resume["publications"]) == n
 
 
-@check("web CV escapes HTML and declares both themes")
+@check("web CV escapes HTML, defaults to light, and offers dark")
 def _html_safety():
     html = render_html.web_cv(PUBLIC)
     assert html.startswith("<!doctype html>")
     assert 'name="viewport"' in html
-    assert "prefers-color-scheme:dark" in html
-    assert '[data-theme="dark"]' in html
+    # Light by default: the palette is defined on bare :root, and the page must
+    # NOT flip to dark just because the visitor's OS is dark.
+    assert ":root{" in html.replace(" ", "").replace("\n", "")
+    # Match the media query, not the words — the CSS explains this choice in a
+    # comment, and that comment must not fail its own test.
+    import re as _re
+    assert not _re.search(r"@media[^{]*prefers-color-scheme", html), \
+        "the CV should stay light regardless of system theme"
+    assert '[data-theme="dark"]' in html, "the dark toggle lost its palette"
     assert "@media print" in html
     # A stray unescaped angle bracket from data would break the document.
     body = html.split("<body>", 1)[1]
