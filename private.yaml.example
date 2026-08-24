@@ -1,0 +1,24 @@
+# ---------------------------------------------------------------------------
+# private.yaml — personal details that must NOT be published.
+#
+# Copy this file to `private.yaml` (which is git-ignored) and fill it in.
+# It is deep-merged over cv.yaml, but ONLY for the documents written to
+# build-private/. Nothing in build/ — the committed, GitHub Pages-served
+# directory — ever contains these values.
+#
+# Korean 이력서 forms normally require 생년월일, 주소 and 병역사항, which is the
+# only reason these fields exist at all.
+# ---------------------------------------------------------------------------
+
+person:
+  birth: "1987-10-20"
+  address_kr: 경기도 화성시 ...
+  phones:
+    mobile: "010-0000-0000"
+    office: "031-369-9100"
+
+military:
+  군별: 육군 (공익근무요원)
+  복무기간: 2008.01.24 – 2010.02.21
+  복무내용: 송파구 국민연금관리공단 공익근무요원
+  병역: 필

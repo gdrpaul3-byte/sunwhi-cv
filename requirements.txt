@@ -1,0 +1,5 @@
+# Core — needed to build any artifact.
+PyYAML>=6.0
+
+# Optional — only needed for `python scripts/build.py --docx`.
+python-docx>=1.1.0

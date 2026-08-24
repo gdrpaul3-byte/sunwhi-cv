@@ -1,0 +1,256 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Sunwhi Kim — CV</title>
+<meta name="description" content="Academic CV of Sunwhi Kim, Assistant Professor, Hwasung Medi-Science University.">
+<meta name="author" content="Sunwhi Kim">
+<style>
+:root{
+  --bg:#ffffff; --panel:#f7f7f5; --ink:#16181d; --muted:#5c6270; --faint:#8b91a0;
+  --rule:#e3e5ea; --accent:#7a1f2b; --accent-soft:#f3e7e9; --link:#1f4f8b;
+  --serif:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,"Noto Serif KR",serif;
+  --sans:"Inter",-apple-system,BlinkMacSystemFont,"Segoe UI","Pretendard","Noto Sans KR",sans-serif;
+  --mono:ui-monospace,SFMono-Regular,"SF Mono",Menlo,Consolas,monospace;
+  --measure:44rem;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --bg:#101216; --panel:#171a20; --ink:#e8eaef; --muted:#a2a9b8; --faint:#767d8d;
+    --rule:#272b34; --accent:#e0919c; --accent-soft:#2a1e21; --link:#8fb6e8;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#101216; --panel:#171a20; --ink:#e8eaef; --muted:#a2a9b8; --faint:#767d8d;
+  --rule:#272b34; --accent:#e0919c; --accent-soft:#2a1e21; --link:#8fb6e8;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);
+  font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}
+.wrap{max-width:52rem;margin:0 auto;padding:3.5rem 1.5rem 5rem}
+a{color:var(--link);text-decoration:none;border-bottom:1px solid transparent}
+a:hover{border-bottom-color:currentColor}
+
+header.masthead{border-bottom:2px solid var(--ink);padding-bottom:1.25rem;margin-bottom:.5rem}
+h1{font-family:var(--serif);font-size:2.6rem;line-height:1.1;margin:0 0 .25rem;
+  letter-spacing:-.015em;font-weight:600}
+.alt{color:var(--faint);font-size:.85rem;font-style:italic;margin:0 0 .9rem}
+.role{font-size:1.02rem;color:var(--muted);margin:0 0 1rem}
+.role strong{color:var(--ink);font-weight:600}
+.contact{display:flex;flex-wrap:wrap;gap:.4rem 1.1rem;font-size:.85rem;color:var(--muted);
+  font-family:var(--mono)}
+.contact a{color:var(--muted)}
+.idlinks{display:flex;flex-wrap:wrap;gap:.45rem;margin-top:.9rem}
+.idlinks a{font-size:.75rem;letter-spacing:.04em;text-transform:uppercase;
+  padding:.28rem .6rem;border:1px solid var(--rule);border-radius:999px;
+  color:var(--muted);background:var(--panel)}
+.idlinks a:hover{border-color:var(--accent);color:var(--accent)}
+.updated{font-size:.75rem;color:var(--faint);font-family:var(--mono);margin-top:1rem}
+
+h2{font-family:var(--sans);font-size:.78rem;font-weight:700;letter-spacing:.16em;
+  text-transform:uppercase;color:var(--accent);margin:2.8rem 0 .9rem;
+  padding-bottom:.4rem;border-bottom:1px solid var(--rule)}
+
+.entry{margin:0 0 1.35rem;display:grid;grid-template-columns:8.5rem 1fr;gap:0 1.4rem}
+.entry .when{font-family:var(--mono);font-size:.8rem;color:var(--faint);
+  padding-top:.2rem;white-space:nowrap}
+.entry .what{min-width:0}
+.entry .what .line1{font-weight:600}
+.entry .what .line2{color:var(--muted);font-size:.94rem}
+.entry .what .sub{color:var(--faint);font-size:.86rem;font-style:italic;margin-top:.15rem}
+.entry ul{margin:.4rem 0 0;padding-left:1.1rem}
+.entry li{color:var(--muted);font-size:.94rem;margin:.2rem 0}
+
+ol.pubs{list-style:none;counter-reset:p;margin:0;padding:0}
+ol.pubs li{counter-increment:p;position:relative;padding-left:2.1rem;margin:0 0 1.05rem;
+  font-size:.95rem;line-height:1.55}
+ol.pubs li::before{content:counter(p) ".";position:absolute;left:0;top:0;
+  font-family:var(--mono);font-size:.8rem;color:var(--faint)}
+ol.pubs .title{color:var(--ink)}
+ol.pubs .venue{font-style:italic;color:var(--muted)}
+ol.pubs .doi{font-family:var(--mono);font-size:.78rem}
+.badge{display:inline-block;font-size:.66rem;letter-spacing:.08em;text-transform:uppercase;
+  padding:.12rem .42rem;border-radius:3px;background:var(--accent-soft);color:var(--accent);
+  margin-left:.35rem;vertical-align:.08em;font-weight:600;white-space:nowrap}
+
+table{width:100%;border-collapse:collapse;font-size:.9rem;margin:.2rem 0 1rem}
+th{text-align:left;font-size:.7rem;letter-spacing:.09em;text-transform:uppercase;
+  color:var(--faint);font-weight:600;padding:.4rem .6rem .4rem 0;border-bottom:1px solid var(--rule)}
+td{padding:.45rem .6rem .45rem 0;border-bottom:1px solid var(--rule);
+  color:var(--muted);vertical-align:top}
+td.k{font-family:var(--mono);font-size:.82rem;color:var(--faint);white-space:nowrap}
+td strong{color:var(--ink);font-weight:600}
+.scroll{overflow-x:auto;-webkit-overflow-scrolling:touch}
+
+.metrics{display:flex;gap:1.6rem;flex-wrap:wrap;background:var(--panel);
+  border:1px solid var(--rule);border-radius:8px;padding:1rem 1.25rem;margin:.3rem 0 .6rem}
+.metrics div{min-width:5rem}
+.metrics .n{font-family:var(--serif);font-size:1.7rem;font-weight:600;line-height:1}
+.metrics .l{font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;color:var(--faint);
+  margin-top:.25rem}
+.note{font-size:.85rem;color:var(--faint);font-style:italic;margin:.4rem 0 1rem}
+
+.tools{position:fixed;top:1rem;right:1rem;display:flex;gap:.4rem;z-index:9}
+.tools button{font:inherit;font-size:.75rem;padding:.35rem .7rem;border-radius:6px;
+  border:1px solid var(--rule);background:var(--panel);color:var(--muted);cursor:pointer}
+.tools button:hover{border-color:var(--accent);color:var(--accent)}
+
+footer{margin-top:3.5rem;padding-top:1.2rem;border-top:1px solid var(--rule);
+  font-size:.78rem;color:var(--faint);font-family:var(--mono)}
+
+@media (max-width:640px){
+  .wrap{padding:2.25rem 1.1rem 3.5rem}
+  h1{font-size:2rem}
+  .entry{grid-template-columns:1fr;gap:.15rem}
+  .entry .when{padding-top:0}
+  .tools{position:static;justify-content:flex-end;margin-bottom:1rem}
+}
+@media print{
+  :root{--bg:#fff;--ink:#000;--muted:#333;--faint:#666;--rule:#ccc;--accent:#000;
+    --accent-soft:#eee;--link:#000;--panel:#fff}
+  body{font-size:10.2pt;line-height:1.42}
+  .wrap{max-width:none;padding:0}
+  .tools{display:none}
+  h1{font-size:20pt}
+  h2{margin:14pt 0 5pt;font-size:8pt;break-after:avoid}
+  .entry,ol.pubs li,tr{break-inside:avoid}
+  a{color:#000}
+  .idlinks a{border-color:#999}
+  @page{margin:16mm 15mm}
+}
+</style>
+</head>
+<body>
+<main class="wrap">
+<div class="tools"><button id="theme">◐ theme</button><button id="print">⎙ print / PDF</button></div>
+<header class="masthead">
+<h1>Sunwhi Kim, Ph.D.</h1>
+<p class="alt">김선휘 · also published as Sunwhi Kimm</p>
+<p class="role"><strong>Assistant Professor</strong>, Department of Bio-Healthcare<br>Hwasung Medi-Science University</p>
+<div class="contact"><span><a href="mailto:skim@hsmu.ac.kr">skim@hsmu.ac.kr</a></span><span><a href="mailto:gdrpaul3@gmail.com">gdrpaul3@gmail.com</a></span><span>office 031-369-9100</span></div>
+<div class="idlinks"><a href="https://orcid.org/0000-0001-5009-5544">ORCID</a><a href="https://scholar.google.com/citations?user=64RRH9QAAAAJ">Google Scholar</a><a href="https://github.com/gdrpaul3-byte">GitHub</a><a href="https://gdrpaul3-byte.github.io/sunwhikim-lab-page/">Lab website</a><a href="https://gdrpaul3-byte.github.io/sunwhi-cv/">Web CV</a><a href="https://github.com/gdrpaul3-byte/sunwhi-cv">CV source</a><a href="https://www.youtube.com/@swkim_n">YouTube</a></div>
+<p class="updated">last updated 2026-08-24 · generated from cv.yaml</p>
+</header>
+<h2>Professional Appointments</h2>
+<div class="entry"><div class="when">2025–present</div><div class="what"><div class="line1">Assistant Professor</div><div class="line2">Department of Bio-Healthcare, Hwasung Medi-Science University, Republic of Korea</div><ul><li>Department Chair (학과장) since September 2025; principal investigator of the Neural Systems Laboratory.</li><li>Research spanning neural-circuit mechanisms of social and defensive behaviour and the cognitive human factors of human–AI interaction.</li></ul></div></div>
+<div class="entry"><div class="when">Apr 2019–Dec 2024</div><div class="what"><div class="line1">Postdoctoral Fellow</div><div class="line2">Department of Anatomy &amp; Neurobiology, College of Medicine, University of Tennessee Health Science Center, Memphis, TN, USA</div><div class="sub">Advisor: Dr. Il Hwan Kim</div><ul><li>Circuit- and network-specific dissection of the mechanisms underlying social dysfunction in Shank3 models of autism spectrum disorder.</li><li>Developed the split-Cre circuit-targeting toolkit (Addgene #187614, #187615) and the Monosynaptically-interconnected Network Module (MNM) analysis method.</li></ul></div></div>
+<h2>Education</h2>
+<div class="entry"><div class="when">Mar 2013–Aug 2019</div><div class="what"><div class="line1">Ph.D. in Biopsychology (이학박사, Doctor of Science)</div><div class="line2">Department of Psychology, Korea University</div><div class="sub">Advisor: Dr. June-Seek Choi · Dissertation: The functions of the amygdala sub-nuclei and prelimbic cortex in an approach-avoidance conflict situation</div></div></div>
+<div class="entry"><div class="when">Mar 2006–Feb 2013</div><div class="what"><div class="line1">B.A. in Psychology</div><div class="line2">College of Liberal Arts, Department of Psychology, Korea University</div></div></div>
+<div class="entry"><div class="when">Mar 2006–Feb 2013</div><div class="what"><div class="line1">B.Eng. in Brain and Cognitive Sciences (interdisciplinary major)</div><div class="line2">College of Informatics, Korea University</div></div></div>
+<h2>Citation Metrics</h2>
+<div class="metrics"><div><div class="n">162</div><div class="l">citations</div></div><div><div class="n">6</div><div class="l">h-index</div></div><div><div class="n">4</div><div class="l">i10-index</div></div></div>
+<p class="note">Google Scholar, as of 2026-08-24</p>
+<h2>Peer-Reviewed Journal Articles</h2>
+<p class="note">Published under both “Kim” and “Kimm”. Each work is listed under the surname used in the original publication. * equal contribution; † corresponding author.</p>
+<ol class="pubs"><li>Kim YE, Kim M*, <strong>Kim S*</strong>, Lee R*, Ujihara Y, Marquez-Wilkins EM, Jiang YH, Yang E, Kim H, Lee C, Park C†, Kim IH† (2025). <span class="title">Endothelial SHANK3 regulates tight junctions in the neonatal mouse blood-brain barrier through β-Catenin signaling.</span> <span class="venue">Nature Communications 16, 1407.</span> <a class="doi" href="https://doi.org/10.1038/s41467-025-56720-1">doi:10.1038/s41467-025-56720-1</a></li><li><strong>Kimm S</strong>, Kim JJ, Choi JS† (2023). <span class="title">The central amygdala modulates distinctive conflict-like behaviors in a naturalistic foraging task.</span> <span class="venue">Frontiers in Behavioral Neuroscience 17, 1212884.</span> <a class="doi" href="https://doi.org/10.3389/fnbeh.2023.1212884">doi:10.3389/fnbeh.2023.1212884</a></li><li><strong>Kim S</strong>, Kim YE, Song I, Ujihara Y, Kim N, Jiang YH, Yin HH, Lee TH, Kim IH† (2022). <span class="title">Neural circuit pathology driven by Shank3 mutation disrupts social behaviors.</span> <span class="venue">Cell Reports 39(10), 110906.</span> <a class="doi" href="https://doi.org/10.1016/j.celrep.2022.110906">doi:10.1016/j.celrep.2022.110906</a> <span class="badge">Cover article</span></li><li><strong>Kim S*</strong>, Kim YE*, Kim IH† (2022). <span class="title">Simultaneous analysis of social behaviors and neural responses in mice using round social arena system.</span> <span class="venue">STAR Protocols 3(4), 101722.</span> <a class="doi" href="https://doi.org/10.1016/j.xpro.2022.101722">doi:10.1016/j.xpro.2022.101722</a></li><li>Kim YE*, <strong>Kim S*</strong>, Kim IH† (2022). <span class="title">Neural circuit-specific gene manipulation in mouse brain in vivo using split-intein-mediated split-Cre system.</span> <span class="venue">STAR Protocols 3(4), 101807.</span> <a class="doi" href="https://doi.org/10.1016/j.xpro.2022.101807">doi:10.1016/j.xpro.2022.101807</a></li><li>Kim IH†, Kim N, <strong>Kim S</strong>, Toda K, Catavero CM, Courtland JL, Yin HH, Soderling S† (2020). <span class="title">Dysregulation of the synaptic cytoskeleton in the PFC drives neural circuit pathology, leading to social dysfunction.</span> <span class="venue">Cell Reports 32(4), 107965.</span> <a class="doi" href="https://doi.org/10.1016/j.celrep.2020.107965">doi:10.1016/j.celrep.2020.107965</a></li><li><strong>Kimm S</strong>, Choi JS† (2018). <span class="title">Sensory and motivational modulation of immediate and delayed defensive responses under dynamic threat.</span> <span class="venue">Journal of Neuroscience Methods 307, 84-94.</span> <a class="doi" href="https://doi.org/10.1016/j.jneumeth.2018.06.023">doi:10.1016/j.jneumeth.2018.06.023</a></li><li>Lee JH, <strong>Kimm S</strong>, Han JS, Choi JS† (2018). <span class="title">Chasing as a model of psychogenic stress: characterization of physiological and behavioral responses.</span> <span class="venue">Stress 21(4), 323-332.</span> <a class="doi" href="https://doi.org/10.1080/10253890.2018.1455090">doi:10.1080/10253890.2018.1455090</a></li></ol>
+<h2>Preprints &amp; Manuscripts</h2>
+<ol class="pubs"><li><strong>Kim S</strong>, Kim SY (2026). <span class="title">Human factors in detecting AI-generated portraits: age, sex, device, and confidence.</span> <span class="venue">arXiv, arXiv:2603.24048.</span> <a class="doi" href="https://doi.org/10.48550/arXiv.2603.24048">doi:10.48550/arXiv.2603.24048</a> <span class="badge">Preprint</span></li><li><strong>Kim S†</strong>, Kim YE, Ujihara Y, Kim IH† (2024). <span class="title">Monosynaptically-interconnected network module (MNM) approach for high-resolution brain sub-network analysis.</span> <span class="venue">bioRxiv, 2024.02.19.581007.</span> <a class="doi" href="https://doi.org/10.1101/2024.02.19.581007">doi:10.1101/2024.02.19.581007</a> <span class="badge">Preprint</span></li></ol>
+<h2>Conference Proceedings</h2>
+<ol class="pubs"><li>Jeong JH, <strong>Kimm S</strong>, Lee J, Choi JS† (2019). <span class="title">Differential encoding of events during approach–avoidance conflict situation by the prelimbic cortex.</span> <span class="venue">IBRO Reports 6, S313-S314.</span></li><li>Choi JS†, Lee JH, <strong>Kim S</strong>, Han JS (2017). <span class="title">Validating an animal model of stress using a chasing robot.</span> <span class="venue">Proceedings of the 15th Conference of the Japanese Society for Cognitive Psychology (日本認知心理学会発表論文集).</span></li><li><strong>Kim S</strong>, Hong EH, Jie HS, Jeong JH, Choi JS† (2015). <span class="title">Control and data acquisition of rodent experiments using Arduino-based system.</span> <span class="venue">Korean Association for Laboratory Animal Science International Symposium (한국실험동물학회 학술발표대회 논문집), 124.</span></li></ol>
+<h2>Research Funding</h2>
+<div class="entry"><div class="when">2025–2026.02 (year 1 of 3)</div><div class="what"><div class="line1">Silver digital literacy education and ESG campaign (industry–academia regional cooperation)</div><div class="line2">Gyeonggi-do RISE Programme, HSMU RISE Centre · Role: Curriculum and courseware development lead</div></div></div>
+<div class="entry"><div class="when">2025.04–2026.02</div><div class="what"><div class="line1">Long-term neurobehavioral safety assessment of transcranial focused ultrasound neuromodulation</div><div class="line2">HSMU New Faculty Research Grant · Role: Principal Investigator · ₩5,000,000</div></div></div>
+<h2>Grants Under Review</h2>
+<div class="entry"><div class="when">2026.04–2029.12</div><div class="what"><div class="line1">Development of AI learning frameworks based on brain cognitive science and biological learning principles</div><div class="line2">Ministry of Science and ICT / Institute of Information &amp; Communications Technology Planning &amp; Evaluation (IITP)</div></div></div>
+<div class="entry"><div class="when">2026–2028 (3 years, proposed)</div><div class="what"><div class="line1">AI-based quantification of social behaviors in group-housed rodents and their whole-brain neural correlates</div><div class="line2">National Research Foundation of Korea (NRF)</div></div></div>
+<h2>Teaching</h2>
+<div class="scroll"><table><thead><tr><th>Term</th><th>Course</th><th>Code</th><th>Cr.</th><th>Institution</th></tr></thead><tbody><tr><td class="k">2026-1</td><td><strong>Cognitive-Behavioral Experiment and Design</strong><br><span style='font-size:.85em'>인지행동실험과설계</span></td><td>443525</td><td>3</td><td>Hwasung Medi-Science University</td></tr><tr><td class="k">2026-1</td><td><strong>Introduction to Neuroscience</strong><br><span style='font-size:.85em'>뇌과학개론</span></td><td>500387</td><td>3</td><td>Hwasung Medi-Science University</td></tr><tr><td class="k">2026-1</td><td><strong>Introduction to Preclinical Studies</strong><br><span style='font-size:.85em'>전임상개론</span></td><td>500386</td><td>3</td><td>Hwasung Medi-Science University</td></tr><tr><td class="k">2025-2</td><td><strong>Understanding Genetic Engineering</strong><br><span style='font-size:.85em'>유전공학의이해</span></td><td>500500</td><td>3</td><td>Hwasung Medi-Science University</td></tr><tr><td class="k">2025-2</td><td><strong>Animal Behavior Experiment</strong><br><span style='font-size:.85em'>동물행동실험</span></td><td>500501</td><td>3</td><td>Hwasung Medi-Science University</td></tr><tr><td class="k">2025-2</td><td><strong>Basic Animal Experiment</strong><br><span style='font-size:.85em'>기초동물실험</span></td><td>500498</td><td>3</td><td>Hwasung Medi-Science University</td></tr><tr><td class="k">2025-1</td><td><strong>Introduction to Neuroscience</strong><br><span style='font-size:.85em'>뇌과학개론</span></td><td>500387</td><td>3</td><td>Hwasung Medi-Science University</td></tr><tr><td class="k">2025-1</td><td><strong>Introduction to Preclinical Studies</strong><br><span style='font-size:.85em'>전임상개론</span></td><td>500386</td><td>3</td><td>Hwasung Medi-Science University</td></tr><tr><td class="k">2025-1</td><td><strong>General Biology</strong><br><span style='font-size:.85em'>일반생물학</span></td><td>500384</td><td>3</td><td>Hwasung Medi-Science University</td></tr><tr><td class="k">2025-1</td><td><strong>Physiology</strong><br><span style='font-size:.85em'>생리학</span></td><td>242519</td><td>2</td><td>Hwasung Medi-Science University (Dept. of Nursing)</td></tr><tr><td class="k">2024 Spring</td><td><strong>Guest lecture: “Autism spectrum disorder” — Developmental and Molecular Neurobiology</strong></td><td>ANAT 825</td><td></td><td>University of Tennessee Health Science Center</td></tr><tr><td class="k">2022 Spring</td><td><strong>Guest lecture: “Autism spectrum disorder and neural circuit-based approach” — Developmental and Molecular Neurobiology</strong></td><td>ANAT 825</td><td></td><td>University of Tennessee Health Science Center</td></tr><tr><td class="k">2016-1</td><td><strong>Workshop lecture: animal tracking and behavioral measurement with ANY-maze</strong><br><span style='font-size:.85em'>행동신경과학 워크샵 — ANY-maze 사용 및 활용 방법</span></td><td></td><td></td><td>Korea University</td></tr></tbody></table></div>
+<h2>Invited Talks &amp; Guest Lectures</h2>
+<div class="entry"><div class="when">2025</div><div class="what"><div class="line1">“3D 프린터로 취미에서 창업까지: 아이디어를 현실로 만드는 기술 (From hobby to start-up with 3D printing)”</div><div class="line2">HSMU ‘CareerFit’ programme (invited campus lecture) · Hwasung Medi-Science University, Korea</div></div></div>
+<div class="entry"><div class="when">2025</div><div class="what"><div class="line1">“뇌 신경 회로 타겟팅 기술을 이용한 자폐 스펙트럼 장애 메커니즘 연구 (Circuit-targeting approaches to autism spectrum disorder)”</div><div class="line2">1st HSMU Colloquium, Center for Teaching and Learning · Hwasung Medi-Science University, Korea</div></div></div>
+<div class="entry"><div class="when">2022</div><div class="what"><div class="line1">“Neural circuit-selective Shank3 mutation disrupts social behaviors”</div><div class="line2">Memphis Korean Scientists Association · Memphis, TN, USA</div></div></div>
+<div class="entry"><div class="when">2022</div><div class="what"><div class="line1">“Neural circuit-selective Shank3 mutation disrupts social behaviors”</div><div class="line2">35th US-Korea Conference (UKC) · Washington, D.C., USA</div></div></div>
+<div class="entry"><div class="when">2022</div><div class="what"><div class="line1">“Neural circuit pathology driven by Shank3 mutation disrupts social behaviors”</div><div class="line2">Neuroscience Institute Spring Seminar, University of Tennessee Health Science Center · Memphis, TN, USA</div></div></div>
+<div class="entry"><div class="when">2021</div><div class="what"><div class="line1">“Neural circuit pathology driven by Shank3 mutation disrupts social behaviors”</div><div class="line2">BK21 Seminar, Korea University · Seoul, Republic of Korea</div></div></div>
+<h2>Conference Presentations</h2>
+<div class="entry"><div class="when">2024</div><div class="what"><div class="line1">“The miniature neural network module (MNM) approach for mapping and analyzing modular subnetworks in the brain”</div><div class="line2">Kim S, Kim YE, Ujihara Y, Kim IH · Cold Spring Harbor Laboratory Neuronal Circuits Meeting · Cold Spring Harbor, NY, USA</div></div></div>
+<div class="entry"><div class="when">2018</div><div class="what"><div class="line1">“Rat’s head-withdrawal reflex depends on visual and vibrissal information and on auditory conditioning”</div><div class="line2">Kim S, Lee JY, Choi JS · Korean Society of Cognitive and Biological Psychology · Korea</div></div></div>
+<div class="entry"><div class="when">2016</div><div class="what"><div class="line1">“A modified version of Lima-Dill model predicts approach-avoidance behavior of rats facing a predator-like robot”</div><div class="line2">Kim S, Jie HS, Choi JS · Society for Neuroscience (Neuroscience 2016) · San Diego, CA, USA</div></div></div>
+<div class="entry"><div class="when">2016</div><div class="what"><div class="line1">“Amygdala regulates approach-avoidance conflict under predatory threat in rats: a model-based approach”</div><div class="line2">Kim S, Choi JS · NeuroSplash (Data Blitz) · Korea</div></div></div>
+<div class="entry"><div class="when">2015</div><div class="what"><div class="line1">“Control and data acquisition of animal behavior experiments using Arduino-based system”</div><div class="line2">Kim S, Choi JS · Korean Psychological Association Annual Conference · Seoul, Korea</div></div></div>
+<div class="entry"><div class="when">2015</div><div class="what"><div class="line1">“Control and data acquisition of rodent experiments using Arduino-based system”</div><div class="line2">Kim S, Hong EW, Jie HS, Jeong JH, Lee JH, Choi JS · Korean Association for Laboratory Animal Science International Symposium · Incheon, Korea</div></div></div>
+<div class="entry"><div class="when">2015</div><div class="what"><div class="line1">“Central and basolateral amygdala lesions disrupt risk avoidance but spare reflexive defensive system”</div><div class="line2">Kimm S, Choi JS · Korean Society for Brain and Neural Sciences · Korea</div></div></div>
+<div class="entry"><div class="when">2015</div><div class="what"><div class="line1">“A cost-effective system for experimental control and data acquisition using Arduino”</div><div class="line2">Kimm S, Hong EH, Jie HS, Choi JS · Korean Society of Cognitive and Biological Psychology · Jeju, Korea</div></div></div>
+<div class="entry"><div class="when">2014</div><div class="what"><div class="line1">“Amygdala modulates approach-avoidance but not reflexive withdrawal in a semi-naturalistic conflict situation”</div><div class="line2">Kimm SW, Kim DY, Choi JS · Annual Pavlovian Society Meeting · Seattle, WA, USA</div></div></div>
+<div class="entry"><div class="when">2014</div><div class="what"><div class="line1">“Amygdala modulates approach-avoidance but not reflexive withdrawal in semi-naturalistic conflict situation”</div><div class="line2">Kimm S, Kim D, Choi JS · Korean Society for Brain and Neural Sciences · Seoul, Korea</div></div></div>
+<div class="entry"><div class="when">2014</div><div class="what"><div class="line1">“Partial amygdala lesions increase approach to the robot predator and impede the expression of overall defensive behaviors except for reflexive withdrawal”</div><div class="line2">Kimm S, Kim D, Choi JS · NeuroSplash · Korea</div></div></div>
+<div class="entry"><div class="when">2014</div><div class="what"><div class="line1">“Search of sign stimulus for rats’ defensive behavior using a cat-like robot”</div><div class="line2">Kimm S, Lee YK, Choi JS · Korean Society of Cognitive and Biological Psychology · Buyeo, Korea</div></div></div>
+<div class="entry"><div class="when">2013</div><div class="what"><div class="line1">“Past experience of mild threat reduces anxiety in rats during dynamic interaction with a robot stressor”</div><div class="line2">Kimm S, Choi JS · 16th Annual International Meeting of the Korean Society for Brain and Neural Sciences · Korea University, Seoul, Korea</div></div></div>
+<div class="entry"><div class="when">2013</div><div class="what"><div class="line1">“Lobsterbot, a possible new tool for the study of animal’s risk evaluation and decision making”</div><div class="line2">Kimm S, Lee JY, Choi JS · Korean Society for Brain and Cognitive Science Conference · Seoul National University, Seoul, Korea</div></div></div>
+<div class="entry"><div class="when">2013</div><div class="what"><div class="line1">“Fear of predation: artificial predation-like motions by robotic agents and their effects on defensive behavior”</div><div class="line2">Kimm S, Choi JS · NeuroSplash · Korea</div></div></div>
+<h2>Software &amp; Registered Programs</h2>
+<div class="scroll"><table><thead><tr><th>Year</th><th>Program</th><th>Registration</th><th>Description</th></tr></thead><tbody><tr><td class="k">2016</td><td><strong>Small Animal Defensive Response Measurement and Analysis Program</strong></td><td>C-2016-025109</td><td>Classical-conditioning experiment control and analysis software</td></tr><tr><td class="k">2015</td><td><strong>ActiMon — 24-hour small-animal activity monitoring system</strong></td><td>C-2015-008076</td><td>Continuous 24-hour rodent activity monitoring</td></tr><tr><td class="k">2015</td><td><strong>Serial Reaction Time Task</strong></td><td>C-2015-008009</td><td>Attention and working-memory test battery for rodents</td></tr></tbody></table></div>
+<p class="note">Open-source research and teaching tools</p>
+<div class="scroll"><table><thead><tr><th>Year</th><th>Project</th><th>Description</th></tr></thead><tbody><tr><td class="k">2025</td><td><a href="https://hsmu-real-vs-ai-test.web.app/"><strong>Real vs. AI — public portrait-discrimination web experiment</strong></a></td><td>Two-alternative forced-choice web experiment used to collect the 1,664-participant dataset behind the 2026 AI-portrait study</td></tr><tr><td class="k">2026</td><td><a href="https://github.com/gdrpaul3-byte/hsmu_ai_detection_public"><strong>hsmu_ai_detection_public</strong></a></td><td>Open stimulus set, metadata and de-identified trial-level behavioural data for the AI-generated portrait detection study</td></tr><tr><td class="k">2022</td><td><a href="https://www.addgene.org/browse/article/28219553/"><strong>Addgene plasmid deposition: split-Cre toolkit</strong></a></td><td>pAAV-Ef1a-CreN-InteinN (#187614) and pAAV-Ef1a-InteinC-CreC (#187615) — circuit-specific gene-manipulation reagents distributed to the community</td></tr></tbody></table></div>
+<h2>Mentoring &amp; Advising</h2>
+<div class="entry"><div class="when">2025–</div><div class="what"><div class="line1">11 undergraduate advisees, Dept. of Bio-Healthcare</div><div class="line2">Faculty academic advisor, Hwasung Medi-Science University</div></div></div>
+<div class="entry"><div class="when">2021–2024</div><div class="what"><div class="line1">Yusuke Ujihara, B.A.</div><div class="line2">Graduate student, UTHSC</div></div></div>
+<div class="entry"><div class="when">2024.05</div><div class="what"><div class="line1">Elizabeth Rachel Dang</div><div class="line2">M.D. candidate, UTHSC</div></div></div>
+<div class="entry"><div class="when">2014</div><div class="what"><div class="line1">Teaching assistant, Introduction to Brain Science (ISC218)</div><div class="line2">Korea University International Summer Campus</div></div></div>
+<div class="entry"><div class="when">2013</div><div class="what"><div class="line1">Teaching assistant, Learning Psychology</div><div class="line2">Korea University, Dept. of Psychology</div></div></div>
+<h2>Institutional &amp; Professional Service</h2>
+<div class="entry"><div class="when">2025.09–2027.08</div><div class="what"><div class="line1">Department Chair, Department of Bio-Healthcare</div><div class="line2">화성의과학대학교 / Hwasung Medi-Science University</div></div></div>
+<div class="entry"><div class="when">2026.02</div><div class="what"><div class="line1">Expert content-validity reviewer, institutional core-competency scale development</div><div class="line2">화성의과학대학교</div></div></div>
+<div class="entry"><div class="when">2025.10–2025.12</div><div class="what"><div class="line1">Member, Scholarship Review Committee</div><div class="line2">화성의과학대학교</div></div></div>
+<div class="entry"><div class="when">2025</div><div class="what"><div class="line1">Reviewer, Liberal 101 scholarship programme</div><div class="line2">화성의과학대학교</div></div></div>
+<div class="entry"><div class="when">2025.06</div><div class="what"><div class="line1">Member, Major Curriculum Subcommittee</div><div class="line2">화성의과학대학교</div></div></div>
+<div class="entry"><div class="when">2025–</div><div class="what"><div class="line1">Faculty academic advisor (11 advisees), academic-probation counselling, merit-scholarship nomination</div><div class="line2">화성의과학대학교 바이오헬스케어학과</div></div></div>
+<div class="entry"><div class="when">2025–</div><div class="what"><div class="line1">Departmental website build, admissions presentations, chairing faculty meetings, curriculum and timetable planning</div><div class="line2">화성의과학대학교 바이오헬스케어학과</div></div></div>
+<div class="entry"><div class="when">2015–</div><div class="what"><div class="line1">Member — Korean Psychological Association; Korean Association for Laboratory Animal Science</div></div></div>
+<h2>Awards &amp; Honors</h2>
+<div class="entry"><div class="when">2022</div><div class="what"><div class="line1">Journal cover selection, Cell Reports 39(10)</div><div class="line2">Cell Press</div></div></div>
+<div class="entry"><div class="when">2018</div><div class="what"><div class="line1">Research Scholarship</div><div class="line2">Korea University</div></div></div>
+<div class="entry"><div class="when">2015</div><div class="what"><div class="line1">BK21 PLUS Scholarship</div><div class="line2">Korea University</div></div></div>
+<div class="entry"><div class="when">2014</div><div class="what"><div class="line1">Institute of Foreign Language Studies Work Scholarship</div><div class="line2">Korea University</div></div></div>
+<div class="entry"><div class="when">2014</div><div class="what"><div class="line1">BK21 PLUS Scholarship</div><div class="line2">Korea University</div></div></div>
+<div class="entry"><div class="when">2013</div><div class="what"><div class="line1">Research Assistant Scholarship</div><div class="line2">Korea University</div></div></div>
+<div class="entry"><div class="when">2013</div><div class="what"><div class="line1">BK21 PLUS Scholarship</div><div class="line2">Korea University</div></div></div>
+<div class="entry"><div class="when">2010</div><div class="what"><div class="line1">Work Scholarship</div><div class="line2">Korea University</div></div></div>
+<div class="entry"><div class="when">2006</div><div class="what"><div class="line1">Freshman Special Scholarship</div><div class="line2">Korea University</div></div></div>
+<h2>Certifications &amp; Training</h2>
+<div class="entry"><div class="when">2026-02-25</div><div class="what"><div class="line1">Research Ethics for Principal Investigators (Science &amp; Engineering)</div><div class="line2">국가과학기술인력개발원 (KIRD)</div></div></div>
+<div class="entry"><div class="when">2025-07-19</div><div class="what"><div class="line1">Laboratory Animal Technician Practical Workshop (theory module)</div><div class="line2">한국실험동물학회 인증위원회 (KALAS)</div></div></div>
+<div class="entry"><div class="when">2025-05-24</div><div class="what"><div class="line1">Laboratory Safety Education &amp; Training for new researchers (8 h)</div><div class="line2">화성의과학대학교</div></div></div>
+<div class="entry"><div class="when">2025-04-30</div><div class="what"><div class="line1">Online Training for Human Subjects Researchers on the Ethical Conduct of Research</div><div class="line2">국가생명윤리정책원 (KoNIBP)</div></div></div>
+<div class="entry"><div class="when">2019-02-28</div><div class="what"><div class="line1">Biosafety Training / Laboratory Practicum Safety Training</div><div class="line2">한국생명공학연구원 국가연구안전관리본부 (KRIBB)</div></div></div>
+<div class="entry"><div class="when">2018-09-04</div><div class="what"><div class="line1">Biosafety Training</div><div class="line2">한국생명공학연구원 국가연구안전관리본부 (KRIBB)</div></div></div>
+<div class="entry"><div class="when">2013-05-09</div><div class="what"><div class="line1">CITI Program — Human Research, Basic Course</div><div class="line2">Collaborative Institutional Training Initiative (via Korea University)</div></div></div>
+<h2>Media Coverage</h2>
+<div class="entry"><div class="when">2022</div><div class="what"><div class="line1">Neural circuit pathology driven by Shank3 mutation disrupts social behaviors — 한빛사 인터뷰</div><div class="line2">한빛사 (BRIC)</div></div></div>
+<div class="entry"><div class="when">2022</div><div class="what"><div class="line1">Autism-linked mutation disrupts brain circuit to change social behavior</div><div class="line2">Spectrum News</div></div></div>
+<h2>Outreach</h2>
+<div class="entry"><div class="when">2026–</div><div class="what"><div class="line1">Makers — student maker &amp; technology club</div><div class="line2">Faculty advisor. Student club for AI coding, generative media, 3D printing, Arduino and automation, run as a bridge between the lab's human–AI research and hands-on student prototyping.</div></div></div>
+<div class="entry"><div class="when">2025</div><div class="what"><div class="line1">Public participant-recruitment campaign, AI-portrait perception study</div><div class="line2">Campus and online science-engagement campaign that recruited 1,843 public participants for the AI-generated portrait detection experiment.</div></div></div>
+<div class="entry"><div class="when">2025</div><div class="what"><div class="line1">화성왭성 AI creative contest — video entry “꿈속의 화성”</div><div class="line2">Generative-AI music video produced as team lead; an applied companion to the lab's generative-media research.</div></div></div>
+<h2>Peer Review</h2>
+<div class="entry"><div class="when">2024, 2025</div><div class="what"><div class="line1">STAR Protocols (Cell Press)</div><div class="line2">Four review reports, including both rounds of one 2025 manuscript</div></div></div>
+<div class="entry"><div class="when">2022</div><div class="what"><div class="line1">Genes, Brain and Behavior</div></div></div>
+<div class="entry"><div class="when">2022</div><div class="what"><div class="line1">Scientific Reports</div></div></div>
+<div class="entry"><div class="when">2014</div><div class="what"><div class="line1">Behavioural Brain Research (Elsevier)</div><div class="line2">two manuscripts, co-review with doctoral advisor</div></div></div>
+<h2>Technical Skills</h2>
+<div class="scroll"><table><thead><tr><th>Area</th><th>Detail</th></tr></thead><tbody><tr><td class="k">Neural Circuit Methods</td><td>Viral circuit tracing (retrograde / anterograde / monosynaptic rabies), Split-Cre and intersectional circuit-specific gene manipulation, Optogenetics, In vivo calcium imaging (fiber photometry, miniscope), In vivo electrophysiology, Immunohistochemistry and whole-brain mapping</td></tr><tr><td class="k">Behaviour</td><td>Rodent social, defensive and approach-avoidance paradigms, Semi-naturalistic robot-predator foraging tasks, Fear conditioning, extinction and context renewal, Automated tracking (DeepLabCut, ANY-maze, SAM-based multi-animal tracking)</td></tr><tr><td class="k">Human Experimentation</td><td>Large-scale online psychophysics (2AFC, reaction-time modelling), IRB protocol design and human-subjects research governance, Signal detection theory</td></tr><tr><td class="k">Computational</td><td>Python, R, MATLAB, Mixed-effects and Bayesian modelling, RNA-seq / differential-expression and network analysis, Machine-learning behavioural classification</td></tr><tr><td class="k">Engineering</td><td>Arduino-based experiment control and data acquisition, 3D printing and rapid prototyping, Web application development (Firebase, GitHub Pages) for experiment delivery</td></tr><tr><td class="k">Languages</td><td>Korean (native), English (professional working proficiency)</td></tr></tbody></table></div>
+<h2>References</h2>
+<div class="entry"><div class="when"></div><div class="what"><div class="line1"><strong>Dr. June-Seek Choi</strong></div><div class="line2">Professor of Psychology · Korea University · j-schoi@korea.ac.kr</div></div></div>
+<div class="entry"><div class="when"></div><div class="what"><div class="line1"><strong>Dr. Il Hwan Kim</strong></div><div class="line2">Associate Professor, Dept. of Anatomy &amp; Neurobiology · University of Tennessee Health Science Center · ikim9@uthsc.edu</div></div></div>
+<footer>Sunwhi Kim · CV generated from <a href="https://github.com/gdrpaul3-byte/sunwhi-cv">cv.yaml</a> on 2026-08-24</footer>
+</main>
+<script>
+(function(){
+  var root=document.documentElement, K='cv-theme';
+  try{var s=localStorage.getItem(K); if(s) root.setAttribute('data-theme',s);}catch(e){}
+  var t=document.getElementById('theme');
+  if(t) t.addEventListener('click',function(){
+    var cur=root.getAttribute('data-theme');
+    if(!cur) cur = matchMedia('(prefers-color-scheme:dark)').matches ? 'dark' : 'light';
+    var next = cur==='dark' ? 'light' : 'dark';
+    root.setAttribute('data-theme',next);
+    try{localStorage.setItem(K,next);}catch(e){}
+  });
+  var p=document.getElementById('print');
+  if(p) p.addEventListener('click',function(){window.print();});
+})();
+</script>
+</body>
+</html>

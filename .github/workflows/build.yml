@@ -1,0 +1,119 @@
+name: Build CV
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+  schedule:
+    # Monthly nudge: rebuilds and re-runs the ORCID reconciliation so drift
+    # between cv.yaml and the live ORCID record shows up in the job summary.
+    - cron: "0 3 1 * *"
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: cv-build
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Validate cv.yaml
+        run: python scripts/build.py --check
+
+      - name: Build artifacts
+        run: python scripts/build.py --docx --orcid-diff
+
+      # Runs after the build so the privacy-leak check has files to inspect.
+      # private.yaml is never in CI, so that check is a no-op here — it is the
+      # local pre-commit guard. Everything else is enforced on every push.
+      - name: Tests
+        run: python scripts/test_build.py
+
+      - name: Export PDF
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq chromium-browser || sudo snap install chromium
+          python scripts/build.py --pdf
+        continue-on-error: true
+
+      - name: ORCID drift summary
+        run: |
+          if [ -f build/orcid-diff.json ]; then
+            {
+              echo "### ORCID reconciliation"
+              echo ''
+              python - <<'PY'
+          import json
+          d = json.load(open('build/orcid-diff.json', encoding='utf-8'))
+          mw = d.get('missing_works') or []
+          if mw:
+              print('**%d work(s) in cv.yaml are missing from ORCID:**\n' % len(mw))
+              for w in mw:
+                  print('- %s (`%s`)' % (w['title'], w['doi']))
+          else:
+              print('All cv.yaml works with a DOI are present in ORCID.')
+          for e in d.get('open_ended_education') or []:
+              print('\n- :warning: education **%s** at %s has no end date' % (e['role'], e['org']))
+          print('\n| section | ORCID | cv.yaml |')
+          print('|---|---|---|')
+          c = d.get('counts') or {}
+          for k in ('education', 'employment', 'fundings', 'distinctions', 'services'):
+              orc = c.get('orcid_' + k)
+              mine = c.get('cv_' + {'education':'education','employment':'appointments',
+                                    'fundings':'grants_awarded','distinctions':'awards',
+                                    'services':'service'}[k])
+              print('| %s | %s | %s |' % (k, orc, mine))
+          PY
+            } >> "$GITHUB_STEP_SUMMARY"
+          fi
+        continue-on-error: true
+
+      - name: Commit rebuilt artifacts
+        if: github.event_name != 'pull_request'
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add build
+          if git diff --staged --quiet; then
+            echo "build/ unchanged"
+          else
+            git commit -m "chore: rebuild CV artifacts from cv.yaml"
+            git push
+          fi
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: cv
+          path: build/
+
+      - uses: actions/upload-pages-artifact@v3
+        if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
+        with:
+          path: build/
+
+  deploy:
+    if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

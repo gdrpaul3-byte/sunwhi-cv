@@ -1,0 +1,315 @@
+{
+  "$schema": "https://raw.githubusercontent.com/jsonresume/resume-schema/v1.0.0/schema.json",
+  "meta": {
+    "lastModified": "2026-08-24",
+    "source": "cv.yaml",
+    "canonical": "https://gdrpaul3-byte.github.io/sunwhi-cv/"
+  },
+  "basics": {
+    "name": "Sunwhi Kim",
+    "label": "Assistant Professor, Department of Bio-Healthcare",
+    "email": "skim@hsmu.ac.kr",
+    "phone": null,
+    "url": "https://gdrpaul3-byte.github.io/sunwhikim-lab-page/",
+    "summary": "Behavioural neuroscientist working at the junction of neural-circuit biology and human–AI interaction. Circuit-specific dissection of social and defensive behaviour in mouse models of autism (Cell Reports cover article; Nature Communications), now extended to large-scale human experiments on how people judge AI-generated media. Currently Department Chair of Bio-Healthcare at Hwasung Medi-Science University, where I built the department's experimental teaching programme.",
+    "location": {
+      "countryCode": "KR",
+      "region": "Gyeonggi-do"
+    },
+    "profiles": [
+      {
+        "network": "ORCID",
+        "username": "0000-0001-5009-5544",
+        "url": "https://orcid.org/0000-0001-5009-5544"
+      },
+      {
+        "network": "Google Scholar",
+        "username": "64RRH9QAAAAJ",
+        "url": "https://scholar.google.com/citations?user=64RRH9QAAAAJ"
+      },
+      {
+        "network": "GitHub",
+        "username": "gdrpaul3-byte",
+        "url": "https://github.com/gdrpaul3-byte"
+      }
+    ]
+  },
+  "work": [
+    {
+      "name": "Hwasung Medi-Science University",
+      "position": "Assistant Professor",
+      "department": "Department of Bio-Healthcare",
+      "startDate": "2025",
+      "endDate": null,
+      "highlights": [
+        "Department Chair (학과장) since September 2025; principal investigator of the Neural Systems Laboratory.",
+        "Research spanning neural-circuit mechanisms of social and defensive behaviour and the cognitive human factors of human–AI interaction."
+      ]
+    },
+    {
+      "name": "University of Tennessee Health Science Center",
+      "position": "Postdoctoral Fellow",
+      "department": "Department of Anatomy & Neurobiology, College of Medicine",
+      "startDate": "2019-04",
+      "endDate": "2024-12",
+      "highlights": [
+        "Circuit- and network-specific dissection of the mechanisms underlying social dysfunction in Shank3 models of autism spectrum disorder.",
+        "Developed the split-Cre circuit-targeting toolkit (Addgene #187614, #187615) and the Monosynaptically-interconnected Network Module (MNM) analysis method."
+      ]
+    }
+  ],
+  "education": [
+    {
+      "institution": "Korea University",
+      "area": "Department of Psychology",
+      "studyType": "Ph.D. in Biopsychology (이학박사, Doctor of Science)",
+      "startDate": "2013-03",
+      "endDate": "2019-08"
+    },
+    {
+      "institution": "Korea University",
+      "area": "College of Liberal Arts, Department of Psychology",
+      "studyType": "B.A. in Psychology",
+      "startDate": "2006-03",
+      "endDate": "2013-02"
+    },
+    {
+      "institution": "Korea University",
+      "area": "College of Informatics",
+      "studyType": "B.Eng. in Brain and Cognitive Sciences (interdisciplinary major)",
+      "startDate": "2006-03",
+      "endDate": "2013-02"
+    }
+  ],
+  "publications": [
+    {
+      "name": "Endothelial SHANK3 regulates tight junctions in the neonatal mouse blood-brain barrier through β-Catenin signaling",
+      "publisher": "Nature Communications",
+      "releaseDate": "2025",
+      "url": "https://doi.org/10.1038/s41467-025-56720-1",
+      "summary": "Kim YE, Kim M*, Kim S*, Lee R*, Ujihara Y, Marquez-Wilkins EM, Jiang YH, Yang E, Kim H, Lee C, Park C†, Kim IH†"
+    },
+    {
+      "name": "The central amygdala modulates distinctive conflict-like behaviors in a naturalistic foraging task",
+      "publisher": "Frontiers in Behavioral Neuroscience",
+      "releaseDate": "2023",
+      "url": "https://doi.org/10.3389/fnbeh.2023.1212884",
+      "summary": "Kimm S, Kim JJ, Choi JS†"
+    },
+    {
+      "name": "Neural circuit pathology driven by Shank3 mutation disrupts social behaviors",
+      "publisher": "Cell Reports",
+      "releaseDate": "2022",
+      "url": "https://doi.org/10.1016/j.celrep.2022.110906",
+      "summary": "Kim S, Kim YE, Song I, Ujihara Y, Kim N, Jiang YH, Yin HH, Lee TH, Kim IH†"
+    },
+    {
+      "name": "Simultaneous analysis of social behaviors and neural responses in mice using round social arena system",
+      "publisher": "STAR Protocols",
+      "releaseDate": "2022",
+      "url": "https://doi.org/10.1016/j.xpro.2022.101722",
+      "summary": "Kim S*, Kim YE*, Kim IH†"
+    },
+    {
+      "name": "Neural circuit-specific gene manipulation in mouse brain in vivo using split-intein-mediated split-Cre system",
+      "publisher": "STAR Protocols",
+      "releaseDate": "2022",
+      "url": "https://doi.org/10.1016/j.xpro.2022.101807",
+      "summary": "Kim YE*, Kim S*, Kim IH†"
+    },
+    {
+      "name": "Dysregulation of the synaptic cytoskeleton in the PFC drives neural circuit pathology, leading to social dysfunction",
+      "publisher": "Cell Reports",
+      "releaseDate": "2020",
+      "url": "https://doi.org/10.1016/j.celrep.2020.107965",
+      "summary": "Kim IH†, Kim N, Kim S, Toda K, Catavero CM, Courtland JL, Yin HH, Soderling S†"
+    },
+    {
+      "name": "Sensory and motivational modulation of immediate and delayed defensive responses under dynamic threat",
+      "publisher": "Journal of Neuroscience Methods",
+      "releaseDate": "2018",
+      "url": "https://doi.org/10.1016/j.jneumeth.2018.06.023",
+      "summary": "Kimm S, Choi JS†"
+    },
+    {
+      "name": "Chasing as a model of psychogenic stress: characterization of physiological and behavioral responses",
+      "publisher": "Stress",
+      "releaseDate": "2018",
+      "url": "https://doi.org/10.1080/10253890.2018.1455090",
+      "summary": "Lee JH, Kimm S, Han JS, Choi JS†"
+    },
+    {
+      "name": "Human factors in detecting AI-generated portraits: age, sex, device, and confidence",
+      "publisher": "arXiv",
+      "releaseDate": "2026",
+      "url": "https://doi.org/10.48550/arXiv.2603.24048",
+      "summary": "Kim S, Kim SY"
+    },
+    {
+      "name": "Monosynaptically-interconnected network module (MNM) approach for high-resolution brain sub-network analysis",
+      "publisher": "bioRxiv",
+      "releaseDate": "2024",
+      "url": "https://doi.org/10.1101/2024.02.19.581007",
+      "summary": "Kim S†, Kim YE, Ujihara Y, Kim IH†"
+    },
+    {
+      "name": "Differential encoding of events during approach–avoidance conflict situation by the prelimbic cortex",
+      "publisher": "IBRO Reports",
+      "releaseDate": "2019",
+      "url": null,
+      "summary": "Jeong JH, Kimm S, Lee J, Choi JS†"
+    },
+    {
+      "name": "Validating an animal model of stress using a chasing robot",
+      "publisher": "Proceedings of the 15th Conference of the Japanese Society for Cognitive Psychology (日本認知心理学会発表論文集)",
+      "releaseDate": "2017",
+      "url": null,
+      "summary": "Choi JS†, Lee JH, Kim S, Han JS"
+    },
+    {
+      "name": "Control and data acquisition of rodent experiments using Arduino-based system",
+      "publisher": "Korean Association for Laboratory Animal Science International Symposium (한국실험동물학회 학술발표대회 논문집)",
+      "releaseDate": "2015",
+      "url": null,
+      "summary": "Kim S, Hong EH, Jie HS, Jeong JH, Choi JS†"
+    }
+  ],
+  "awards": [
+    {
+      "title": "Journal cover selection, Cell Reports 39(10)",
+      "date": "2022",
+      "awarder": "Cell Press"
+    },
+    {
+      "title": "Research Scholarship",
+      "date": "2018",
+      "awarder": "Korea University"
+    },
+    {
+      "title": "BK21 PLUS Scholarship",
+      "date": "2015",
+      "awarder": "Korea University"
+    },
+    {
+      "title": "Institute of Foreign Language Studies Work Scholarship",
+      "date": "2014",
+      "awarder": "Korea University"
+    },
+    {
+      "title": "BK21 PLUS Scholarship",
+      "date": "2014",
+      "awarder": "Korea University"
+    },
+    {
+      "title": "Research Assistant Scholarship",
+      "date": "2013",
+      "awarder": "Korea University"
+    },
+    {
+      "title": "BK21 PLUS Scholarship",
+      "date": "2013",
+      "awarder": "Korea University"
+    },
+    {
+      "title": "Work Scholarship",
+      "date": "2010",
+      "awarder": "Korea University"
+    },
+    {
+      "title": "Freshman Special Scholarship",
+      "date": "2006",
+      "awarder": "Korea University"
+    }
+  ],
+  "certificates": [
+    {
+      "name": "Research Ethics for Principal Investigators (Science & Engineering)",
+      "date": "2026-02-25",
+      "issuer": "국가과학기술인력개발원 (KIRD)"
+    },
+    {
+      "name": "Laboratory Animal Technician Practical Workshop (theory module)",
+      "date": "2025-07-19",
+      "issuer": "한국실험동물학회 인증위원회 (KALAS)"
+    },
+    {
+      "name": "Laboratory Safety Education & Training for new researchers (8 h)",
+      "date": "2025-05-24",
+      "issuer": "화성의과학대학교"
+    },
+    {
+      "name": "Online Training for Human Subjects Researchers on the Ethical Conduct of Research",
+      "date": "2025-04-30",
+      "issuer": "국가생명윤리정책원 (KoNIBP)"
+    },
+    {
+      "name": "Biosafety Training / Laboratory Practicum Safety Training",
+      "date": "2019-02-28",
+      "issuer": "한국생명공학연구원 국가연구안전관리본부 (KRIBB)"
+    },
+    {
+      "name": "Biosafety Training",
+      "date": "2018-09-04",
+      "issuer": "한국생명공학연구원 국가연구안전관리본부 (KRIBB)"
+    },
+    {
+      "name": "CITI Program — Human Research, Basic Course",
+      "date": "2013-05-09",
+      "issuer": "Collaborative Institutional Training Initiative (via Korea University)"
+    }
+  ],
+  "skills": [
+    {
+      "name": "Neural Circuit Methods",
+      "keywords": [
+        "Viral circuit tracing (retrograde / anterograde / monosynaptic rabies)",
+        "Split-Cre and intersectional circuit-specific gene manipulation",
+        "Optogenetics",
+        "In vivo calcium imaging (fiber photometry, miniscope)",
+        "In vivo electrophysiology",
+        "Immunohistochemistry and whole-brain mapping"
+      ]
+    },
+    {
+      "name": "Behaviour",
+      "keywords": [
+        "Rodent social, defensive and approach-avoidance paradigms",
+        "Semi-naturalistic robot-predator foraging tasks",
+        "Fear conditioning, extinction and context renewal",
+        "Automated tracking (DeepLabCut, ANY-maze, SAM-based multi-animal tracking)"
+      ]
+    },
+    {
+      "name": "Human Experimentation",
+      "keywords": [
+        "Large-scale online psychophysics (2AFC, reaction-time modelling)",
+        "IRB protocol design and human-subjects research governance",
+        "Signal detection theory"
+      ]
+    },
+    {
+      "name": "Computational",
+      "keywords": [
+        "Python, R, MATLAB",
+        "Mixed-effects and Bayesian modelling",
+        "RNA-seq / differential-expression and network analysis",
+        "Machine-learning behavioural classification"
+      ]
+    },
+    {
+      "name": "Engineering",
+      "keywords": [
+        "Arduino-based experiment control and data acquisition",
+        "3D printing and rapid prototyping",
+        "Web application development (Firebase, GitHub Pages) for experiment delivery"
+      ]
+    },
+    {
+      "name": "Languages",
+      "keywords": [
+        "Korean (native)",
+        "English (professional working proficiency)"
+      ]
+    }
+  ]
+}

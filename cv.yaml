@@ -1,0 +1,1012 @@
+# ---------------------------------------------------------------------------
+# cv.yaml — the single source of truth for every CV artifact in this repo.
+#
+# Edit this file, then run:  python scripts/build.py
+# Validate without building: python scripts/build.py --check
+# Run the guard tests:       python scripts/test_build.py
+#
+# Fields ending _en / _kr are language pairs. English outputs prefer _en and
+# fall back to _kr; the Korean 이력서 does the reverse.
+#
+# Author-name style: Vancouver (no hyphens in initials) — "Choi JS", not
+# "Choi J-S" — applied consistently even where a publisher prints otherwise.
+#
+# Provenance: every entry below was verified in Aug 2026 against publisher
+# PDFs, Crossref/DataCite, the live ORCID record, the arXiv API, official
+# Korea University certificates, and HSMU administrative documents. Entries
+# that could not be verified were left out rather than guessed; see the
+# `open_questions` block at the end of this file.
+# ---------------------------------------------------------------------------
+
+meta:
+  updated: "2026-08-24"
+  author_note_en: >-
+    Published under both “Kim” and “Kimm”. Each work is listed under the surname used
+    in the original publication. * equal contribution; † corresponding author.
+  resume:
+    max_publications: 6
+    summary_en: >-
+      Behavioural neuroscientist working at the junction of neural-circuit biology and
+      human–AI interaction. Circuit-specific dissection of social and defensive behaviour
+      in mouse models of autism (Cell Reports cover article; Nature Communications),
+      now extended to large-scale human experiments on how people judge AI-generated
+      media. Currently Department Chair of Bio-Healthcare at Hwasung Medi-Science
+      University, where I built the department's experimental teaching programme.
+
+person:
+  name_en: Sunwhi Kim
+  name_kr: 김선휘
+  name_en_alt: [Sunwhi Kimm]
+  citation_name: Kim S            # bolded wherever it appears in an author list
+  degree: Ph.D.
+  title_en: Assistant Professor
+  title_kr: 조교수
+  dept_en: Department of Bio-Healthcare
+  dept_kr: 바이오헬스케어학과
+  institution_en: Hwasung Medi-Science University
+  institution_kr: 화성의과학대학교
+  region: Gyeonggi-do
+  emails:
+    - skim@hsmu.ac.kr
+    - gdrpaul3@gmail.com
+  phones:
+    office: "031-369-9100"
+  # Date of birth, home address and personal mobile live in private.yaml
+  # (git-ignored) — Korean 이력서 forms need them, the public web CV must not
+  # carry them. See private.yaml.example.
+  orcid: 0000-0001-5009-5544
+  ids:
+    scholar: 64RRH9QAAAAJ
+    github: gdrpaul3-byte
+    scopus: ["57201366588", "57218267142"]
+    loop: "2295141"
+    researcher_kr: "11182163"      # 국가연구자번호
+  links:
+    lab: https://gdrpaul3-byte.github.io/sunwhikim-lab-page/
+    cv: https://gdrpaul3-byte.github.io/sunwhi-cv/
+    cv_repo: https://github.com/gdrpaul3-byte/sunwhi-cv
+    youtube: https://www.youtube.com/@swkim_n
+
+# Google Scholar, refreshed by hand — Scholar has no public API.
+metrics:
+  citations: 162
+  citations_since_2021: 157
+  h_index: 6
+  i10_index: 4
+  as_of: "2026-08-24"
+
+appointments:
+  - start: 2025
+    end: present
+    role_en: Assistant Professor
+    role_kr: 조교수
+    org_en: Hwasung Medi-Science University
+    org_kr: 화성의과학대학교
+    dept_en: Department of Bio-Healthcare
+    dept_kr: 바이오헬스케어학과
+    country: Republic of Korea
+    bullets:
+      - >-
+        Department Chair (학과장) since September 2025; principal investigator of the
+        Neural Systems Laboratory.
+      - >-
+        Research spanning neural-circuit mechanisms of social and defensive behaviour
+        and the cognitive human factors of human–AI interaction.
+
+  - start: 2019-04
+    end: 2024-12
+    role_en: Postdoctoral Fellow
+    role_kr: 박사후 연구원
+    org_en: University of Tennessee Health Science Center
+    org_kr: University of Tennessee Health Science Center
+    dept_en: Department of Anatomy & Neurobiology, College of Medicine
+    dept_kr: Anatomy and Neurobiology (College of Medicine)
+    country: Memphis, TN, USA
+    advisor: Dr. Il Hwan Kim
+    bullets:
+      - >-
+        Circuit- and network-specific dissection of the mechanisms underlying social
+        dysfunction in Shank3 models of autism spectrum disorder.
+      - >-
+        Developed the split-Cre circuit-targeting toolkit (Addgene #187614, #187615)
+        and the Monosynaptically-interconnected Network Module (MNM) analysis method.
+
+education:
+  - start: 2013-03
+    end: 2019-08
+    degree_en: Ph.D. in Biopsychology (이학박사, Doctor of Science)
+    degree_kr: 박사 (석·박사통합과정)
+    dept_en: Department of Psychology
+    dept_kr: 생물심리학전공 / 심리학과
+    org_en: Korea University
+    org_kr: 고려대학교
+    advisor: Dr. June-Seek Choi
+    advisor_kr: 최준식
+    thesis: >-
+      The functions of the amygdala sub-nuclei and prelimbic cortex in an
+      approach-avoidance conflict situation
+    # Integrated M.S./Ph.D. programme. Admitted 2013-03-01; coursework completed
+    # (수료) 2016-08-25; degree conferred 2019-08-24. 학위등록번호 고려대2018(박)0601.
+
+  - start: 2006-03
+    end: 2013-02
+    degree_en: B.A. in Psychology
+    degree_kr: 학사 (문학사)
+    dept_en: College of Liberal Arts, Department of Psychology
+    dept_kr: 문과대학 심리학과
+    org_en: Korea University
+    org_kr: 고려대학교
+
+  - start: 2006-03
+    end: 2013-02
+    degree_en: B.Eng. in Brain and Cognitive Sciences (interdisciplinary major)
+    degree_kr: 학사 (공학사) · 뇌인지과학 연계전공
+    dept_en: College of Informatics
+    dept_kr: 정보통신대학
+    org_en: Korea University
+    org_kr: 고려대학교
+
+# ---------------------------------------------------------------------------
+# PUBLICATIONS
+# Author lists, titles, volumes, article numbers and DOIs verified page-by-page
+# against the publisher PDFs and cross-checked with Crossref, DataCite, ORCID
+# and the arXiv API (Aug 2026). Titles are given in the publisher's sentence case.
+# ---------------------------------------------------------------------------
+publications:
+
+  journal:
+    - id: natcomm2025
+      year: 2025
+      authors: [Kim YE, Kim M, Kim S, Lee R, Ujihara Y, Marquez-Wilkins EM,
+                Jiang YH, Yang E, Kim H, Lee C, Park C, Kim IH]
+      equal: [Kim M, Kim S, Lee R]
+      corresponding: [Park C, Kim IH]
+      me: Kim S
+      title: >-
+        Endothelial SHANK3 regulates tight junctions in the neonatal mouse blood-brain
+        barrier through β-Catenin signaling
+      venue: Nature Communications
+      volume: 16
+      article: 1407
+      doi: 10.1038/s41467-025-56720-1
+      role_kr: 공동 제1저자
+      featured: true
+      # 17 pp. Received 2024-03-06, accepted 2025-01-29. Cell Press prints no
+      # issue number for this article — 1407 is the article number, not an issue.
+
+    - id: frontiers2023
+      year: 2023
+      authors: [Kimm S, Kim JJ, Choi JS]
+      corresponding: [Choi JS]
+      me: Kimm S
+      title: >-
+        The central amygdala modulates distinctive conflict-like behaviors in a
+        naturalistic foraging task
+      venue: Frontiers in Behavioral Neuroscience
+      volume: 17
+      article: 1212884
+      doi: 10.3389/fnbeh.2023.1212884
+      role_kr: 제1저자
+      note_kr: 저자명 ‘Sunwhi Kimm’으로 출간
+      featured: true
+      # Brief Research Report. Published 2023-08-02.
+
+    - id: cellrep2022
+      year: 2022
+      authors: [Kim S, Kim YE, Song I, Ujihara Y, Kim N, Jiang YH, Yin HH,
+                Lee TH, Kim IH]
+      corresponding: [Kim IH]
+      me: Kim S
+      title: Neural circuit pathology driven by Shank3 mutation disrupts social behaviors
+      venue: Cell Reports
+      volume: 39
+      issue: 10
+      article: 110906
+      doi: 10.1016/j.celrep.2022.110906
+      role_kr: 제1저자
+      note: Cover article
+      note_kr: 해당 호 표지 선정
+      featured: true
+      # Sole first author — the paper carries no equal-contribution footnote.
+
+    - id: starprot2022rsa
+      year: 2022
+      authors: [Kim S, Kim YE, Kim IH]
+      equal: [Kim S, Kim YE]
+      corresponding: [Kim IH]
+      me: Kim S
+      title: >-
+        Simultaneous analysis of social behaviors and neural responses in mice using
+        round social arena system
+      venue: STAR Protocols
+      volume: 3
+      issue: 4
+      article: 101722
+      doi: 10.1016/j.xpro.2022.101722
+      role_kr: 공동 제1저자
+      # Sunwhi Kim is the designated technical contact for this protocol.
+
+    - id: starprot2022splitcre
+      year: 2022
+      authors: [Kim YE, Kim S, Kim IH]
+      equal: [Kim YE, Kim S]
+      corresponding: [Kim IH]
+      me: Kim S
+      title: >-
+        Neural circuit-specific gene manipulation in mouse brain in vivo using
+        split-intein-mediated split-Cre system
+      venue: STAR Protocols
+      volume: 3
+      issue: 4
+      article: 101807
+      doi: 10.1016/j.xpro.2022.101807
+      role_kr: 공동 제1저자
+      # Plasmids deposited: Addgene #187614, #187615.
+
+    - id: cellrep2020
+      year: 2020
+      authors: [Kim IH, Kim N, Kim S, Toda K, Catavero CM, Courtland JL, Yin HH,
+                Soderling S]
+      corresponding: [Kim IH, Soderling S]
+      me: Kim S
+      title: >-
+        Dysregulation of the synaptic cytoskeleton in the PFC drives neural circuit
+        pathology, leading to social dysfunction
+      venue: Cell Reports
+      volume: 32
+      issue: 4
+      article: 107965
+      doi: 10.1016/j.celrep.2020.107965
+      role_kr: 공저자
+
+    - id: jnm2018
+      year: 2018
+      authors: [Kimm S, Choi JS]
+      corresponding: [Choi JS]
+      me: Kimm S
+      title: >-
+        Sensory and motivational modulation of immediate and delayed defensive responses
+        under dynamic threat
+      venue: Journal of Neuroscience Methods
+      volume: 307
+      pages: 84-94
+      doi: 10.1016/j.jneumeth.2018.06.023
+      role_kr: 제1저자
+
+    - id: stress2018
+      year: 2018
+      authors: [Lee JH, Kimm S, Han JS, Choi JS]
+      corresponding: [Choi JS]
+      me: Kimm S
+      title: >-
+        Chasing as a model of psychogenic stress: characterization of physiological and
+        behavioral responses
+      venue: Stress
+      volume: 21
+      issue: 4
+      pages: 323-332
+      doi: 10.1080/10253890.2018.1455090
+      role_kr: 공저자
+
+  preprint:
+    # The Research Square preprint of natcomm2025 (10.21203/rs.3.rs-3938233/v1) is
+    # deliberately omitted — the journal version above supersedes it.
+    - id: arxiv2026
+      year: 2026
+      authors: [Kim S, Kim SY]
+      me: Kim S
+      title: >-
+        Human factors in detecting AI-generated portraits: age, sex, device, and
+        confidence
+      venue: arXiv
+      article: "arXiv:2603.24048"
+      doi: 10.48550/arXiv.2603.24048
+      url: https://arxiv.org/abs/2603.24048
+      role_kr: 제1저자
+      note: Preprint
+      featured: true
+      # v1 posted 2026-03-25, cs.HC, 36 pp. Verified against the arXiv API and
+      # DataCite. Co-author Sunyul Kim — Yonsei University, Graduate School of
+      # Engineering, Dept. of Artificial Intelligence.
+      # Data & code: github.com/gdrpaul3-byte/hsmu_ai_detection_public
+
+    - id: biorxiv2024mnm
+      year: 2024
+      authors: [Kim S, Kim YE, Ujihara Y, Kim IH]
+      corresponding: [Kim S, Kim IH]
+      me: Kim S
+      title: >-
+        Monosynaptically-interconnected network module (MNM) approach for
+        high-resolution brain sub-network analysis
+      venue: bioRxiv
+      article: "2024.02.19.581007"
+      doi: 10.1101/2024.02.19.581007
+      role_kr: 제1저자
+      note: Preprint
+      # Posted 2024-02-22. Still unpublished as of 2026-08 (checked via Crossref).
+
+  conference:
+    - id: ibro2019
+      year: 2019
+      authors: [Jeong JH, Kimm S, Lee J, Choi JS]
+      corresponding: [Choi JS]
+      me: Kimm S
+      title: >-
+        Differential encoding of events during approach–avoidance conflict situation by
+        the prelimbic cortex
+      venue: IBRO Reports
+      volume: 6
+      pages: S313-S314
+
+    - id: jscp2017
+      year: 2017
+      authors: [Choi JS, Lee JH, Kim S, Han JS]
+      corresponding: [Choi JS]
+      me: Kim S
+      title: Validating an animal model of stress using a chasing robot
+      venue: >-
+        Proceedings of the 15th Conference of the Japanese Society for Cognitive
+        Psychology (日本認知心理学会発表論文集)
+
+    - id: kalas2015
+      year: 2015
+      authors: [Kim S, Hong EH, Jie HS, Jeong JH, Choi JS]
+      corresponding: [Choi JS]
+      me: Kim S
+      title: Control and data acquisition of rodent experiments using Arduino-based system
+      venue: >-
+        Korean Association for Laboratory Animal Science International Symposium
+        (한국실험동물학회 학술발표대회 논문집)
+      pages: "124"
+
+# ---------------------------------------------------------------------------
+# TEACHING — semesters and course codes verified against syllabi (강의계획서),
+# grade sheets (성적처리내역서) and departmental load forms (양식1/양식3).
+# ---------------------------------------------------------------------------
+teaching:
+  - term: 2026-1
+    name_kr: 인지행동실험과설계
+    name_en: Cognitive-Behavioral Experiment and Design
+    code: "443525"
+    credits: 3
+    institution_kr: 화성의과학대학교
+    institution_en: Hwasung Medi-Science University
+    note: >-
+      Newly created course, designed from scratch. Experiment design (RT, attention,
+      memory), AI-assisted coding to build and deploy web/mobile experiments,
+      Firebase data collection, Arduino + heart-rate sensor integration.
+
+  - term: 2026-1
+    name_kr: 뇌과학개론
+    name_en: Introduction to Neuroscience
+    code: "500387"
+    credits: 3
+    institution_kr: 화성의과학대학교
+    institution_en: Hwasung Medi-Science University
+
+  - term: 2026-1
+    name_kr: 전임상개론
+    name_en: Introduction to Preclinical Studies
+    code: "500386"
+    credits: 3
+    institution_kr: 화성의과학대학교
+    institution_en: Hwasung Medi-Science University
+    note: Redesigned for 2026 around ADME/PK/PD and 3R ethics, case-based.
+
+  - term: 2025-2
+    name_kr: 유전공학의이해
+    name_en: Understanding Genetic Engineering
+    code: "500500"
+    credits: 3
+    institution_kr: 화성의과학대학교
+    institution_en: Hwasung Medi-Science University
+
+  - term: 2025-2
+    name_kr: 동물행동실험
+    name_en: Animal Behavior Experiment
+    code: "500501"
+    credits: 3
+    institution_kr: 화성의과학대학교
+    institution_en: Hwasung Medi-Science University
+    note: Theory 2h + practicum 2h; DeepLabCut and a custom elevated-plus-maze pipeline.
+
+  - term: 2025-2
+    name_kr: 기초동물실험
+    name_en: Basic Animal Experiment
+    code: "500498"
+    credits: 3
+    institution_kr: 화성의과학대학교
+    institution_en: Hwasung Medi-Science University
+    note: Theory 2h + practicum 2h.
+
+  - term: 2025-1
+    name_kr: 뇌과학개론
+    name_en: Introduction to Neuroscience
+    code: "500387"
+    credits: 3
+    institution_kr: 화성의과학대학교
+    institution_en: Hwasung Medi-Science University
+
+  - term: 2025-1
+    name_kr: 전임상개론
+    name_en: Introduction to Preclinical Studies
+    code: "500386"
+    credits: 3
+    institution_kr: 화성의과학대학교
+    institution_en: Hwasung Medi-Science University
+
+  - term: 2025-1
+    name_kr: 일반생물학
+    name_en: General Biology
+    code: "500384"
+    credits: 3
+    institution_kr: 화성의과학대학교
+    institution_en: Hwasung Medi-Science University
+
+  - term: 2025-1
+    name_kr: 생리학
+    name_en: Physiology
+    code: "242519"
+    credits: 2
+    institution_kr: 화성의과학대학교 간호학과
+    institution_en: Hwasung Medi-Science University (Dept. of Nursing)
+
+  - term: 2024 Spring
+    name_en: "Guest lecture: “Autism spectrum disorder” — Developmental and Molecular Neurobiology"
+    code: ANAT 825
+    institution_en: University of Tennessee Health Science Center
+
+  - term: 2022 Spring
+    name_en: "Guest lecture: “Autism spectrum disorder and neural circuit-based approach” — Developmental and Molecular Neurobiology"
+    code: ANAT 825
+    institution_en: University of Tennessee Health Science Center
+
+  - term: 2016-1
+    name_kr: 행동신경과학 워크샵 — ANY-maze 사용 및 활용 방법
+    name_en: "Workshop lecture: animal tracking and behavioral measurement with ANY-maze"
+    institution_kr: 고려대학교
+    institution_en: Korea University
+
+# ---------------------------------------------------------------------------
+# GRANTS — `status` is validated. Only `awarded` appears under Research Funding.
+# ---------------------------------------------------------------------------
+grants:
+  - title_kr: >-
+      뇌 인지과학과 생물학적 학습 원리에 기반한 인공지능 학습 기술 개발
+    title_en: >-
+      Development of AI learning frameworks based on brain cognitive science and
+      biological learning principles
+    funder_kr: 과학기술정보통신부 · 정보통신기획평가원(IITP)
+    funder_en: Ministry of Science and ICT / Institute of Information & Communications
+      Technology Planning & Evaluation (IITP)
+    period: 2026.04–2029.12
+    role: Participating researcher (50%)
+    role_kr: 참여연구원 (참여율 50%)
+    status: in_review
+    note: >-
+      2026 AI programme, task 2026-인공지능-10. Lead institution Dongguk University;
+      Korea University co-PI June-Seek Choi. Proposal and oral defence submitted
+      Feb 2026; outcome not recorded in the local archive.
+
+  - title_kr: >-
+      AI 기반 다개체 설치류 사회행동의 정량화와 전뇌 신경활성 연계 분석
+    title_en: >-
+      AI-based quantification of social behaviors in group-housed rodents and their
+      whole-brain neural correlates
+    funder_kr: 과학기술정보통신부 · 한국연구재단(NRF)
+    funder_en: National Research Foundation of Korea (NRF)
+    period: 2026–2028 (3 years, proposed)
+    role: Principal Investigator
+    role_kr: 연구책임자
+    amount: up to ₩150M/year (requested)
+    status: in_review
+    note: >-
+      2026 개인기초연구사업 신진연구(유형B). Submitted Dec 2025; outcome not recorded
+      in the local archive.
+
+  - title_kr: 지산학 상생 협력 실버 디지털 리터러시 교육 및 ESG 캠페인
+    title_en: >-
+      Silver digital literacy education and ESG campaign (industry–academia
+      regional cooperation)
+    funder_kr: 경기도 지역혁신중심 대학지원체계(RISE) 사업 · 화성의과학대학교 RISE 사업단
+    funder_en: Gyeonggi-do RISE Programme, HSMU RISE Centre
+    period: 2025–2026.02 (year 1 of 3)
+    role: Curriculum and courseware development lead
+    role_kr: 교육과정·교재 개발 책임자
+    status: awarded
+    note: >-
+      Delivered three curricula (kiosk basics, smartphone apps, digital health apps;
+      123/132/119 pp.) and two textbooks (318/325 pp.); formally inspected and
+      approved 2026-02-24.
+
+  - title_kr: 경두개 집속초음파 기반 비침습적 뇌 자극의 장기 행동신경학적 안전성 평가
+    title_en: >-
+      Long-term neurobehavioral safety assessment of transcranial focused ultrasound
+      neuromodulation
+    funder_kr: 화성의과학대학교 교내연구비 (신진교수연구비)
+    funder_en: HSMU New Faculty Research Grant
+    period: 2025.04–2026.02
+    role: Principal Investigator
+    role_kr: 연구책임자
+    amount: ₩5,000,000
+    status: awarded
+    note: >-
+      Final research output filed Feb 2026. Scope was redirected mid-award to the
+      human AI-portrait study (HSMU IRB 2025-06) because HSMU has no accredited
+      animal facility.
+
+invited_talks:
+  - year: 2025
+    title: >-
+      3D 프린터로 취미에서 창업까지: 아이디어를 현실로 만드는 기술
+      (From hobby to start-up with 3D printing)
+    venue: HSMU ‘CareerFit’ programme (invited campus lecture)
+    location: Hwasung Medi-Science University, Korea
+    date: "2025-12-02"
+
+  - year: 2025
+    title: >-
+      뇌 신경 회로 타겟팅 기술을 이용한 자폐 스펙트럼 장애 메커니즘 연구
+      (Circuit-targeting approaches to autism spectrum disorder)
+    venue: 1st HSMU Colloquium, Center for Teaching and Learning
+    location: Hwasung Medi-Science University, Korea
+
+  - year: 2022
+    title: Neural circuit-selective Shank3 mutation disrupts social behaviors
+    venue: Memphis Korean Scientists Association
+    location: Memphis, TN, USA
+
+  - year: 2022
+    title: Neural circuit-selective Shank3 mutation disrupts social behaviors
+    venue: 35th US-Korea Conference (UKC)
+    location: Washington, D.C., USA
+
+  - year: 2022
+    title: Neural circuit pathology driven by Shank3 mutation disrupts social behaviors
+    venue: Neuroscience Institute Spring Seminar, University of Tennessee Health Science Center
+    location: Memphis, TN, USA
+
+  - year: 2021
+    title: Neural circuit pathology driven by Shank3 mutation disrupts social behaviors
+    venue: BK21 Seminar, Korea University
+    location: Seoul, Republic of Korea
+
+# Oral vs. poster classification corrected against submission records,
+# conference programmes and society correspondence.
+posters:
+  - year: 2024
+    authors: [Kim S, Kim YE, Ujihara Y, Kim IH]
+    title: >-
+      The miniature neural network module (MNM) approach for mapping and analyzing
+      modular subnetworks in the brain
+    venue: Cold Spring Harbor Laboratory Neuronal Circuits Meeting
+    location: Cold Spring Harbor, NY, USA
+    kind: poster
+
+  - year: 2018
+    authors: [Kim S, Lee JY, Choi JS]
+    title: >-
+      Rat’s head-withdrawal reflex depends on visual and vibrissal information and on
+      auditory conditioning
+    venue: Korean Society of Cognitive and Biological Psychology
+    location: Korea
+    kind: oral
+
+  - year: 2016
+    authors: [Kim S, Jie HS, Choi JS]
+    title: >-
+      A modified version of Lima-Dill model predicts approach-avoidance behavior of rats
+      facing a predator-like robot
+    venue: Society for Neuroscience (Neuroscience 2016)
+    location: San Diego, CA, USA
+    kind: poster
+
+  - year: 2016
+    authors: [Kim S, Choi JS]
+    title: >-
+      Amygdala regulates approach-avoidance conflict under predatory threat in rats:
+      a model-based approach
+    venue: NeuroSplash (Data Blitz)
+    location: Korea
+    kind: oral
+
+  - year: 2015
+    authors: [Kim S, Choi JS]
+    title: >-
+      Control and data acquisition of animal behavior experiments using
+      Arduino-based system
+    venue: Korean Psychological Association Annual Conference
+    location: Seoul, Korea
+    kind: oral
+
+  - year: 2015
+    authors: [Kim S, Hong EW, Jie HS, Jeong JH, Lee JH, Choi JS]
+    title: Control and data acquisition of rodent experiments using Arduino-based system
+    venue: Korean Association for Laboratory Animal Science International Symposium
+    location: Incheon, Korea
+    kind: oral
+
+  - year: 2015
+    authors: [Kimm S, Choi JS]
+    title: >-
+      Central and basolateral amygdala lesions disrupt risk avoidance but spare
+      reflexive defensive system
+    venue: Korean Society for Brain and Neural Sciences
+    location: Korea
+    kind: poster
+
+  - year: 2015
+    authors: [Kimm S, Hong EH, Jie HS, Choi JS]
+    title: >-
+      A cost-effective system for experimental control and data acquisition using Arduino
+    venue: Korean Society of Cognitive and Biological Psychology
+    location: Jeju, Korea
+    kind: poster
+
+  - year: 2014
+    authors: [Kimm SW, Kim DY, Choi JS]
+    title: >-
+      Amygdala modulates approach-avoidance but not reflexive withdrawal in a
+      semi-naturalistic conflict situation
+    venue: Annual Pavlovian Society Meeting
+    location: Seattle, WA, USA
+    kind: poster
+
+  - year: 2014
+    authors: [Kimm S, Kim D, Choi JS]
+    title: >-
+      Amygdala modulates approach-avoidance but not reflexive withdrawal in
+      semi-naturalistic conflict situation
+    venue: Korean Society for Brain and Neural Sciences
+    location: Seoul, Korea
+    kind: poster
+
+  - year: 2014
+    authors: [Kimm S, Kim D, Choi JS]
+    title: >-
+      Partial amygdala lesions increase approach to the robot predator and impede the
+      expression of overall defensive behaviors except for reflexive withdrawal
+    venue: NeuroSplash
+    location: Korea
+    kind: oral
+
+  - year: 2014
+    authors: [Kimm S, Lee YK, Choi JS]
+    title: Search of sign stimulus for rats’ defensive behavior using a cat-like robot
+    venue: Korean Society of Cognitive and Biological Psychology
+    location: Buyeo, Korea
+    kind: oral
+
+  - year: 2013
+    authors: [Kimm S, Choi JS]
+    title: >-
+      Past experience of mild threat reduces anxiety in rats during dynamic interaction
+      with a robot stressor
+    venue: 16th Annual International Meeting of the Korean Society for Brain and Neural Sciences
+    location: Korea University, Seoul, Korea
+    kind: poster
+
+  - year: 2013
+    authors: [Kimm S, Lee JY, Choi JS]
+    title: >-
+      Lobsterbot, a possible new tool for the study of animal’s risk evaluation and
+      decision making
+    venue: Korean Society for Brain and Cognitive Science Conference
+    location: Seoul National University, Seoul, Korea
+    kind: poster
+
+  - year: 2013
+    authors: [Kimm S, Choi JS]
+    title: >-
+      Fear of predation: artificial predation-like motions by robotic agents and their
+      effects on defensive behavior
+    venue: NeuroSplash
+    location: Korea
+    kind: oral
+
+software:
+  - name_en: Small Animal Defensive Response Measurement and Analysis Program
+    name_kr: 소동물 방어반응 계측 및 분석 프로그램
+    registration: C-2016-025109
+    year: 2016
+    description_en: Classical-conditioning experiment control and analysis software
+    description_kr: 고전적 조건화 실험 제어 및 분석 프로그램
+    holder: 고려대학교 산학협력단 외 1인 (건국대학교 산학협력단)
+
+  - name_en: ActiMon — 24-hour small-animal activity monitoring system
+    name_kr: 액티몬(ActiMon)
+    registration: C-2015-008076
+    year: 2015
+    description_en: Continuous 24-hour rodent activity monitoring
+    description_kr: 24시간 소동물 활동 모니터링 시스템
+    holder: 고려대학교 산학협력단
+
+  - name_en: Serial Reaction Time Task
+    name_kr: 연속반응속도검사
+    registration: C-2015-008009
+    year: 2015
+    description_en: Attention and working-memory test battery for rodents
+    description_kr: 동물의 주의력 및 작업기억 검사 프로그램
+    holder: 고려대학교 산학협력단
+
+  - name_en: "Real vs. AI — public portrait-discrimination web experiment"
+    name_kr: 진짜 vs AI 초상 판별 웹 실험
+    year: 2025
+    url: https://hsmu-real-vs-ai-test.web.app/
+    description_en: >-
+      Two-alternative forced-choice web experiment used to collect the 1,664-participant
+      dataset behind the 2026 AI-portrait study
+    description_kr: AI 생성 초상 판별 온라인 실험 플랫폼 (참여자 1,664명)
+
+  - name_en: hsmu_ai_detection_public
+    year: 2026
+    url: https://github.com/gdrpaul3-byte/hsmu_ai_detection_public
+    description_en: >-
+      Open stimulus set, metadata and de-identified trial-level behavioural data for the
+      AI-generated portrait detection study
+    description_kr: AI 초상 판별 연구의 공개 자극·메타데이터·비식별 행동 데이터
+
+  - name_en: "Addgene plasmid deposition: split-Cre toolkit"
+    year: 2022
+    url: https://www.addgene.org/browse/article/28219553/
+    description_en: >-
+      pAAV-Ef1a-CreN-InteinN (#187614) and pAAV-Ef1a-InteinC-CreC (#187615) —
+      circuit-specific gene-manipulation reagents distributed to the community
+    description_kr: 신경회로 특이적 유전자 조작용 split-Cre 플라스미드 기탁
+
+service:
+  - period: 2025.09–2027.08
+    role_kr: 학과장 (임명 2025.9.1.–2027.8.31.)
+    role_en: Department Chair, Department of Bio-Healthcare
+    org: 화성의과학대학교 / Hwasung Medi-Science University
+
+  - period: 2026.02
+    role_kr: 전문가 내용타당도 검토위원 — 「의과학 특성화 대학 핵심역량 진단 척도」 개발
+    role_en: Expert content-validity reviewer, institutional core-competency scale development
+    org: 화성의과학대학교
+
+  - period: 2025.10–2025.12
+    role_kr: 장학심의위원회 위원 (제11–17차 회의)
+    role_en: Member, Scholarship Review Committee
+    org: 화성의과학대학교
+
+  - period: 2025
+    role_kr: Liberal 101 장학 프로그램 심사위원 (전교 21명 레포트 심사)
+    role_en: Reviewer, Liberal 101 scholarship programme
+    org: 화성의과학대학교
+
+  - period: 2025.06
+    role_kr: 전공교육과정소위원회 위원
+    role_en: Member, Major Curriculum Subcommittee
+    org: 화성의과학대학교
+
+  - period: 2025–
+    role_kr: 학과 지도교수 (재학생 11명 배정), 학사경고자 상담, 면학장학금 추천
+    role_en: Faculty academic advisor (11 advisees), academic-probation counselling,
+      merit-scholarship nomination
+    org: 화성의과학대학교 바이오헬스케어학과
+
+  - period: 2025–
+    role_kr: 학과 홈페이지 구축·개편, 입학설명회 학과 발표, 학과회의 주재 및 교육과정·시간표 편성 총괄
+    role_en: Departmental website build, admissions presentations, chairing faculty
+      meetings, curriculum and timetable planning
+    org: 화성의과학대학교 바이오헬스케어학과
+
+  - period: 2015–
+    role_kr: 정회원 — 한국심리학회, 한국실험동물학회
+    role_en: Member — Korean Psychological Association; Korean Association for
+      Laboratory Animal Science
+
+peer_review:
+  - journal: STAR Protocols (Cell Press)
+    years: "2024, 2025"
+    note: >-
+      Four review reports, including both rounds of one 2025 manuscript
+  - journal: Genes, Brain and Behavior
+    years: "2022"
+  - journal: Scientific Reports
+    years: "2022"
+  - journal: Behavioural Brain Research (Elsevier)
+    years: "2014"
+    note: two manuscripts, co-review with doctoral advisor
+
+mentoring:
+  - period: 2025–
+    name: 11 undergraduate advisees, Dept. of Bio-Healthcare
+    role: Faculty academic advisor, Hwasung Medi-Science University
+  - period: 2021–2024
+    name: Yusuke Ujihara, B.A.
+    role: Graduate student, UTHSC
+  - period: 2024.05
+    name: Elizabeth Rachel Dang
+    role: M.D. candidate, UTHSC
+  - period: 2014
+    name: Teaching assistant, Introduction to Brain Science (ISC218)
+    role: Korea University International Summer Campus
+  - period: 2013
+    name: Teaching assistant, Learning Psychology
+    role: Korea University, Dept. of Psychology
+
+awards:
+  - year: 2022
+    name_en: Journal cover selection, Cell Reports 39(10)
+    name_kr: Cell Reports 표지 논문 선정
+    org: Cell Press
+  - year: 2018
+    name_en: Research Scholarship
+    name_kr: 연구장학금
+    org: Korea University
+  - year: 2015
+    name_en: BK21 PLUS Scholarship
+    org: Korea University
+  - year: 2014
+    name_en: Institute of Foreign Language Studies Work Scholarship
+    org: Korea University
+  - year: 2014
+    name_en: BK21 PLUS Scholarship
+    org: Korea University
+  - year: 2013
+    name_en: Research Assistant Scholarship
+    org: Korea University
+  - year: 2013
+    name_en: BK21 PLUS Scholarship
+    org: Korea University
+  - year: 2010
+    name_en: Work Scholarship
+    org: Korea University
+  - year: 2006
+    name_en: Freshman Special Scholarship
+    org: Korea University
+
+certifications:
+  - date: "2026-02-25"
+    name_en: Research Ethics for Principal Investigators (Science & Engineering)
+    name_kr: 연구책임자를 위한 연구윤리(이공계)
+    issuer: 국가과학기술인력개발원 (KIRD)
+    note: 2 h · valid to 2029-02-25 · no. 2026-12-31-S-E-022845
+
+  - date: "2025-07-19"
+    name_en: Laboratory Animal Technician Practical Workshop (theory module)
+    name_kr: 실험동물기술원 실기 워크숍 이론 과정
+    issuer: 한국실험동물학회 인증위원회 (KALAS)
+    note: 발급번호 2025-0327
+
+  - date: "2025-05-24"
+    name_en: Laboratory Safety Education & Training for new researchers (8 h)
+    name_kr: 연구실 신규 안전 교육·훈련
+    issuer: 화성의과학대학교
+
+  - date: "2025-04-30"
+    name_en: Online Training for Human Subjects Researchers on the Ethical Conduct of Research
+    name_kr: 인간대상연구자 교육
+    issuer: 국가생명윤리정책원 (KoNIBP)
+    note: 4 h · valid to 2027-04-30 · no. 2025-030596
+
+  - date: "2019-02-28"
+    name_en: Biosafety Training / Laboratory Practicum Safety Training
+    name_kr: 생물 안전교육 · 실습교육
+    issuer: 한국생명공학연구원 국가연구안전관리본부 (KRIBB)
+    note: Lab-2019E-05361, Lab-2019E-05328
+
+  - date: "2018-09-04"
+    name_en: Biosafety Training
+    name_kr: 생물 안전교육
+    issuer: 한국생명공학연구원 국가연구안전관리본부 (KRIBB)
+    note: Lab-2018E-16223
+
+  - date: "2013-05-09"
+    name_en: CITI Program — Human Research, Basic Course
+    issuer: Collaborative Institutional Training Initiative (via Korea University)
+    note: no. K-2013-10317045
+
+media:
+  - year: 2022
+    outlet: 한빛사 (BRIC)
+    title: >-
+      Neural circuit pathology driven by Shank3 mutation disrupts social behaviors —
+      한빛사 인터뷰
+  - year: 2022
+    outlet: Spectrum News
+    title: Autism-linked mutation disrupts brain circuit to change social behavior
+    date: "2022-06-24"
+
+outreach:
+  - period: 2026–
+    name_en: Makers — student maker & technology club
+    name_kr: 메이커스(Makers)
+    description_en: >-
+      Faculty advisor. Student club for AI coding, generative media, 3D printing,
+      Arduino and automation, run as a bridge between the lab's human–AI research and
+      hands-on student prototyping.
+    description_kr: >-
+      지도교수. AI 코딩·생성형 미디어·3D 프린팅·아두이노·자동화 창작형 기술 동아리.
+
+  - year: 2025
+    name_en: Public participant-recruitment campaign, AI-portrait perception study
+    name_kr: AI 초상 판별 연구 공개 참여자 모집 캠페인
+    description_en: >-
+      Campus and online science-engagement campaign that recruited 1,843 public
+      participants for the AI-generated portrait detection experiment.
+
+  - year: 2025
+    name_en: "화성왭성 AI creative contest — video entry “꿈속의 화성”"
+    name_kr: 화성왔성 AI 공모전 영상 부문 출품 (작품명 「꿈속의 화성」)
+    description_en: >-
+      Generative-AI music video produced as team lead; an applied companion to the
+      lab's generative-media research.
+
+skills:
+  neural_circuit_methods:
+    - Viral circuit tracing (retrograde / anterograde / monosynaptic rabies)
+    - Split-Cre and intersectional circuit-specific gene manipulation
+    - Optogenetics
+    - In vivo calcium imaging (fiber photometry, miniscope)
+    - In vivo electrophysiology
+    - Immunohistochemistry and whole-brain mapping
+  behaviour:
+    - Rodent social, defensive and approach-avoidance paradigms
+    - Semi-naturalistic robot-predator foraging tasks
+    - Fear conditioning, extinction and context renewal
+    - Automated tracking (DeepLabCut, ANY-maze, SAM-based multi-animal tracking)
+  human_experimentation:
+    - Large-scale online psychophysics (2AFC, reaction-time modelling)
+    - IRB protocol design and human-subjects research governance
+    - Signal detection theory
+  computational:
+    - Python, R, MATLAB
+    - Mixed-effects and Bayesian modelling
+    - RNA-seq / differential-expression and network analysis
+    - Machine-learning behavioural classification
+  engineering:
+    - Arduino-based experiment control and data acquisition
+    - 3D printing and rapid prototyping
+    - Web application development (Firebase, GitHub Pages) for experiment delivery
+  languages:
+    - Korean (native)
+    - English (professional working proficiency)
+
+# military service — see private.yaml
+
+references:
+  - name: Dr. June-Seek Choi
+    title: Professor of Psychology
+    org: Korea University
+    email: j-schoi@korea.ac.kr
+  - name: Dr. Il Hwan Kim
+    title: Associate Professor, Dept. of Anatomy & Neurobiology
+    org: University of Tennessee Health Science Center
+    email: ikim9@uthsc.edu
+
+# ---------------------------------------------------------------------------
+# Open questions — things no local document could settle. Resolve these, then
+# move the answers into the sections above and delete the question.
+# ---------------------------------------------------------------------------
+open_questions:
+  - >-
+    NRF 신진연구(유형B) and IITP 2026-인공지능-10: both were submitted (Dec 2025 and
+    Feb 2026) but neither folder records the outcome. Both are currently listed as
+    `in_review`. If either was awarded, flip `status` to `awarded` and add the grant
+    number and amount; if not, set `not_funded` and it will stop being printed.
+  - >-
+    STAR Protocols split-Cre (10.1016/j.xpro.2022.101807): the printed correspondence
+    footnote lists skim135@uthsc.edu alongside the lead contact, which may support a
+    co-corresponding claim. Currently credited to Kim IH alone — confirm with the
+    publisher record before changing.
+  - >-
+    Manuscript in preparation — Kim S, Lim S, Choi JS, “A naturalistic conditioned-fear
+    extinction paradigm reveals sex-dependent behavioral relevance of darting and
+    divergent basolateral amygdala transcriptomic networks” (target: Experimental
+    Neurobiology, draft v3, references not yet compiled). Add to `publications.preprint`
+    once submitted.
+  - >-
+    A second AI-detection manuscript appears to be in progress (GitHub repo
+    hsmu_ai_detection_kci_sdt — “KCI manuscript: age differences in AI-generated face
+    detection, signal detection analysis”). Add once submitted.
+  - >-
+    HSMU IRB approval HSMUIRB-2025-06 expires 2026-08-26. Renew if data collection
+    continues.
+  - >-
+    Graduate-era competitive funding found in the archive but with no award notice:
+    Korea University Graduate School Junior Fellow Research Grant (2016–2017, ₩3M
+    requested) and BK21 PLUS Graduate Student Creative Research Project (2014–2015,
+    ₩3.5M requested). Add to `grants` or `awards` if they were in fact awarded.

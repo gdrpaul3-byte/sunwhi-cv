@@ -1,0 +1,16 @@
+__pycache__/
+*.pyc
+.venv/
+venv/
+.DS_Store
+Thumbs.db
+~$*
+*.tmp
+
+# build/ IS committed: GitHub Pages serves it and the lab site pulls
+# build/publications.json straight from this repo. Do not ignore it.
+
+# Personal details (home address, date of birth, mobile, military service)
+# and the documents built from them. Never commit these.
+private.yaml
+build-private/

@@ -1,0 +1,33 @@
+{
+  "orcid": "0000-0001-5009-5544",
+  "checked": "2026-08-24",
+  "missing_works": [
+    {
+      "title": "Neural circuit-specific gene manipulation in mouse brain in vivo using split-intein-mediated split-Cre system",
+      "doi": "10.1016/j.xpro.2022.101807",
+      "year": 2022,
+      "venue": "STAR Protocols"
+    }
+  ],
+  "open_ended_education": [
+    {
+      "role": "Ph.D",
+      "org": "Korea University",
+      "start": "2013",
+      "problem": "no end date — shows as ongoing"
+    }
+  ],
+  "counts": {
+    "orcid_education": 1,
+    "cv_education": 3,
+    "orcid_employment": 2,
+    "cv_appointments": 2,
+    "orcid_fundings": 0,
+    "cv_grants_awarded": 2,
+    "orcid_distinctions": 0,
+    "cv_awards": 9,
+    "orcid_services": 0,
+    "cv_service": 8
+  },
+  "researcher_urls": []
+}
