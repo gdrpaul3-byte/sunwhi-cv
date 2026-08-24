@@ -17,7 +17,8 @@ from docx.enum.table import WD_TABLE_ALIGNMENT
 from docx.enum.text import WD_ALIGN_PARAGRAPH
 from docx.shared import Pt, RGBColor
 
-from cvdata import PUB_KINDS, author_string, citation, daterange, stamp
+from cvdata import (PUB_KINDS, author_string, citation, daterange, funded_grants,
+                    grants, stamp)
 
 KR_FONT = "맑은 고딕"
 EN_FONT = "Calibri"
@@ -119,15 +120,15 @@ def korean_resume(d: dict, out_dir: str) -> str:
                             pub.get("note_kr") or pub.get("note") or ""])
     _grid(doc, ["출간연도", "학술지", "권·호", "제목", "기여도", "특이사항"], pubrows)
 
-    if d["grants"]:
+    shown_grants = grants(d)
+    if shown_grants:
         _heading(doc, "5. 연구비 실적")
-        status_kr = {"awarded": "선정", "applied": "신청",
-                     "in_review": "심사중", "not_funded": "미선정"}
+        status_kr = {"awarded": "선정", "applied": "신청", "in_review": "심사중"}
         _grid(doc, ["기간", "과제명", "지원기관", "역할", "연구비", "상태"],
               [[g.get("period", ""), g.get("title_kr") or g.get("title_en", ""),
                 g.get("funder_kr") or g.get("funder_en", ""),
                 g.get("role_kr") or g.get("role", ""), g.get("amount", ""),
-                status_kr.get(g.get("status"), "")] for g in d["grants"]])
+                status_kr.get(g.get("status"), "")] for g in shown_grants])
 
     _heading(doc, "6. 강의 실적")
     _grid(doc, ["연도·학기", "강의명", "교과코드", "학점", "학교명"],
@@ -280,7 +281,7 @@ def english_cv(d: dict, out_dir: str) -> str:
     ]:
         items = d.get(key) or []
         if key == "grants":
-            items = [g for g in items if g.get("status") == "awarded"]
+            items = funded_grants(d)
         if not items:
             continue
         _heading(doc, label)

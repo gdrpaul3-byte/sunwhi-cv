@@ -3,7 +3,8 @@
 """Markdown renderers: full English CV, Korean 이력서, and a one-page résumé."""
 from __future__ import annotations
 
-from cvdata import PUB_KINDS, author_string, citation, daterange, stamp
+from cvdata import (PUB_KINDS, author_string, citation, daterange, funded_grants,
+                    grants, pending_grants, stamp)
 
 BOLD = "**%s**"
 
@@ -121,10 +122,10 @@ def cv_en(d: dict) -> str:
                  % (m.get("citations"), m.get("h_index"), m.get("i10_index"),
                     m.get("as_of", stamp(d))))
 
-    if d["grants"]:
+    funded = funded_grants(d)
+    other = pending_grants(d)
+    if funded or other:
         L.append(_h(2, "Research Funding"))
-        funded = [g for g in d["grants"] if g.get("status") == "awarded"]
-        other = [g for g in d["grants"] if g.get("status") != "awarded"]
         for g in funded:
             L.append("**%s** — %s  " % (g.get("period", ""),
                                         g.get("title_en") or g.get("title_kr")))
@@ -328,13 +329,13 @@ def cv_kr(d: dict) -> str:
                 pub.get("title", ""), pub.get("role_kr", ""),
                 pub.get("note_kr") or pub.get("note") or ""))
 
-    if d["grants"]:
+    shown_grants = grants(d)
+    if shown_grants:
         L.append("\n## 5. 연구비 수혜 실적\n")
         L.append("| 기간 | 과제명 | 지원기관 | 역할 | 연구비 | 상태 |")
         L.append("|---|---|---|---|---|---|")
-        status_kr = {"awarded": "선정", "applied": "신청",
-                     "in_review": "심사중", "not_funded": "미선정"}
-        for g in d["grants"]:
+        status_kr = {"awarded": "선정", "applied": "신청", "in_review": "심사중"}
+        for g in shown_grants:
             L.append("| %s | %s | %s | %s | %s | %s |" % (
                 g.get("period", ""), g.get("title_kr") or g.get("title_en", ""),
                 g.get("funder_kr") or g.get("funder_en", ""), g.get("role_kr") or g.get("role", ""),
@@ -446,7 +447,7 @@ def resume_en(d: dict) -> str:
                  % (m.get("citations"), m.get("h_index"), m.get("i10_index"),
                     m.get("as_of", stamp(d))))
 
-    funded = [g for g in d["grants"] if g.get("status") == "awarded"]
+    funded = funded_grants(d)
     if funded:
         L.append(_h(2, "Funding"))
         for g in funded:

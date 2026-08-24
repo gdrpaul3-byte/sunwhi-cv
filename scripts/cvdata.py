@@ -283,6 +283,24 @@ def citation(pub: dict, bold_self: str | None = None, link: bool = False) -> str
     return " ".join(b for b in bits if b)
 
 
+# Grant statuses that may appear in a rendered document. A rejected
+# application stays in cv.yaml as a record of the work, but is never printed —
+# every renderer must go through these helpers rather than filter inline.
+PRINTABLE_GRANT_STATUS = ("awarded", "applied", "in_review")
+
+
+def grants(d: dict, statuses=PRINTABLE_GRANT_STATUS) -> list[dict]:
+    return [g for g in (d.get("grants") or []) if g.get("status") in statuses]
+
+
+def funded_grants(d: dict) -> list[dict]:
+    return grants(d, ("awarded",))
+
+
+def pending_grants(d: dict) -> list[dict]:
+    return grants(d, ("applied", "in_review"))
+
+
 def all_publications(d: dict) -> list[dict]:
     out = []
     for kind in PUB_KINDS:

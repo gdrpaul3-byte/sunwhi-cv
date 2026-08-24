@@ -485,11 +485,11 @@ grants:
     period: 2026.04–2029.12
     role: Participating researcher (50%)
     role_kr: 참여연구원 (참여율 50%)
-    status: in_review
+    status: not_funded
     note: >-
       2026 AI programme, task 2026-인공지능-10. Lead institution Dongguk University;
       Korea University co-PI June-Seek Choi. Proposal and oral defence submitted
-      Feb 2026; outcome not recorded in the local archive.
+      Feb 2026; not selected. Kept as a record only — never rendered.
 
   - title_kr: >-
       AI 기반 다개체 설치류 사회행동의 정량화와 전뇌 신경활성 연계 분석
@@ -502,10 +502,10 @@ grants:
     role: Principal Investigator
     role_kr: 연구책임자
     amount: up to ₩150M/year (requested)
-    status: in_review
+    status: not_funded
     note: >-
-      2026 개인기초연구사업 신진연구(유형B). Submitted Dec 2025; outcome not recorded
-      in the local archive.
+      2026 개인기초연구사업 신진연구(유형B). Submitted Dec 2025; not selected.
+      Kept as a record only — never rendered.
 
   - title_kr: 지산학 상생 협력 실버 디지털 리터러시 교육 및 ESG 캠페인
     title_en: >-
@@ -985,11 +985,6 @@ references:
 # move the answers into the sections above and delete the question.
 # ---------------------------------------------------------------------------
 open_questions:
-  - >-
-    NRF 신진연구(유형B) and IITP 2026-인공지능-10: both were submitted (Dec 2025 and
-    Feb 2026) but neither folder records the outcome. Both are currently listed as
-    `in_review`. If either was awarded, flip `status` to `awarded` and add the grant
-    number and amount; if not, set `not_funded` and it will stop being printed.
   - >-
     STAR Protocols split-Cre (10.1016/j.xpro.2022.101807): the printed correspondence
     footnote lists skim135@uthsc.edu alongside the lead contact, which may support a

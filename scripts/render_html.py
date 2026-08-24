@@ -5,7 +5,8 @@ from __future__ import annotations
 
 import html as _html
 
-from cvdata import PUB_KINDS, author_string, daterange, stamp
+from cvdata import (PUB_KINDS, author_string, daterange, funded_grants,
+                    pending_grants, stamp)
 
 BOLD = "<strong>%s</strong>"
 
@@ -291,9 +292,9 @@ def web_cv(d: dict) -> str:
         S.append('<ol class="pubs">%s</ol>' % "".join(_pub_li(x) for x in pubs))
 
     # -- funding ----------------------------------------------------------
-    if d["grants"]:
-        funded = [g for g in d["grants"] if g.get("status") == "awarded"]
-        pending = [g for g in d["grants"] if g.get("status") in ("applied", "in_review")]
+    funded = funded_grants(d)
+    pending = pending_grants(d)
+    if funded or pending:
         if funded:
             S.append("<h2>Research Funding</h2>")
             for g in funded:

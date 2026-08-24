@@ -81,11 +81,6 @@ Gyeonggi-do RISE Programme, HSMU RISE Centre · Role: Curriculum and courseware 
 **2025.04–2026.02** — Long-term neurobehavioral safety assessment of transcranial focused ultrasound neuromodulation  
 HSMU New Faculty Research Grant · Role: Principal Investigator · ₩5,000,000
 
-*Submitted / under review*
-
-- 2026.04–2029.12 — Development of AI learning frameworks based on brain cognitive science and biological learning principles (in_review)
-- 2026–2028 (3 years, proposed) — AI-based quantification of social behaviors in group-housed rodents and their whole-brain neural correlates (in_review)
-
 ## Teaching
 
 | Term | Course | Code | Credits | Institution |

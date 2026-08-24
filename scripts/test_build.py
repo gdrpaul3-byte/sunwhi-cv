@@ -150,6 +150,46 @@ def _grants():
     assert not bad, "invalid status on: %s" % ", ".join(bad)
 
 
+@check("a rejected grant never appears in any rendered document")
+def _rejected_grants_never_render():
+    """not_funded is a private record, not a CV line.
+
+    Checked against a synthetic rejection rather than only the real data, so
+    the guard holds even when cv.yaml happens to contain none.
+    """
+    import copy
+    probe = "ZZTESTREJECTEDGRANTZZ"
+    d = copy.deepcopy(PUBLIC)
+    d.setdefault("grants", []).append({
+        "title_en": probe, "title_kr": probe, "funder_en": probe,
+        "period": "1999", "role": probe, "amount": probe, "status": "not_funded",
+    })
+    leaks = []
+    for name, text in [
+        ("cv-en.md", render_markdown.cv_en(d)),
+        ("cv-kr.md", render_markdown.cv_kr(d)),
+        ("resume-en.md", render_markdown.resume_en(d)),
+        ("index.html", render_html.web_cv(d)),
+    ]:
+        if probe in text:
+            leaks.append(name)
+    try:
+        import render_docx  # noqa: F401
+    except ImportError:
+        pass
+    else:
+        import tempfile
+        import zipfile
+        with tempfile.TemporaryDirectory() as tmp:
+            for path in render_docx.build(d, tmp):
+                with zipfile.ZipFile(path) as z:
+                    blob = b"".join(z.read(n) for n in z.namelist()
+                                    if n.endswith(".xml"))
+                if probe.encode() in blob:
+                    leaks.append(os.path.basename(path))
+    assert not leaks, "rejected grant rendered into: %s" % ", ".join(leaks)
+
+
 @check("JSON artifacts are serializable and complete")
 def _json():
     resume = render_json.json_resume(PUBLIC)
