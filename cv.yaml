@@ -169,10 +169,13 @@ publications:
       volume: 16
       article: 1407
       doi: 10.1038/s41467-025-56720-1
-      role_kr: 공동 제1저자
+      role_kr: 공저자 (동등기여)
       featured: true
-      # 17 pp. Received 2024-03-06, accepted 2025-01-29. Cell Press prints no
-      # issue number for this article — 1407 is the article number, not an issue.
+      # 17 pp. Received 2024-03-06, accepted 2025-01-29. Nature prints no issue
+      # number for this article — 1407 is the article number, not an issue.
+      # The equal-contribution footnote covers authors 2–4 (Kim M, Kim S, Lee R)
+      # and does NOT include the first author, so this is an equal-contributing
+      # co-authorship, not a co-first authorship.
 
     - id: frontiers2023
       year: 2023

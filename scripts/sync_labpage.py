@@ -39,48 +39,60 @@ def esc(s) -> str:
     return html.escape("" if s is None else str(s), quote=True)
 
 
-def render_block(d: dict, indent: str = "          ") -> str:
-    """Publication cards in the lab site's existing markup idiom."""
-    rows = []
-    for kind in PUB_KINDS:
-        for pub in d["publications"][kind]:
-            rows.append(pub)
+# Which buckets the website shows. Conference abstracts stay on the CV only.
+SITE_KINDS = ["journal", "preprint"]
+
+
+def site_rows(d: dict) -> list:
+    rows = [p for kind in SITE_KINDS for p in d["publications"][kind]]
     rows.sort(key=lambda p: int(str(p.get("year", 0))[:4] or 0), reverse=True)
+    return rows
 
+
+def _venue(pub: dict) -> str:
+    """'Cell Reports 39(10)', 'Nature Communications 16, 1407', 'arXiv:2603.24048'."""
+    if pub.get("venue") == "arXiv":
+        return esc(pub.get("article") or "arXiv")
+    out = esc(pub.get("venue") or "")
+    if pub.get("volume"):
+        out += " %s" % esc(pub["volume"])
+        if pub.get("issue"):
+            out += "(%s)" % esc(pub["issue"])
+        if pub.get("article") and not pub.get("issue"):
+            out += ", %s" % esc(pub["article"])
+    elif pub.get("article"):
+        out += " %s" % esc(pub["article"])
+    return out
+
+
+def _badges(pub: dict) -> str:
+    """The site's own badge vocabulary: 주저자 / 공저자 / 표지 선정."""
+    out = []
+    role = pub.get("role_kr") or ""
+    if "제1저자" in role or "주저자" in role:
+        out.append('<span class="pub-badge badge-first">주저자</span>')
+    elif "공저자" in role:
+        out.append('<span class="pub-badge badge-co">공저자</span>')
+    if pub.get("note_kr") and "표지" in pub["note_kr"]:
+        out.append('<span class="pub-badge badge-cover">표지 선정</span>')
+    return "".join(out)
+
+
+def render_block(d: dict, indent: str = "      ") -> str:
+    """Publication list items in the lab site's existing markup idiom."""
     out = [START, indent + WARN]
-    for pub in rows:
-        venue = esc(pub.get("venue") or "")
-        if pub.get("volume"):
-            venue += " %s" % esc(pub["volume"])
-            if pub.get("issue"):
-                venue += "(%s)" % esc(pub["issue"])
-        if pub.get("article"):
-            venue += ", %s" % esc(pub["article"])
+    for pub in site_rows(d):
         href = ("https://doi.org/%s" % pub["doi"]) if pub.get("doi") else (pub.get("url") or "")
-
-        card = [
-            '%s<article class="pub" data-year="%s" data-kind="%s">' % (
-                indent, esc(pub.get("year")), esc(pub.get("kind"))),
-            '%s  <span class="pub-year">%s</span>' % (indent, esc(pub.get("year"))),
-            '%s  <h3 class="pub-title">%s</h3>' % (
-                indent, esc((pub.get("title") or "").rstrip("."))),
-        ]
-        tags = []
-        if pub.get("role_kr"):
-            tags.append('<span class="pub-tag">%s</span>' % esc(pub["role_kr"]))
-        if pub.get("note_kr") or pub.get("note"):
-            tags.append('<span class="pub-tag pub-tag--flag">%s</span>'
-                        % esc(pub.get("note_kr") or pub.get("note")))
-        if tags:
-            card.append('%s  <p class="pub-tags">%s</p>' % (indent, "".join(tags)))
-        if href:
-            card.append('%s  <p class="pub-venue"><a href="%s" rel="noopener">%s</a></p>'
-                        % (indent, esc(href), venue))
-        else:
-            card.append('%s  <p class="pub-venue">%s</p>' % (indent, venue))
-        card.append("%s</article>" % indent)
-        out.append("\n".join(card))
-
+        title = esc((pub.get("title") or "").rstrip(".")) + "."
+        link = ('<a class="pub-link" href="%s" target="_blank" rel="noopener">%s</a>'
+                % (esc(href), title)) if href else title
+        out.append("\n".join([
+            '%s<li class="pub-item">' % indent,
+            '%s  <div class="pub-year">%s</div>' % (indent, esc(pub.get("year"))),
+            '%s  <div class="pub-title">%s%s</div>' % (indent, link, _badges(pub)),
+            '%s  <div class="pub-journal">%s</div>' % (indent, _venue(pub)),
+            "%s</li>" % indent,
+        ]))
     out.append(indent + END)
     return "\n".join(out)
 
@@ -107,18 +119,28 @@ def sync(lab_dir: str, check: bool = False, source: str | None = None) -> int:
     indent = indent_m.group(1) if indent_m else "          "
     new = render_block(d, indent=indent)
 
-    if old == new:
-        print("lab page publications already in sync (%d entries)"
-              % len(cvdata.all_publications(d)))
+    n = len(site_rows(d))
+    updated = html.replace(old, new)
+
+    # The boot animation announces a record count. Keep it honest — it drifted
+    # out of step with the list once already, when a paper was dropped during a
+    # redesign and the count was left behind.
+    updated, hits = re.subn(r"(Mounting publication index \()\d+( records\))",
+                            r"\g<1>%d\g<2>" % n, updated)
+    if not hits:
+        sys.stderr.write("  note: boot-sequence record count not found — skipped\n")
+
+    if updated == html:
+        print("lab page publications already in sync (%d entries)" % n)
         return 0
 
     if check:
         sys.stderr.write("lab page publications are OUT OF SYNC with cv.yaml\n")
         return 1
 
-    io.open(index, "w", encoding="utf-8", newline="\n").write(html.replace(old, new))
-    print("updated %s — %d publications, generated %s"
-          % (index, len(cvdata.all_publications(d)), stamp(d)))
+    io.open(index, "w", encoding="utf-8", newline="\n").write(updated)
+    print("updated %s — %d publications (%s), generated %s"
+          % (index, n, "/".join(SITE_KINDS), stamp(d)))
     return 0
 
 

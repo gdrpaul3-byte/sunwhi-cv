@@ -31,7 +31,7 @@
 
 | 출간연도 | 학술지 | 권·호 | 제목 | 기여도 | 특이사항 |
 |---|---|---|---|---|---|
-| 2025 | Nature Communications | 16, 1407 | Endothelial SHANK3 regulates tight junctions in the neonatal mouse blood-brain barrier through β-Catenin signaling | 공동 제1저자 |  |
+| 2025 | Nature Communications | 16, 1407 | Endothelial SHANK3 regulates tight junctions in the neonatal mouse blood-brain barrier through β-Catenin signaling | 공저자 (동등기여) |  |
 | 2023 | Frontiers in Behavioral Neuroscience | 17, 1212884 | The central amygdala modulates distinctive conflict-like behaviors in a naturalistic foraging task | 제1저자 | 저자명 ‘Sunwhi Kimm’으로 출간 |
 | 2022 | Cell Reports | 39(10), 110906 | Neural circuit pathology driven by Shank3 mutation disrupts social behaviors | 제1저자 | 해당 호 표지 선정 |
 | 2022 | STAR Protocols | 3(4), 101722 | Simultaneous analysis of social behaviors and neural responses in mice using round social arena system | 공동 제1저자 |  |
