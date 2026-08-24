@@ -12,7 +12,7 @@ on:
     - cron: "0 3 1 * *"
 
 permissions:
-  contents: write
+  contents: read      # nothing is pushed back; build/ is committed by hand
   pages: write
   id-token: write
 
@@ -84,17 +84,23 @@ jobs:
           fi
         continue-on-error: true
 
-      - name: Commit rebuilt artifacts
+      # CI deliberately does NOT commit build/. Pages is deployed from the
+      # files this job just built, and the committed copy comes from whoever
+      # edited cv.yaml. Having both write build/ meant every local push
+      # conflicted on the generated .docx and .pdf binaries.
+      #
+      # Instead, fail loudly if the committed build/ is stale, so the tree
+      # never claims to be something it isn't.
+      - name: Committed build/ matches cv.yaml
         if: github.event_name != 'pull_request'
         run: |
-          git config user.name  "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add build
-          if git diff --staged --quiet; then
-            echo "build/ unchanged"
+          if git diff --quiet -- build/cv-en.md build/cv-kr.md build/resume-en.md \
+                                 build/index.html build/cv.json build/publications.json; then
+            echo "committed build/ is up to date"
           else
-            git commit -m "chore: rebuild CV artifacts from cv.yaml"
-            git push
+            echo "::error::build/ is stale — run 'python scripts/build.py' and commit the result"
+            git diff --stat -- build/
+            exit 1
           fi
 
       - uses: actions/upload-artifact@v4

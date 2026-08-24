@@ -181,8 +181,11 @@ The validator is the contract. If `--check` passes, every renderer will produce
 sensible output — so an agent can edit `cv.yaml`, run `--check`, and know whether it
 broke anything without reading a single renderer.
 
-CI runs on every push and on the 1st of each month, rebuilds everything, commits
-`build/` back, deploys Pages, and posts the ORCID drift table to the job summary.
+CI runs on every push and on the 1st of each month: it validates `cv.yaml`, runs the
+tests, rebuilds everything, deploys Pages from what it just built, and posts the ORCID
+drift table to the job summary. It does **not** commit `build/` — you do, along with
+your `cv.yaml` edit. CI fails if the committed `build/` is stale, so run
+`python scripts/build.py` before pushing.
 
 ---
 
