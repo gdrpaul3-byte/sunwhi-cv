@@ -9,14 +9,7 @@
       "venue": "STAR Protocols"
     }
   ],
-  "open_ended_education": [
-    {
-      "role": "Ph.D",
-      "org": "Korea University",
-      "start": "2013",
-      "problem": "no end date — shows as ongoing"
-    }
-  ],
+  "open_ended_education": [],
   "counts": {
     "orcid_education": 1,
     "cv_education": 3,
