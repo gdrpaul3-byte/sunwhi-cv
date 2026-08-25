@@ -132,11 +132,11 @@ HSMU New Faculty Research Grant · Role: Principal Investigator
 - **ActiMon — 24-hour small-animal activity monitoring system** — C-2015-008076 (2015). Continuous 24-hour rodent activity monitoring
 - **Serial Reaction Time Task** — C-2015-008009 (2015). Attention and working-memory test battery for rodents
 
-*Open-source research & teaching tools*
+*Research, teaching and operations tools*
 
-- **HSMU institutional research (IR) dashboard** (2026). Agent-built dashboard that assembles institutional research reporting from university data sources — [hsmu-ir-dashboard](https://github.com/gdrpaul3-byte/hsmu-ir-dashboard) *(private)*
-- **HSMU course CQI automation** (2026). Automates the course-level continuous quality improvement cycle — evaluation intake, report drafting and self-assessment paperwork — [hsmu-cqi-automation](https://github.com/gdrpaul3-byte/hsmu-cqi-automation) *(private)*
-- **HSMU workshop participation platform** (2026). Real-time audience participation, voting and AI-assisted synthesis app used at the 2026 all-staff workshop — phone-based input with a live projected board — [hsmu-workshop](https://github.com/gdrpaul3-byte/hsmu-workshop) *(private)*
+- **HSMU institutional research (IR) dashboard** (2026). Agent-built dashboard that assembles institutional research reporting from university data sources — [hsmu-ir-dashboard.vercel.app](https://hsmu-ir-dashboard.vercel.app)
+- **HSMU course CQI automation** (2026). Automates the course-level continuous quality improvement cycle — evaluation intake, report drafting and self-assessment paperwork — [hsmu-cqi-automation.vercel.app](https://hsmu-cqi-automation.vercel.app)
+- **HSMU workshop participation platform** (2026). Real-time audience participation, voting and AI-assisted synthesis app used at the 2026 all-staff workshop — phone-based input with a live projected board — [hsmu-workshop.vercel.app](https://hsmu-workshop.vercel.app)
 - **Real vs. AI — public portrait-discrimination web experiment** (2025). Two-alternative forced-choice web experiment used to collect the 1,664-participant dataset behind the 2026 AI-portrait study — [hsmu-real-vs-ai-test.web.app](https://hsmu-real-vs-ai-test.web.app/)
 - **hsmu_ai_detection_public** (2026). Open stimulus set, metadata and de-identified trial-level behavioural data for the AI-generated portrait detection study — [hsmu_ai_detection_public](https://github.com/gdrpaul3-byte/hsmu_ai_detection_public)
 - **Addgene plasmid deposition: split-Cre toolkit** (2022). pAAV-Ef1a-CreN-InteinN (#187614) and pAAV-Ef1a-InteinC-CreC (#187615) — circuit-specific gene-manipulation reagents distributed to the community — [addgene.org](https://www.addgene.org/browse/article/28219553/)

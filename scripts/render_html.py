@@ -354,7 +354,7 @@ def web_cv(d: dict) -> str:
                               esc(s.get("description_en") or s.get("description_kr") or "")]
                              for s in reg]))
         if opensrc:
-            S.append('<p class="note">Open-source research and teaching tools</p>')
+            S.append('<p class="note">Research, teaching and operations tools</p>')
             S.append(_table(["Year", "Project", "Description"],
                             [[esc(s.get("year", "")),
                               (('<a href="%s"><strong>%s</strong></a>%s'

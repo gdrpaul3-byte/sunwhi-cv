@@ -754,13 +754,15 @@ software:
     holder: 고려대학교 산학협력단
 
   # University operations tooling, built with AI agents (2026).
-  # These three repositories are private; the links resolve only for
-  # collaborators who have been granted access.
+  # The repositories are private, so each entry links to the deployed
+  # application instead. The IR and CQI systems open on a password gate and
+  # expose no institutional data to an anonymous visitor — verified Aug 2026.
   - name_en: HSMU institutional research (IR) dashboard
     name_kr: 기관연구(IR) 대시보드
     year: 2026
-    url: https://github.com/gdrpaul3-byte/hsmu-ir-dashboard
-    private: true
+    url: https://hsmu-ir-dashboard.vercel.app
+    url_label: hsmu-ir-dashboard.vercel.app
+    repo: https://github.com/gdrpaul3-byte/hsmu-ir-dashboard   # private
     description_en: >-
       Agent-built dashboard that assembles institutional research reporting from
       university data sources
@@ -769,8 +771,9 @@ software:
   - name_en: HSMU course CQI automation
     name_kr: 교과목 CQI 자동화
     year: 2026
-    url: https://github.com/gdrpaul3-byte/hsmu-cqi-automation
-    private: true
+    url: https://hsmu-cqi-automation.vercel.app
+    url_label: hsmu-cqi-automation.vercel.app
+    repo: https://github.com/gdrpaul3-byte/hsmu-cqi-automation   # private
     description_en: >-
       Automates the course-level continuous quality improvement cycle — evaluation
       intake, report drafting and self-assessment paperwork
@@ -779,8 +782,9 @@ software:
   - name_en: HSMU workshop participation platform
     name_kr: 워크숍 실시간 의견수렴 플랫폼
     year: 2026
-    url: https://github.com/gdrpaul3-byte/hsmu-workshop
-    private: true
+    url: https://hsmu-workshop.vercel.app
+    url_label: hsmu-workshop.vercel.app
+    repo: https://github.com/gdrpaul3-byte/hsmu-workshop   # private
     description_en: >-
       Real-time audience participation, voting and AI-assisted synthesis app used at
       the 2026 all-staff workshop — phone-based input with a live projected board

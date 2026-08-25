@@ -45,6 +45,13 @@ jobs:
       - name: Tests
         run: python scripts/test_build.py
 
+      # Links rot silently. Checked on the monthly schedule only — it needs the
+      # network, and a transient outage should never block a content edit.
+      - name: Check links
+        if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
+        run: python scripts/check_links.py
+        continue-on-error: true
+
       - name: Export PDF
         run: |
           sudo apt-get update -qq

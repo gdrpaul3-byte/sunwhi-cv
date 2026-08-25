@@ -203,7 +203,7 @@ def cv_en(d: dict) -> str:
                     s.get("year", ""), s.get("description_en") or s.get("description_kr") or ""))
             L.append("")
         if opensrc:
-            L.append("*Open-source research & teaching tools*\n")
+            L.append("*Research, teaching and operations tools*\n")
             for s in opensrc:
                 url = ""
                 if s.get("url"):

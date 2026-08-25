@@ -67,6 +67,13 @@ python scripts/build.py --docx --pdf --orcid-diff
 Everything.
 
 ```bash
+python scripts/check_links.py
+```
+Fetch every URL in `cv.yaml` — DOIs, profiles, deployed apps — and report the dead
+ones. A dead link on a CV is worse than no link. Needs the network, so it is not part
+of `test_build.py`; CI runs it on the monthly schedule.
+
+```bash
 python scripts/sync_labpage.py --lab ../sunwhikim_lab_page
 ```
 Rewrite the publication block in the lab site's `index.html`. Add `--check` to fail
@@ -154,6 +161,7 @@ scripts/
   render_json.py           cv.json, publications.json, ORCID reconciliation
   render_docx.py           optional .docx export
   sync_labpage.py          push publications into the lab website
+  check_links.py           verify every URL in cv.yaml still resolves
 build/                     generated — committed so Pages can serve it
 .github/workflows/build.yml
 ```
