@@ -141,7 +141,7 @@ def korean_resume(d: dict, out_dir: str) -> str:
         _heading(doc, "7. 프로그램 개발 실적")
         _grid(doc, ["연도", "프로그램명", "등록번호", "내용"],
               [[s.get("year", ""), s.get("name_kr") or s.get("name_en", ""),
-                s.get("registration", ""),
+                s.get("registration") or s.get("url", ""),
                 s.get("description_kr") or s.get("description_en", "")]
                for s in d["software"]])
         note = doc.add_paragraph()
@@ -263,9 +263,9 @@ def english_cv(d: dict, out_dir: str) -> str:
         ("grants", "RESEARCH FUNDING",
          lambda g: "%s — %s, %s%s" % (g.get("period", ""), g.get("title_en") or g.get("title_kr"),
                                       g.get("funder_en") or g.get("funder_kr", ""),
-                                      " (%s)" % g["amount"] if g.get("amount") else "")),
+                                      " (%s)" % g["phase_en"] if g.get("phase_en") else "")),
         ("invited_talks", "INVITED TALKS",
-         lambda t: "%s — “%s.” %s%s" % (t.get("year", ""), (t.get("title") or "").rstrip("."),
+         lambda t: "%s — “%s.” %s%s" % (t.get("date") or t.get("year", ""), (t.get("title") or "").rstrip("."),
                                         t.get("venue", ""),
                                         ", %s" % t["location"] if t.get("location") else "")),
         ("posters", "CONFERENCE PRESENTATIONS",

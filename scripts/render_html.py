@@ -299,6 +299,7 @@ def web_cv(d: dict) -> str:
                                 " · ".join(filter(None, [
                                     esc(g.get("funder_en") or g.get("funder_kr") or ""),
                                     "Role: %s" % esc(g["role"]) if g.get("role") else "",
+                                    esc(g.get("phase_en") or ""),
                                     esc(g.get("amount") or "")]))))
         if pending:
             S.append("<h2>Grants Under Review</h2>")
@@ -327,7 +328,7 @@ def web_cv(d: dict) -> str:
     if d["invited_talks"]:
         S.append("<h2>Invited Talks &amp; Guest Lectures</h2>")
         for t in d["invited_talks"]:
-            S.append(_entry(str(t.get("year", "")),
+            S.append(_entry(str(t.get("date") or t.get("year", "")),
                             "“%s”" % esc((t.get("title") or "").rstrip(".")),
                             " · ".join(filter(None, [esc(t.get("venue", "")),
                                                      esc(t.get("location", ""))]))))
@@ -356,8 +357,10 @@ def web_cv(d: dict) -> str:
             S.append('<p class="note">Open-source research and teaching tools</p>')
             S.append(_table(["Year", "Project", "Description"],
                             [[esc(s.get("year", "")),
-                              ('<a href="%s"><strong>%s</strong></a>' % (esc(s["url"]), esc(s.get("name_en") or s.get("name_kr"))))
-                               if s.get("url") else "<strong>%s</strong>" % esc(s.get("name_en") or s.get("name_kr")),
+                              (('<a href="%s"><strong>%s</strong></a>%s'
+                                % (esc(s["url"]), esc(s.get("name_en") or s.get("name_kr")),
+                                   ' <span class="badge">private</span>' if s.get("private") else ""))
+                               if s.get("url") else "<strong>%s</strong>" % esc(s.get("name_en") or s.get("name_kr"))),
                               esc(s.get("description_en") or s.get("description_kr") or "")]
                              for s in opensrc]))
 
@@ -411,8 +414,9 @@ def web_cv(d: dict) -> str:
 
     if d["skills"]:
         S.append("<h2>Technical Skills</h2>")
+        import render_markdown as _rm
         S.append(_table(["Area", "Detail"],
-                        [[esc(g.replace("_", " ").title()), esc(", ".join(items))]
+                        [[esc(_rm.skill_label(g)), esc(", ".join(items))]
                          for g, items in d["skills"].items()]))
 
     if d["references"]:

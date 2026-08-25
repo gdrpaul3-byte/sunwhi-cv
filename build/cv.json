@@ -260,6 +260,15 @@
   ],
   "skills": [
     {
+      "name": "Ai Agentic Engineering",
+      "keywords": [
+        "Agentic coding and multi-agent workflows",
+        "Claude Code, OpenAI Codex, Cursor, OpenClaw, Hermes",
+        "Agent-driven automation of institutional and research workflows",
+        "Prompt and context engineering, tool/MCP integration"
+      ]
+    },
+    {
       "name": "Neural Circuit Methods",
       "keywords": [
         "Viral circuit tracing (retrograde / anterograde / monosynaptic rabies)",

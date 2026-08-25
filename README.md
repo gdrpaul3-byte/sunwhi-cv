@@ -24,7 +24,6 @@ Now there is one source of truth, and the drift is detected mechanically:
 | Web CV (GitHub Pages) | regenerated and deployed on every push to `main` |
 | Lab website publication list | `scripts/sync_labpage.py` rewrites one delimited block |
 | ORCID | `--orcid-diff` reports what ORCID is missing (writing is still manual — ORCID has no unattended write path) |
-| Google Scholar | read-only; citation metrics are copied into `cv.yaml` under `metrics:` |
 
 ---
 
@@ -196,4 +195,4 @@ your `cv.yaml` edit. CI fails if the committed `build/` is stale, so run
 - **Each semester** — add courses to `teaching`.
 - **When a grant result arrives** — flip `status` from `in_review` to `awarded` or
   `not_funded`.
-- **Yearly** — refresh `metrics:` from Google Scholar and bump `meta.updated`.
+- **Yearly** — bump `meta.updated`.

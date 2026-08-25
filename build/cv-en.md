@@ -68,18 +68,13 @@ College of Informatics, Korea University
 2. Choi JS†, Lee JH, **Kim S**, Han JS (2017) Validating an animal model of stress using a chasing robot. Proceedings of the 15th Conference of the Japanese Society for Cognitive Psychology (日本認知心理学会発表論文集).
 3. **Kim S**, Hong EH, Jie HS, Jeong JH, Choi JS† (2015) Control and data acquisition of rodent experiments using Arduino-based system. Korean Association for Laboratory Animal Science International Symposium (한국실험동물학회 학술발표대회 논문집), 124.
 
-## Citation Metrics
-
-Citations 162 · h-index 6 · i10-index 4  
-*(Google Scholar, 2026-08-24)*
-
 ## Research Funding
 
-**2025–2026.02 (year 1 of 3)** — Silver digital literacy education and ESG campaign (industry–academia regional cooperation)  
-Gyeonggi-do RISE Programme, HSMU RISE Centre · Role: Curriculum and courseware development lead
+**2025–2026.02** — Silver digital literacy education and ESG campaign (industry–academia regional cooperation)  
+Gyeonggi-do RISE Programme, HSMU RISE Centre · Role: Curriculum and courseware development lead · Year 1 of 3
 
 **2025.04–2026.02** — Long-term neurobehavioral safety assessment of transcranial focused ultrasound neuromodulation  
-HSMU New Faculty Research Grant · Role: Principal Investigator · ₩5,000,000
+HSMU New Faculty Research Grant · Role: Principal Investigator
 
 ## Teaching
 
@@ -101,7 +96,10 @@ HSMU New Faculty Research Grant · Role: Principal Investigator · ₩5,000,000
 
 ## Invited Talks & Guest Lectures
 
-- **2025** “3D 프린터로 취미에서 창업까지: 아이디어를 현실로 만드는 기술 (From hobby to start-up with 3D printing).” HSMU ‘CareerFit’ programme (invited campus lecture), Hwasung Medi-Science University, Korea
+- **2026.08.06** “AI 에이전트란 무엇이며 어떤 것들이 가능한가 (What AI agents are and what they make possible).” Wecruit, invited corporate lecture, Bundang, Seongnam, Korea
+- **2026.07.31** “AI 에이전트란 무엇이며 어떤 것들이 가능한가? — 작은 사업장을 위한 AI 활용과 청지기의 지혜 (What AI agents are and what they make possible: using AI in a small business, and the wisdom of stewardship).” Sae-Seoul CBMC, 1393rd meeting, Chunghyun Church, Seoul, Korea
+- **2026.07.14** “AI 에이전트를 활용한 업무 자동화 (Automating everyday work with AI agents).” Hwasung Medi-Science University, 2026 all-faculty-and-staff summer workshop, Chungho HRD Institute, Hwaseong, Korea
+- **2025.12.02** “3D 프린터로 취미에서 창업까지: 아이디어를 현실로 만드는 기술 (From hobby to start-up with 3D printing).” HSMU ‘CareerFit’ programme (invited campus lecture), Hwasung Medi-Science University, Korea
 - **2025** “뇌 신경 회로 타겟팅 기술을 이용한 자폐 스펙트럼 장애 메커니즘 연구 (Circuit-targeting approaches to autism spectrum disorder).” 1st HSMU Colloquium, Center for Teaching and Learning, Hwasung Medi-Science University, Korea
 - **2022** “Neural circuit-selective Shank3 mutation disrupts social behaviors.” Memphis Korean Scientists Association, Memphis, TN, USA
 - **2022** “Neural circuit-selective Shank3 mutation disrupts social behaviors.” 35th US-Korea Conference (UKC), Washington, D.C., USA
@@ -136,34 +134,22 @@ HSMU New Faculty Research Grant · Role: Principal Investigator · ₩5,000,000
 
 *Open-source research & teaching tools*
 
-- **Real vs. AI — public portrait-discrimination web experiment** (2025). Two-alternative forced-choice web experiment used to collect the 1,664-participant dataset behind the 2026 AI-portrait study — https://hsmu-real-vs-ai-test.web.app/
-- **hsmu_ai_detection_public** (2026). Open stimulus set, metadata and de-identified trial-level behavioural data for the AI-generated portrait detection study — https://github.com/gdrpaul3-byte/hsmu_ai_detection_public
-- **Addgene plasmid deposition: split-Cre toolkit** (2022). pAAV-Ef1a-CreN-InteinN (#187614) and pAAV-Ef1a-InteinC-CreC (#187615) — circuit-specific gene-manipulation reagents distributed to the community — https://www.addgene.org/browse/article/28219553/
+- **HSMU institutional research (IR) dashboard** (2026). Agent-built dashboard that assembles institutional research reporting from university data sources — [hsmu-ir-dashboard](https://github.com/gdrpaul3-byte/hsmu-ir-dashboard) *(private)*
+- **HSMU course CQI automation** (2026). Automates the course-level continuous quality improvement cycle — evaluation intake, report drafting and self-assessment paperwork — [hsmu-cqi-automation](https://github.com/gdrpaul3-byte/hsmu-cqi-automation) *(private)*
+- **HSMU workshop participation platform** (2026). Real-time audience participation, voting and AI-assisted synthesis app used at the 2026 all-staff workshop — phone-based input with a live projected board — [hsmu-workshop](https://github.com/gdrpaul3-byte/hsmu-workshop) *(private)*
+- **Real vs. AI — public portrait-discrimination web experiment** (2025). Two-alternative forced-choice web experiment used to collect the 1,664-participant dataset behind the 2026 AI-portrait study — [hsmu-real-vs-ai-test.web.app](https://hsmu-real-vs-ai-test.web.app/)
+- **hsmu_ai_detection_public** (2026). Open stimulus set, metadata and de-identified trial-level behavioural data for the AI-generated portrait detection study — [hsmu_ai_detection_public](https://github.com/gdrpaul3-byte/hsmu_ai_detection_public)
+- **Addgene plasmid deposition: split-Cre toolkit** (2022). pAAV-Ef1a-CreN-InteinN (#187614) and pAAV-Ef1a-InteinC-CreC (#187615) — circuit-specific gene-manipulation reagents distributed to the community — [addgene.org](https://www.addgene.org/browse/article/28219553/)
 
 ## AI Agent Onboarding & Consulting
 
 **2026.07–** — Hwasung Medi-Science University (화성의과학대학교)  
 Institutional automation programme (ongoing) · AI-agent-driven automation of institutional research (IR) reporting and course-level CQI workflows
   
-*Repositories hsmu-cqi-automation (from 2026.07), hsmu-ir-dashboard (from 2026.08)*
-
-**2026.08.06** — Wecruit (위크루트)  
-Invited corporate lecture · What AI agents are and what they make possible
-  
-*Bundang, Seongnam · ~15 staff and executives · 90 min*
+*See Software & Registered Programs for the tools built under this programme*
 
 **2026.08** — TheAstory (디아스토리)  
 Lecture, workshop and consulting · AI agent onboarding for business operations
-
-**2026.07.31** — Sae-Seoul CBMC (새서울CBMC)  
-Invited lecture · What AI agents are and what they make possible: using AI in a small business, and the wisdom of stewardship
-  
-*1393rd meeting · Chunghyun Church, Seoul*
-
-**2026.07.14** — Hwasung Medi-Science University (화성의과학대학교)  
-Keynote, all-staff summer workshop · Automating everyday work with AI agents
-  
-*2026 all-faculty-and-staff summer workshop, Chungho HRD Institute, Hwaseong · 90 min*
 
 **2026.06** — Zespa (제스파)  
 Lecture, workshop and consulting · AI agent onboarding for business operations
@@ -178,7 +164,7 @@ Lecture, workshop and consulting · AI agent onboarding for business operations
 
 ## Institutional & Professional Service
 
-- **2025.09–2027.08** — Department Chair, Department of Bio-Healthcare, 화성의과학대학교 / Hwasung Medi-Science University
+- **2025.09–present** — Department Chair, Department of Bio-Healthcare, 화성의과학대학교 / Hwasung Medi-Science University
 - **2026.02** — Expert content-validity reviewer, institutional core-competency scale development, 화성의과학대학교
 - **2025.10–2025.12** — Member, Scholarship Review Committee, 화성의과학대학교
 - **2025** — Reviewer, Liberal 101 scholarship programme, 화성의과학대학교
@@ -224,11 +210,10 @@ Lecture, workshop and consulting · AI agent onboarding for business operations
 ## Outreach
 
 - **2026–** — [Makers — student maker & technology club](https://gdrpaul3-byte.github.io/hsmu_makers_page/). Faculty advisor. Student club for AI coding, generative media, 3D printing, Arduino and automation, run as a bridge between the lab's human–AI research and hands-on student prototyping.
-- **2025** — Public participant-recruitment campaign, AI-portrait perception study. Campus and online science-engagement campaign that recruited 1,843 public participants for the AI-generated portrait detection experiment.
-- **2025** — 화성왭성 AI creative contest — video entry “꿈속의 화성”. Generative-AI music video produced as team lead; an applied companion to the lab's generative-media research.
 
 ## Technical Skills
 
+- **AI Agentic Engineering:** Agentic coding and multi-agent workflows, Claude Code, OpenAI Codex, Cursor, OpenClaw, Hermes, Agent-driven automation of institutional and research workflows, Prompt and context engineering, tool/MCP integration
 - **Neural Circuit Methods:** Viral circuit tracing (retrograde / anterograde / monosynaptic rabies), Split-Cre and intersectional circuit-specific gene manipulation, Optogenetics, In vivo calcium imaging (fiber photometry, miniscope), In vivo electrophysiology, Immunohistochemistry and whole-brain mapping
 - **Behaviour:** Rodent social, defensive and approach-avoidance paradigms, Semi-naturalistic robot-predator foraging tasks, Fear conditioning, extinction and context renewal, Automated tracking (DeepLabCut, ANY-maze, SAM-based multi-animal tracking)
 - **Human Experimentation:** Large-scale online psychophysics (2AFC, reaction-time modelling), IRB protocol design and human-subjects research governance, Signal detection theory

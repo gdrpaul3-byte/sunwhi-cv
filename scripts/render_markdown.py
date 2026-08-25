@@ -30,9 +30,26 @@ def _contact_line(p: dict) -> str:
 LINK_LABELS = {"lab": "Lab website", "cv": "Web CV", "cv_repo": "CV source",
                "youtube": "YouTube", "github": "GitHub"}
 
+# Acronyms that .title() would mangle ("Ai Agentic Engineering").
+SKILL_LABELS = {"ai_agentic_engineering": "AI Agentic Engineering",
+                "human_experimentation": "Human Experimentation"}
+
 
 def link_label(key: str) -> str:
     return LINK_LABELS.get(key, key.replace("_", " ").title())
+
+
+def skill_label(key: str) -> str:
+    return SKILL_LABELS.get(key, key.replace("_", " ").title())
+
+
+def url_label(url: str) -> str:
+    """'…/hsmu-workshop' -> 'hsmu-workshop'; a bare host keeps the host."""
+    trimmed = url.rstrip("/")
+    tail = trimmed.split("/")[-1]
+    if not tail or "." in tail and "/" not in trimmed.split("//")[-1]:
+        return trimmed.split("//")[-1].split("/")[0]
+    return tail
 
 
 def _idlinks_md(p: dict) -> str:
@@ -129,9 +146,11 @@ def cv_en(d: dict) -> str:
         for g in funded:
             L.append("**%s** — %s  " % (g.get("period", ""),
                                         g.get("title_en") or g.get("title_kr")))
-            L.append("%s%s%s" % (g.get("funder_en") or g.get("funder_kr") or "",
-                                 " · Role: %s" % g["role"] if g.get("role") else "",
-                                 " · %s" % g["amount"] if g.get("amount") else ""))
+            L.append(" · ".join(filter(None, [
+                g.get("funder_en") or g.get("funder_kr") or "",
+                "Role: %s" % g["role"] if g.get("role") else "",
+                g.get("phase_en") or "",
+                g.get("amount") or ""])))
             L.append("")
         if other:
             L.append("*Submitted / under review*\n")
@@ -158,7 +177,7 @@ def cv_en(d: dict) -> str:
         L.append(_h(2, "Invited Talks & Guest Lectures"))
         for t in d["invited_talks"]:
             L.append("- **%s** “%s.” %s%s" % (
-                t.get("year", ""), (t.get("title") or "").rstrip("."),
+                t.get("date") or t.get("year", ""), (t.get("title") or "").rstrip("."),
                 t.get("venue", ""),
                 ", " + t["location"] if t.get("location") else ""))
         L.append("")
@@ -186,7 +205,11 @@ def cv_en(d: dict) -> str:
         if opensrc:
             L.append("*Open-source research & teaching tools*\n")
             for s in opensrc:
-                url = " — %s" % s["url"] if s.get("url") else ""
+                url = ""
+                if s.get("url"):
+                    url = " — [%s](%s)%s" % (s.get("url_label") or url_label(s["url"]),
+                                             s["url"],
+                                             " *(private)*" if s.get("private") else "")
                 L.append("- **%s** (%s). %s%s" % (
                     s.get("name_en") or s.get("name_kr"), s.get("year", ""),
                     s.get("description_en") or s.get("description_kr") or "", url))
@@ -266,8 +289,7 @@ def cv_en(d: dict) -> str:
     if d["skills"]:
         L.append(_h(2, "Technical Skills"))
         for group, items in d["skills"].items():
-            L.append("- **%s:** %s" % (group.replace("_", " ").title(),
-                                       ", ".join(items)))
+            L.append("- **%s:** %s" % (skill_label(group), ", ".join(items)))
         L.append("")
 
     if d["references"]:
@@ -395,9 +417,9 @@ def cv_kr(d: dict) -> str:
         L.append("| 기간 | 활동 | 기관 |")
         L.append("|---|---|---|")
         for s in d["service"]:
-            L.append("| %s | %s | %s |" % (s.get("period") or s.get("year", ""),
-                                           s.get("role_kr") or s.get("role_en", ""),
-                                           s.get("org", "")))
+            L.append("| %s | %s | %s |" % (
+                s.get("period_kr") or s.get("period") or s.get("year", ""),
+                s.get("role_kr") or s.get("role_en", ""), s.get("org", "")))
 
     if d["certifications"]:
         L.append("\n## 10. 교육 이수 및 자격\n")
@@ -520,7 +542,6 @@ def resume_en(d: dict) -> str:
     if d["skills"]:
         L.append(_h(2, "Skills"))
         for group, items in d["skills"].items():
-            L.append("- **%s:** %s" % (group.replace("_", " ").title(),
-                                       ", ".join(items)))
+            L.append("- **%s:** %s" % (skill_label(group), ", ".join(items)))
 
     return "\n".join(L).strip() + "\n"

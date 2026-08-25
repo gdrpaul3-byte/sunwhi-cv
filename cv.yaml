@@ -69,14 +69,6 @@ person:
     cv_repo: https://github.com/gdrpaul3-byte/sunwhi-cv
     youtube: https://www.youtube.com/@swkim_n
 
-# Google Scholar, refreshed by hand — Scholar has no public API.
-metrics:
-  citations: 162
-  citations_since_2021: 157
-  h_index: 6
-  i10_index: 4
-  as_of: "2026-08-24"
-
 appointments:
   - start: 2025
     end: present
@@ -515,7 +507,9 @@ grants:
       regional cooperation)
     funder_kr: 경기도 지역혁신중심 대학지원체계(RISE) 사업 · 화성의과학대학교 RISE 사업단
     funder_en: Gyeonggi-do RISE Programme, HSMU RISE Centre
-    period: 2025–2026.02 (year 1 of 3)
+    period: 2025–2026.02
+    phase_en: Year 1 of 3
+    phase_kr: 1차년도 / 3개년 과제
     role: Curriculum and courseware development lead
     role_kr: 교육과정·교재 개발 책임자
     status: awarded
@@ -533,7 +527,6 @@ grants:
     period: 2025.04–2026.02
     role: Principal Investigator
     role_kr: 연구책임자
-    amount: ₩5,000,000
     status: awarded
     note: >-
       Final research output filed Feb 2026. Scope was redirected mid-award to the
@@ -541,13 +534,39 @@ grants:
       animal facility.
 
 invited_talks:
+  - year: 2026
+    date: "2026.08.06"
+    title: AI 에이전트란 무엇이며 어떤 것들이 가능한가 (What AI agents are and what they make possible)
+    venue: Wecruit, invited corporate lecture
+    location: Bundang, Seongnam, Korea
+    # Same programme as the Sae-Seoul CBMC lecture below, delivered for ~15 staff
+    # and executives. The organiser's invitation names the CBMC talk as the
+    # content; no separate Wecruit title was issued.
+
+  - year: 2026
+    date: "2026.07.31"
+    title: >-
+      AI 에이전트란 무엇이며 어떤 것들이 가능한가? — 작은 사업장을 위한 AI 활용과 청지기의 지혜
+      (What AI agents are and what they make possible: using AI in a small business,
+      and the wisdom of stewardship)
+    venue: Sae-Seoul CBMC, 1393rd meeting
+    location: Chunghyun Church, Seoul, Korea
+
+  - year: 2026
+    date: "2026.07.14"
+    title: >-
+      AI 에이전트를 활용한 업무 자동화 (Automating everyday work with AI agents)
+    venue: >-
+      Hwasung Medi-Science University, 2026 all-faculty-and-staff summer workshop
+    location: Chungho HRD Institute, Hwaseong, Korea
+
   - year: 2025
     title: >-
       3D 프린터로 취미에서 창업까지: 아이디어를 현실로 만드는 기술
       (From hobby to start-up with 3D printing)
     venue: HSMU ‘CareerFit’ programme (invited campus lecture)
     location: Hwasung Medi-Science University, Korea
-    date: "2025-12-02"
+    date: "2025.12.02"
 
   - year: 2025
     title: >-
@@ -734,6 +753,40 @@ software:
     description_kr: 동물의 주의력 및 작업기억 검사 프로그램
     holder: 고려대학교 산학협력단
 
+  # University operations tooling, built with AI agents (2026).
+  # These three repositories are private; the links resolve only for
+  # collaborators who have been granted access.
+  - name_en: HSMU institutional research (IR) dashboard
+    name_kr: 기관연구(IR) 대시보드
+    year: 2026
+    url: https://github.com/gdrpaul3-byte/hsmu-ir-dashboard
+    private: true
+    description_en: >-
+      Agent-built dashboard that assembles institutional research reporting from
+      university data sources
+    description_kr: 대학 기관연구(IR) 리포팅 자동 집계 대시보드
+
+  - name_en: HSMU course CQI automation
+    name_kr: 교과목 CQI 자동화
+    year: 2026
+    url: https://github.com/gdrpaul3-byte/hsmu-cqi-automation
+    private: true
+    description_en: >-
+      Automates the course-level continuous quality improvement cycle — evaluation
+      intake, report drafting and self-assessment paperwork
+    description_kr: 교과목 CQI 보고서·교수 자가평가 작성 자동화
+
+  - name_en: HSMU workshop participation platform
+    name_kr: 워크숍 실시간 의견수렴 플랫폼
+    year: 2026
+    url: https://github.com/gdrpaul3-byte/hsmu-workshop
+    private: true
+    description_en: >-
+      Real-time audience participation, voting and AI-assisted synthesis app used at
+      the 2026 all-staff workshop — phone-based input with a live projected board
+    description_kr: >-
+      워크숍 참가자 실시간 의견 입력·투표·AI 요약 웹앱 (참가자 휴대폰 + 대형 화면 보드)
+
   - name_en: "Real vs. AI — public portrait-discrimination web experiment"
     name_kr: 진짜 vs AI 초상 판별 웹 실험
     year: 2025
@@ -754,6 +807,7 @@ software:
   - name_en: "Addgene plasmid deposition: split-Cre toolkit"
     year: 2022
     url: https://www.addgene.org/browse/article/28219553/
+    url_label: addgene.org
     description_en: >-
       pAAV-Ef1a-CreN-InteinN (#187614) and pAAV-Ef1a-InteinC-CreC (#187615) —
       circuit-specific gene-manipulation reagents distributed to the community
@@ -774,44 +828,11 @@ consulting:
       AI-agent-driven automation of institutional research (IR) reporting and
       course-level CQI workflows
     topic_kr: AI 에이전트 기반 기관연구(IR) 리포팅 및 교과목 CQI 자동화
-    note: Repositories hsmu-cqi-automation (from 2026.07), hsmu-ir-dashboard (from 2026.08)
+    note: See Software & Registered Programs for the tools built under this programme
 
-  - org_kr: 위크루트
-    org_en: Wecruit
-    year: 2026
-    period: "2026.08.06"
-    kind_en: Invited corporate lecture
-    kind_kr: 초청 강연
-    topic_en: What AI agents are and what they make possible
-    topic_kr: AI 에이전트란 무엇이며 어떤 것들이 가능한가
-    note: Bundang, Seongnam · ~15 staff and executives · 90 min
-
-  - org_kr: 새서울CBMC
-    org_en: Sae-Seoul CBMC
-    year: 2026
-    period: "2026.07.31"
-    kind_en: Invited lecture
-    kind_kr: 초청 강연 (제1393회 아름다운 만남)
-    topic_en: >-
-      What AI agents are and what they make possible: using AI in a small business,
-      and the wisdom of stewardship
-    topic_kr: >-
-      AI 에이전트란 무엇이며 어떤 것들이 가능한가 — 작은 사업장을 위한 AI 활용과
-      청지기의 지혜
-    note: 1393rd meeting · Chunghyun Church, Seoul
-
-  - org_kr: 화성의과학대학교
-    org_en: Hwasung Medi-Science University
-    year: 2026
-    period: "2026.07.14"
-    kind_en: Keynote, all-staff summer workshop
-    kind_kr: 전 교직원 하계 워크숍 특강
-    topic_en: Automating everyday work with AI agents
-    topic_kr: AI 에이전트를 활용한 업무 자동화
-    note: >-
-      2026 all-faculty-and-staff summer workshop, Chungho HRD Institute, Hwaseong ·
-      90 min
-
+  # The one-off invited lectures (Wecruit, Sae-Seoul CBMC, the HSMU staff
+  # workshop) live under `invited_talks` so they are not listed twice. This
+  # section keeps the multi-session engagements and the ongoing build work.
   - org_kr: 제스파
     org_en: Zespa
     year: 2026
@@ -833,7 +854,8 @@ consulting:
     # TODO: add the exact talk title and day.
 
 service:
-  - period: 2025.09–2027.08
+  - period: 2025.09–present
+    period_kr: 2025.09–현재
     role_kr: 학과장 (임명 2025.9.1.–2027.8.31.)
     role_en: Department Chair, Department of Bio-Healthcare
     org: 화성의과학대학교 / Hwasung Medi-Science University
@@ -1000,21 +1022,13 @@ outreach:
     description_kr: >-
       지도교수. AI 코딩·생성형 미디어·3D 프린팅·아두이노·자동화 창작형 기술 동아리.
 
-  - year: 2025
-    name_en: Public participant-recruitment campaign, AI-portrait perception study
-    name_kr: AI 초상 판별 연구 공개 참여자 모집 캠페인
-    description_en: >-
-      Campus and online science-engagement campaign that recruited 1,843 public
-      participants for the AI-generated portrait detection experiment.
-
-  - year: 2025
-    name_en: "화성왭성 AI creative contest — video entry “꿈속의 화성”"
-    name_kr: 화성왔성 AI 공모전 영상 부문 출품 (작품명 「꿈속의 화성」)
-    description_en: >-
-      Generative-AI music video produced as team lead; an applied companion to the
-      lab's generative-media research.
 
 skills:
+  ai_agentic_engineering:
+    - Agentic coding and multi-agent workflows
+    - Claude Code, OpenAI Codex, Cursor, OpenClaw, Hermes
+    - Agent-driven automation of institutional and research workflows
+    - Prompt and context engineering, tool/MCP integration
   neural_circuit_methods:
     - Viral circuit tracing (retrograde / anterograde / monosynaptic rabies)
     - Split-Cre and intersectional circuit-specific gene manipulation

@@ -33,12 +33,10 @@ Behavioural neuroscientist working at the junction of neural-circuit biology and
 
 *Full list: 8 peer-reviewed articles — see full CV.*
 
-Citations 162 · h-index 6 · i10-index 4 (Google Scholar, 2026-08-24)
-
 ## Funding
 
-- **2025–2026.02 (year 1 of 3)** Silver digital literacy education and ESG campaign (industry–academia regional cooperation) — Gyeonggi-do RISE Programme, HSMU RISE Centre
-- **2025.04–2026.02** Long-term neurobehavioral safety assessment of transcranial focused ultrasound neuromodulation — HSMU New Faculty Research Grant (₩5,000,000)
+- **2025–2026.02** Silver digital literacy education and ESG campaign (industry–academia regional cooperation) — Gyeonggi-do RISE Programme, HSMU RISE Centre
+- **2025.04–2026.02** Long-term neurobehavioral safety assessment of transcranial focused ultrasound neuromodulation — HSMU New Faculty Research Grant
 
 ## Teaching
 
@@ -46,10 +44,11 @@ Citations 162 · h-index 6 · i10-index 4 (Google Scholar, 2026-08-24)
 
 ## AI Agent Onboarding & Consulting
 
-Lectures, workshops and advisory engagements on AI-agent adoption (2026): Hwasung Medi-Science University, Wecruit, TheAstory, Sae-Seoul CBMC, Zespa
+Lectures, workshops and advisory engagements on AI-agent adoption (2026): Hwasung Medi-Science University, TheAstory, Zespa
 
 ## Skills
 
+- **AI Agentic Engineering:** Agentic coding and multi-agent workflows, Claude Code, OpenAI Codex, Cursor, OpenClaw, Hermes, Agent-driven automation of institutional and research workflows, Prompt and context engineering, tool/MCP integration
 - **Neural Circuit Methods:** Viral circuit tracing (retrograde / anterograde / monosynaptic rabies), Split-Cre and intersectional circuit-specific gene manipulation, Optogenetics, In vivo calcium imaging (fiber photometry, miniscope), In vivo electrophysiology, Immunohistochemistry and whole-brain mapping
 - **Behaviour:** Rodent social, defensive and approach-avoidance paradigms, Semi-naturalistic robot-predator foraging tasks, Fear conditioning, extinction and context renewal, Automated tracking (DeepLabCut, ANY-maze, SAM-based multi-animal tracking)
 - **Human Experimentation:** Large-scale online psychophysics (2AFC, reaction-time modelling), IRB protocol design and human-subjects research governance, Signal detection theory
