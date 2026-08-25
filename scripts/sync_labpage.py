@@ -148,7 +148,7 @@ def block_software(d: dict, i: str) -> list[str]:
         ]))
     if tools:
         out.append('%s<p class="section-label" style="margin-top:36px">'
-                   "// deployed_tools</p>" % i)
+                   "deployed_tools</p>" % i)
         for s in tools:
             name = esc(s.get("name_kr") or s.get("name_en"))
             title = ('<a href="%s" target="_blank" rel="noopener">%s</a>'
@@ -182,7 +182,7 @@ def block_agentwork(d: dict, i: str) -> list[str]:
     engagements = [c for c in d["consulting"] if c.get("lab_page")]
     if engagements:
         out.append('%s<p class="section-label" style="margin-top:36px">'
-                   "// engagements</p>" % i)
+                   "engagements</p>" % i)
         for c in engagements:
             when = esc(c.get("period") or c.get("year", ""))
             out.append("\n".join([
