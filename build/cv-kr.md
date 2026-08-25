@@ -25,7 +25,7 @@
 | 기간 | 기관명 | 부서 | 직위 |
 |---|---|---|---|
 | 2025–현재 | 화성의과학대학교 / Hwasung Medi-Science University | 바이오헬스케어학과 | 조교수 |
-| 2019.04–2024.12 | University of Tennessee Health Science Center | Anatomy and Neurobiology (College of Medicine) | 박사후 연구원 |
+| 2019.04–2024.12 | University of Tennessee Health Science Center | 해부학 및 뇌신경생물학 (의과대학) | 박사후 연구원 |
 
 ## 4. 논문 실적
 

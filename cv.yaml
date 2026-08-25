@@ -94,7 +94,7 @@ appointments:
     org_en: University of Tennessee Health Science Center
     org_kr: University of Tennessee Health Science Center
     dept_en: Department of Anatomy & Neurobiology, College of Medicine
-    dept_kr: Anatomy and Neurobiology (College of Medicine)
+    dept_kr: 해부학 및 뇌신경생물학 (의과대학)
     country: Memphis, TN, USA
     advisor: Dr. Il Hwan Kim
     bullets:
@@ -538,7 +538,10 @@ invited_talks:
     date: "2026.08.06"
     title: AI 에이전트란 무엇이며 어떤 것들이 가능한가 (What AI agents are and what they make possible)
     venue: Wecruit, invited corporate lecture
+    venue_kr: 위크루트 초청 강연
+    title_kr: AI 에이전트란 무엇이며 어떤 것들이 가능한가
     location: Bundang, Seongnam, Korea
+    lab_page: true
     # Same programme as the Sae-Seoul CBMC lecture below, delivered for ~15 staff
     # and executives. The organiser's invitation names the CBMC talk as the
     # content; no separate Wecruit title was issued.
@@ -550,7 +553,10 @@ invited_talks:
       (What AI agents are and what they make possible: using AI in a small business,
       and the wisdom of stewardship)
     venue: Sae-Seoul CBMC, 1393rd meeting
+    venue_kr: 새서울CBMC 제1393회 아름다운 만남
+    title_kr: AI 에이전트란 무엇이며 어떤 것들이 가능한가 — 작은 사업장을 위한 AI 활용과 청지기의 지혜
     location: Chunghyun Church, Seoul, Korea
+    lab_page: true
 
   - year: 2026
     date: "2026.07.14"
@@ -558,7 +564,10 @@ invited_talks:
       AI 에이전트를 활용한 업무 자동화 (Automating everyday work with AI agents)
     venue: >-
       Hwasung Medi-Science University, 2026 all-faculty-and-staff summer workshop
+    venue_kr: 화성의과학대학교 전 교직원 하계 워크숍 특강
+    title_kr: AI 에이전트를 활용한 업무 자동화
     location: Chungho HRD Institute, Hwaseong, Korea
+    lab_page: true
 
   - year: 2025
     title: >-
@@ -832,6 +841,7 @@ consulting:
       AI-agent-driven automation of institutional research (IR) reporting and
       course-level CQI workflows
     topic_kr: AI 에이전트 기반 기관연구(IR) 리포팅 및 교과목 CQI 자동화
+    lab_page: true
     note: See Software & Registered Programs for the tools built under this programme
 
   # The one-off invited lectures (Wecruit, Sae-Seoul CBMC, the HSMU staff
@@ -845,6 +855,7 @@ consulting:
     kind_kr: 강연·워크샵·컨설팅
     topic_en: AI agent onboarding for business operations
     topic_kr: AI 에이전트 도입 및 실무 활용
+    lab_page: true
     # TODO: add the exact talk title and day.
 
   - org_kr: 디아스토리
@@ -855,6 +866,7 @@ consulting:
     kind_kr: 강연·워크샵·컨설팅
     topic_en: AI agent onboarding for business operations
     topic_kr: AI 에이전트 도입 및 실무 활용
+    lab_page: true
     # TODO: add the exact talk title and day.
 
 service:
