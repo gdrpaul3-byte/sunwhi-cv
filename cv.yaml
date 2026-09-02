@@ -19,7 +19,7 @@
 # ---------------------------------------------------------------------------
 
 meta:
-  updated: "2026-08-25"
+  updated: "2026-09-02"
   author_note_en: >-
     Published under both “Kim” and “Kimm”. Each work is listed under the surname used
     in the original publication. * equal contribution; † corresponding author.
@@ -288,6 +288,26 @@ publications:
   preprint:
     # The Research Square preprint of natcomm2025 (10.21203/rs.3.rs-3938233/v1) is
     # deliberately omitted — the journal version above supersedes it.
+    - id: arxiv202608
+      year: 2026
+      authors: [Kim S, Kim SY, Jo M, Tae J]
+      corresponding: [Kim S]
+      me: Kim S
+      title: >-
+        Frontier vision-language models have overtaken young adults at detecting
+        AI-generated portraits — but not their calibration
+      venue: arXiv
+      article: "arXiv:2608.30210"
+      doi: 10.48550/arXiv.2608.30210
+      url: https://arxiv.org/abs/2608.30210
+      role_kr: 제1저자
+      note: Preprint
+      featured: true
+      # v1 posted 2026-08-31, cs.HC + cs.CV, 35 pp. Human reference data from
+      # arXiv:2603.24048. Co-authors: Sunyul Kim (Yonsei Univ., AI), Meounggun Jo
+      # (Hoseo Univ.), Jini Tae (GIST).
+      # Data & code: github.com/gdrpaul3-byte/hsmu_vlm_detection_benchmark
+
     - id: arxiv2026
       year: 2026
       authors: [Kim S, Kim SY]
@@ -816,6 +836,14 @@ software:
       Open stimulus set, metadata and de-identified trial-level behavioural data for the
       AI-generated portrait detection study
     description_kr: AI 초상 판별 연구의 공개 자극·메타데이터·비식별 행동 데이터
+
+  - name_en: hsmu_vlm_detection_benchmark
+    year: 2026
+    url: https://github.com/gdrpaul3-byte/hsmu_vlm_detection_benchmark
+    description_en: >-
+      Benchmark data, analysis code and supplementary tables for the 19-model VLM
+      comparison against the human AI-portrait detection reference (arXiv:2608.30210)
+    description_kr: VLM 19종 벤치마크 데이터·분석 코드·보조표 (arXiv:2608.30210)
 
   - name_en: "Addgene plasmid deposition: split-Cre toolkit"
     year: 2022

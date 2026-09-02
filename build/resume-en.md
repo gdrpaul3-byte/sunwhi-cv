@@ -24,12 +24,12 @@ Behavioural neuroscientist working at the junction of neural-circuit biology and
 
 ## Selected Publications
 
+- **Kim S†**, Kim SY, Jo M, Tae J (2026) Frontier vision-language models have overtaken young adults at detecting AI-generated portraits — but not their calibration. arXiv, arXiv:2608.30210. [doi:10.48550/arXiv.2608.30210](https://doi.org/10.48550/arXiv.2608.30210) (Preprint)
 - **Kim S**, Kim SY (2026) Human factors in detecting AI-generated portraits: age, sex, device, and confidence. arXiv, arXiv:2603.24048. [doi:10.48550/arXiv.2603.24048](https://doi.org/10.48550/arXiv.2603.24048) (Preprint)
 - Kim YE, Kim M*, **Kim S***, Lee R*, Ujihara Y, Marquez-Wilkins EM, Jiang YH, Yang E, Kim H, Lee C, Park C†, Kim IH† (2025) Endothelial SHANK3 regulates tight junctions in the neonatal mouse blood-brain barrier through β-Catenin signaling. Nature Communications 16, 1407. [doi:10.1038/s41467-025-56720-1](https://doi.org/10.1038/s41467-025-56720-1)
 - **Kimm S**, Kim JJ, Choi JS† (2023) The central amygdala modulates distinctive conflict-like behaviors in a naturalistic foraging task. Frontiers in Behavioral Neuroscience 17, 1212884. [doi:10.3389/fnbeh.2023.1212884](https://doi.org/10.3389/fnbeh.2023.1212884)
 - **Kim S**, Kim YE, Song I, Ujihara Y, Kim N, Jiang YH, Yin HH, Lee TH, Kim IH† (2022) Neural circuit pathology driven by Shank3 mutation disrupts social behaviors. Cell Reports 39(10), 110906. [doi:10.1016/j.celrep.2022.110906](https://doi.org/10.1016/j.celrep.2022.110906) (Cover article)
 - **Kim S†**, Kim YE, Ujihara Y, Kim IH† (2024) Monosynaptically-interconnected network module (MNM) approach for high-resolution brain sub-network analysis. bioRxiv, 2024.02.19.581007. [doi:10.1101/2024.02.19.581007](https://doi.org/10.1101/2024.02.19.581007) (Preprint)
-- **Kim S***, Kim YE*, Kim IH† (2022) Simultaneous analysis of social behaviors and neural responses in mice using round social arena system. STAR Protocols 3(4), 101722. [doi:10.1016/j.xpro.2022.101722](https://doi.org/10.1016/j.xpro.2022.101722)
 
 *Full list: 8 peer-reviewed articles — see full CV.*
 

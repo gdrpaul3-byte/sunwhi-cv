@@ -1,7 +1,7 @@
 {
   "$schema": "https://raw.githubusercontent.com/jsonresume/resume-schema/v1.0.0/schema.json",
   "meta": {
-    "lastModified": "2026-08-25",
+    "lastModified": "2026-09-02",
     "source": "cv.yaml",
     "canonical": "https://gdrpaul3-byte.github.io/sunwhi-cv/"
   },
@@ -137,6 +137,13 @@
       "releaseDate": "2018",
       "url": "https://doi.org/10.1080/10253890.2018.1455090",
       "summary": "Lee JH, Kimm S, Han JS, Choi JS†"
+    },
+    {
+      "name": "Frontier vision-language models have overtaken young adults at detecting AI-generated portraits — but not their calibration",
+      "publisher": "arXiv",
+      "releaseDate": "2026",
+      "url": "https://doi.org/10.48550/arXiv.2608.30210",
+      "summary": "Kim S†, Kim SY, Jo M, Tae J"
     },
     {
       "name": "Human factors in detecting AI-generated portraits: age, sex, device, and confidence",
