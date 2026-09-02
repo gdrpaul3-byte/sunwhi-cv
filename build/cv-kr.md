@@ -1,6 +1,6 @@
 # 이 력 서
 
-*최종 수정: 2026-08-25*
+*최종 수정: 2026-09-02*
 
 
 ## 1. 인적사항
@@ -39,6 +39,7 @@
 | 2020 | Cell Reports | 32(4), 107965 | Dysregulation of the synaptic cytoskeleton in the PFC drives neural circuit pathology, leading to social dysfunction | 공저자 |  |
 | 2018 | Journal of Neuroscience Methods | 307 | Sensory and motivational modulation of immediate and delayed defensive responses under dynamic threat | 제1저자 |  |
 | 2018 | Stress | 21(4) | Chasing as a model of psychogenic stress: characterization of physiological and behavioral responses | 공저자 |  |
+| 2026 | arXiv | arXiv:2608.30210 | Frontier vision-language models have overtaken young adults at detecting AI-generated portraits — but not their calibration | 제1저자 | Preprint |
 | 2026 | arXiv | arXiv:2603.24048 | Human factors in detecting AI-generated portraits: age, sex, device, and confidence | 제1저자 | Preprint |
 | 2024 | bioRxiv | 2024.02.19.581007 | Monosynaptically-interconnected network module (MNM) approach for high-resolution brain sub-network analysis | 제1저자 | Preprint |
 | 2019 | IBRO Reports | 6 | Differential encoding of events during approach–avoidance conflict situation by the prelimbic cortex |  |  |
@@ -82,6 +83,7 @@
 | 2026 | 워크숍 실시간 의견수렴 플랫폼 |  | 워크숍 참가자 실시간 의견 입력·투표·AI 요약 웹앱 (참가자 휴대폰 + 대형 화면 보드) |
 | 2025 | 진짜 vs AI 초상 판별 웹 실험 |  | AI 생성 초상 판별 온라인 실험 플랫폼 (참여자 1,664명) |
 | 2026 | hsmu_ai_detection_public |  | AI 초상 판별 연구의 공개 자극·메타데이터·비식별 행동 데이터 |
+| 2026 | hsmu_vlm_detection_benchmark |  | VLM 19종 벤치마크 데이터·분석 코드·보조표 (arXiv:2608.30210) |
 | 2022 | Addgene plasmid deposition: split-Cre toolkit |  | 신경회로 특이적 유전자 조작용 split-Cre 플라스미드 기탁 |
 
 \* 요청 시 등록 증명서 제공
@@ -129,6 +131,6 @@
 
 본 이력서에 기재한 사항은 사실과 다름없음을 확인합니다.
 
-작성일 : 2026-08-25
+작성일 : 2026-09-02
 
 지원자 : 김선휘 (인)

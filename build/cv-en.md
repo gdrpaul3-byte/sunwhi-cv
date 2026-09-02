@@ -10,7 +10,7 @@ office 031-369-9100
 
 [ORCID 0000-0001-5009-5544](https://orcid.org/0000-0001-5009-5544) · [Google Scholar](https://scholar.google.com/citations?user=64RRH9QAAAAJ) · [Lab website](https://gdrpaul3-byte.github.io/sunwhikim-lab-page/) · [Web CV](https://gdrpaul3-byte.github.io/sunwhi-cv/) · [CV source](https://github.com/gdrpaul3-byte/sunwhi-cv) · [YouTube](https://www.youtube.com/@swkim_n)
 
-*Last updated: 2026-08-25*
+*Last updated: 2026-09-02*
 
 ---
 
@@ -59,8 +59,9 @@ College of Informatics, Korea University
 
 ## Preprints & Manuscripts
 
-1. **Kim S**, Kim SY (2026) Human factors in detecting AI-generated portraits: age, sex, device, and confidence. arXiv, arXiv:2603.24048. [doi:10.48550/arXiv.2603.24048](https://doi.org/10.48550/arXiv.2603.24048) (Preprint)
-2. **Kim S†**, Kim YE, Ujihara Y, Kim IH† (2024) Monosynaptically-interconnected network module (MNM) approach for high-resolution brain sub-network analysis. bioRxiv, 2024.02.19.581007. [doi:10.1101/2024.02.19.581007](https://doi.org/10.1101/2024.02.19.581007) (Preprint)
+1. **Kim S†**, Kim SY, Jo M, Tae J (2026) Frontier vision-language models have overtaken young adults at detecting AI-generated portraits — but not their calibration. arXiv, arXiv:2608.30210. [doi:10.48550/arXiv.2608.30210](https://doi.org/10.48550/arXiv.2608.30210) (Preprint)
+2. **Kim S**, Kim SY (2026) Human factors in detecting AI-generated portraits: age, sex, device, and confidence. arXiv, arXiv:2603.24048. [doi:10.48550/arXiv.2603.24048](https://doi.org/10.48550/arXiv.2603.24048) (Preprint)
+3. **Kim S†**, Kim YE, Ujihara Y, Kim IH† (2024) Monosynaptically-interconnected network module (MNM) approach for high-resolution brain sub-network analysis. bioRxiv, 2024.02.19.581007. [doi:10.1101/2024.02.19.581007](https://doi.org/10.1101/2024.02.19.581007) (Preprint)
 
 ## Conference Proceedings
 
@@ -139,6 +140,7 @@ HSMU New Faculty Research Grant · Role: Principal Investigator
 - **HSMU workshop participation platform** (2026). Real-time audience participation, voting and AI-assisted synthesis app used at the 2026 all-staff workshop — phone-based input with a live projected board — [hsmu-workshop.vercel.app](https://hsmu-workshop.vercel.app)
 - **Real vs. AI — public portrait-discrimination web experiment** (2025). Two-alternative forced-choice web experiment used to collect the 1,664-participant dataset behind the 2026 AI-portrait study — [hsmu-real-vs-ai-test.web.app](https://hsmu-real-vs-ai-test.web.app/)
 - **hsmu_ai_detection_public** (2026). Open stimulus set, metadata and de-identified trial-level behavioural data for the AI-generated portrait detection study — [hsmu_ai_detection_public](https://github.com/gdrpaul3-byte/hsmu_ai_detection_public)
+- **hsmu_vlm_detection_benchmark** (2026). Benchmark data, analysis code and supplementary tables for the 19-model VLM comparison against the human AI-portrait detection reference (arXiv:2608.30210) — [hsmu_vlm_detection_benchmark](https://github.com/gdrpaul3-byte/hsmu_vlm_detection_benchmark)
 - **Addgene plasmid deposition: split-Cre toolkit** (2022). pAAV-Ef1a-CreN-InteinN (#187614) and pAAV-Ef1a-InteinC-CreC (#187615) — circuit-specific gene-manipulation reagents distributed to the community — [addgene.org](https://www.addgene.org/browse/article/28219553/)
 
 ## AI Agent Onboarding & Consulting

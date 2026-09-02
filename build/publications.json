@@ -1,8 +1,31 @@
 {
-  "generated": "2026-08-25",
+  "generated": "2026-09-02",
   "source": "https://github.com/gdrpaul3-byte/sunwhi-cv",
-  "count": 13,
+  "count": 14,
   "publications": [
+    {
+      "id": "arxiv202608",
+      "kind": "preprint",
+      "year": 2026,
+      "title": "Frontier vision-language models have overtaken young adults at detecting AI-generated portraits — but not their calibration",
+      "venue": "arXiv",
+      "volume": null,
+      "issue": null,
+      "article": "arXiv:2608.30210",
+      "doi": "10.48550/arXiv.2608.30210",
+      "url": "https://doi.org/10.48550/arXiv.2608.30210",
+      "authors": [
+        "Kim S",
+        "Kim SY",
+        "Jo M",
+        "Tae J"
+      ],
+      "authors_display": "Kim S†, Kim SY, Jo M, Tae J",
+      "role_kr": "제1저자",
+      "note": "Preprint",
+      "featured": true,
+      "citation": "Kim S†, Kim SY, Jo M, Tae J (2026) Frontier vision-language models have overtaken young adults at detecting AI-generated portraits — but not their calibration. arXiv, arXiv:2608.30210. doi:10.48550/arXiv.2608.30210 (Preprint)"
+    },
     {
       "id": "arxiv2026",
       "kind": "preprint",
