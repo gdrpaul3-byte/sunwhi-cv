@@ -1102,6 +1102,30 @@ skills:
     - Korean (native)
     - English (professional working proficiency)
 
+# ---------------------------------------------------------------------------
+# Business card — rendered by scripts/render_card.py into build-private/card/.
+# Output is git-ignored because the card also prints the personal mobile
+# number from private.yaml. Everything in this block is institutional and
+# safe to publish.
+# ---------------------------------------------------------------------------
+card:
+  name_en: Kim, Sunwhi, Ph.D.
+  # Every HSMU faculty card prints "OO학과 교수 / Professor" regardless of rank
+  # (the university's proof sheet shows it for all departments), so the card
+  # follows that convention. 학과장 postdates the March 2025 card.
+  role_kr: 교수 · 학과장
+  dept_kr: 바이오헬스케어학과, 화성의과학대학교
+  role_en: Professor & Chair, Dept. of Bio-Healthcare
+  tel: "(031) 369-9190"          # direct line; 031-369-9100 is the switchboard
+  fax: "(031) 369-9150"
+  email: skim@hsmu.ac.kr
+  postcode: "18274"
+  address_kr: 경기도 화성시 남양읍 남양중앙로 400-5
+  address_en:                    # one list item per printed line, as on the original
+    - 400-5, Namyangjungang-ro, Namyang-eup
+    - Hwasung-si, Gyeonggi-do, Korea
+  link: lab                      # key into person.links — what the QR opens
+
 # military service — see private.yaml
 
 references:

@@ -67,6 +67,16 @@ python scripts/build.py --docx --pdf --orcid-diff
 Everything.
 
 ```bash
+python scripts/build.py --card
+```
+Render the business card in the lab site's terminal style into `build-private/card/` —
+a print-ready PDF (90 × 50 mm trim + 1 mm bleed, vector text) and 600 dpi PNGs. The
+card prints the mobile number from `private.yaml`, so it never goes near `build/`.
+Each render checks itself: web fonts loaded, Hangul glyphs present, nothing inside the
+3 mm safety margin, no unpainted seam in the bleed, and the QR decodes to the lab URL
+even as a blurred phone photo. Card text lives in the `card:` block of `cv.yaml`.
+
+```bash
 python scripts/check_links.py
 ```
 Fetch every URL in `cv.yaml` — DOIs, profiles, deployed apps — and report the dead
@@ -162,6 +172,7 @@ scripts/
   render_docx.py           optional .docx export
   sync_labpage.py          push publications into the lab website
   check_links.py           verify every URL in cv.yaml still resolves
+  render_card.py           business card PDF/PNG into build-private/card
 build/                     generated — committed so Pages can serve it
 .github/workflows/build.yml
 ```

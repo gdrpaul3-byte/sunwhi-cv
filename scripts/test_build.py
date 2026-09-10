@@ -205,6 +205,38 @@ def _consulting_order():
         > cvdata._engagement_key({"period": "2026.12.31"})
 
 
+@check("business card data is complete and its output stays private")
+def _card():
+    """Browser-free half of the card: data, QR payload, and output location.
+
+    The rendering half (fonts, safe margins, QR decode, PDF preflight) needs
+    Chrome and runs inside render_card.py itself.
+    """
+    try:
+        import render_card
+    except ImportError:
+        return  # optional dependency not installed — nothing to check
+    k = render_card.card_data(PUBLIC)
+    for field in ("name_kr", "name_en", "role_kr", "tel", "email", "address_kr", "url"):
+        assert k.get(field), "card.%s is empty" % field
+    assert k["url"] == PUBLIC["person"]["links"][PUBLIC["card"].get("link", "lab")], \
+        "the QR would not open the lab page"
+    # The card prints the mobile, so it must never render into published build/.
+    # Compare path components, not strings: ".../build" is a prefix of
+    # ".../build-private", which a substring test would wrongly flag.
+    out = os.path.abspath(render_card.OUT)
+    build = os.path.abspath(BUILD)
+    private = os.path.abspath(os.path.join(ROOT, "build-private"))
+    assert os.path.commonpath([out, build]) != build, \
+        "card output would land in build/: %s" % out
+    assert os.path.commonpath([out, private]) == private, \
+        "card output is not under build-private/: %s" % out
+    # Public data alone must not carry a mobile number onto the card.
+    assert not k["mobile"], "public cv.yaml supplies a mobile number to the card"
+    html = render_card.build_html(k, *render_card.qr_svg(k["url"]))
+    assert k["tel"] in html and k["name_kr"] in html
+
+
 @check("JSON artifacts are serializable and complete")
 def _json():
     resume = render_json.json_resume(PUBLIC)

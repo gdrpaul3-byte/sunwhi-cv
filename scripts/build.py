@@ -7,6 +7,7 @@
     python scripts/build.py --orcid-diff   # also query the live ORCID record
     python scripts/build.py --docx         # also emit .docx (needs python-docx)
     python scripts/build.py --pdf          # also emit .pdf (needs Chrome or LibreOffice)
+    python scripts/build.py --card         # also render the business card (build-private/)
 
 Run it from anywhere; paths are resolved relative to the repository root.
 """
@@ -88,6 +89,9 @@ def main() -> int:
                     help="query the live ORCID record and write build/orcid-diff.json")
     ap.add_argument("--docx", action="store_true", help="also emit .docx files")
     ap.add_argument("--pdf", action="store_true", help="also emit .pdf files")
+    ap.add_argument("--card", action="store_true",
+                    help="also render the business card into build-private/card "
+                         "(needs Playwright + Chrome)")
     ap.add_argument("--source", default=None, help="path to cv.yaml")
     ap.add_argument("--public-only", action="store_true",
                     help="skip build-private/ even if private.yaml exists")
@@ -152,6 +156,22 @@ def main() -> int:
     print("\nbuilt %d file(s) in %s:" % (len(made), OUT))
     for m in made:
         print("  %-22s %6.1f KB" % (os.path.basename(m), os.path.getsize(m) / 1024.0))
+
+    # -- business card -------------------------------------------------------
+    # Rendered from the private-merged data (it prints the mobile number), and
+    # only ever into build-private/, which is git-ignored.
+    if args.card:
+        try:
+            import render_card
+            for m in render_card.render(cvdata.load(args.source)):
+                made.append(m)
+            print("card: all checks passed")
+        except ImportError as exc:
+            sys.stderr.write("  ! card needs playwright, qrcode, pillow, opencv-python, "
+                             "fonttools, pymupdf (%s)\n" % exc)
+        except RuntimeError as exc:
+            sys.stderr.write("  ! %s\n" % exc)
+            return 1
 
     # -- private variants ---------------------------------------------------
     if os.path.exists(cvdata.PRIVATE_PATH) and not args.public_only:
