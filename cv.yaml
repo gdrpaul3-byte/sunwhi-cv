@@ -310,6 +310,8 @@ publications:
       # arXiv:2603.24048. Co-authors: Sunyul Kim (Yonsei Univ., AI), Meounggun Jo
       # (Hoseo Univ.), Jini Tae (GIST).
       # Data & code: github.com/gdrpaul3-byte/hsmu_vlm_detection_benchmark
+      # Verified 2026-09-11 against the arXiv API (title, authors, date, pages);
+      # corresponding authorship confirmed by the author, as the API omits it.
 
     - id: arxiv2026
       year: 2026
@@ -953,6 +955,11 @@ peer_review:
     years: "2022"
   - journal: Scientific Reports
     years: "2022"
+    # 2026: one review completed 2026-09-10 — Springer Nature reviewer
+    # certificate filed in the personal archive (Review/Scientific_Reports).
+    # Not listed yet at the author's request. To list it, change years to
+    # "2022, 2026". Never add the manuscript's title or ID: reviews are
+    # confidential, and a CV credits the journal and year only.
   - journal: Behavioural Brain Research (Elsevier)
     years: "2014"
     note: two manuscripts, co-review with doctoral advisor

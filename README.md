@@ -44,8 +44,13 @@ Artifacts land in `build/`:
 | `resume-en.md` | one-page résumé |
 | `cv.json` | [JSON Resume](https://jsonresume.org) — feeds third-party tools |
 | `publications.json` | the feed the lab website consumes |
-| `CV_SunwhiKim.docx`, `이력서_김선휘.docx` | Word versions (`--docx`) |
-| `cv-en.pdf` | print-quality PDF (`--pdf`) |
+| `CV_SunwhiKim.docx`, `이력서_김선휘.docx` | Word versions (`--docx`) — not committed, see below |
+| `cv-en.pdf` | print-quality PDF (`--pdf`) — not committed, see below |
+
+The Word and PDF files are built by CI on every push and served fresh from Pages —
+[cv-en.pdf](https://gdrpaul3-byte.github.io/sunwhi-cv/cv-en.pdf),
+[CV_SunwhiKim.docx](https://gdrpaul3-byte.github.io/sunwhi-cv/CV_SunwhiKim.docx) — so
+they are git-ignored. A committed copy could only fall behind `cv.yaml`.
 
 ### Other commands
 
@@ -177,8 +182,10 @@ build/                     generated — committed so Pages can serve it
 .github/workflows/build.yml
 ```
 
-`build/` is committed on purpose: GitHub Pages serves it, and the lab site fetches
-`build/publications.json` from this repo. Do not add it to `.gitignore`.
+The text artifacts in `build/` are committed on purpose — the lab site fetches
+`build/publications.json` from this repo, and CI fails if they fall behind `cv.yaml`.
+Do not add `build/` to `.gitignore`. The binary `.docx` and `.pdf` files are the
+exception: CI rebuilds them for Pages, so they are ignored.
 
 ---
 
