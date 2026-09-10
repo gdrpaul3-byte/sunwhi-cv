@@ -52,6 +52,9 @@ person:
     - skim@hsmu.ac.kr
     - gdrpaul3@gmail.com
   phones:
+    # University main line — kept on purpose for the CV and lab site (author's
+    # decision, 2026-09-10). The business card prints the direct line instead;
+    # see card.tel. The two differing is intended, not an inconsistency to fix.
     office: "031-369-9100"
   # Date of birth, home address and personal mobile live in private.yaml
   # (git-ignored) — Korean 이력서 forms need them, the public web CV must not
