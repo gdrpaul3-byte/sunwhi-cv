@@ -19,7 +19,7 @@
 # ---------------------------------------------------------------------------
 
 meta:
-  updated: "2026-09-02"
+  updated: "2026-09-17"
   author_note_en: >-
     Published under both “Kim” and “Kimm”. Each work is listed under the surname used
     in the original publication. * equal contribution; † corresponding author.
@@ -559,6 +559,18 @@ grants:
       animal facility.
 
 invited_talks:
+  - year: 2026
+    date: "2026.09.16"
+    title: AI 에이전트 부트캠프 (AI agent bootcamp — invited instructor)
+    venue: Wecruit, invited corporate bootcamp
+    venue_kr: 위크루트 초청 부트캠프
+    title_kr: AI 에이전트 부트캠프
+    lab_page: true
+    # Added on the author's instruction (2026-09-17). A bootcamp lecture for
+    # Wecruit delivered 2026-09-16; the session title and location were not
+    # supplied, so the bootcamp name stands in for the title until the author
+    # provides the exact one.
+
   - year: 2026
     date: "2026.08.06"
     title: AI 에이전트란 무엇이며 어떤 것들이 가능한가 (What AI agents are and what they make possible)

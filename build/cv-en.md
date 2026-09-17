@@ -10,7 +10,7 @@ office 031-369-9100
 
 [ORCID 0000-0001-5009-5544](https://orcid.org/0000-0001-5009-5544) · [Google Scholar](https://scholar.google.com/citations?user=64RRH9QAAAAJ) · [Lab website](https://gdrpaul3-byte.github.io/sunwhikim-lab-page/) · [Web CV](https://gdrpaul3-byte.github.io/sunwhi-cv/) · [CV source](https://github.com/gdrpaul3-byte/sunwhi-cv) · [YouTube](https://www.youtube.com/@swkim_n)
 
-*Last updated: 2026-09-02*
+*Last updated: 2026-09-17*
 
 ---
 
@@ -97,6 +97,7 @@ HSMU New Faculty Research Grant · Role: Principal Investigator
 
 ## Invited Talks & Guest Lectures
 
+- **2026.09.16** “AI 에이전트 부트캠프 (AI agent bootcamp — invited instructor).” Wecruit, invited corporate bootcamp
 - **2026.08.06** “AI 에이전트란 무엇이며 어떤 것들이 가능한가 (What AI agents are and what they make possible).” Wecruit, invited corporate lecture, Bundang, Seongnam, Korea
 - **2026.07.31** “AI 에이전트란 무엇이며 어떤 것들이 가능한가? — 작은 사업장을 위한 AI 활용과 청지기의 지혜 (What AI agents are and what they make possible: using AI in a small business, and the wisdom of stewardship).” Sae-Seoul CBMC, 1393rd meeting, Chunghyun Church, Seoul, Korea
 - **2026.07.14** “AI 에이전트를 활용한 업무 자동화 (Automating everyday work with AI agents).” Hwasung Medi-Science University, 2026 all-faculty-and-staff summer workshop, Chungho HRD Institute, Hwaseong, Korea
