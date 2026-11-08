@@ -10,7 +10,7 @@ office 031-369-9100
 
 [ORCID 0000-0001-5009-5544](https://orcid.org/0000-0001-5009-5544) · [Google Scholar](https://scholar.google.com/citations?user=64RRH9QAAAAJ) · [Lab website](https://gdrpaul3-byte.github.io/sunwhikim-lab-page/) · [Web CV](https://gdrpaul3-byte.github.io/sunwhi-cv/) · [CV source](https://github.com/gdrpaul3-byte/sunwhi-cv) · [YouTube](https://www.youtube.com/@swkim_n)
 
-*Last updated: 2026-09-17*
+*Last updated: 2026-11-08*
 
 ---
 
@@ -48,14 +48,15 @@ College of Informatics, Korea University
 *Published under both “Kim” and “Kimm”. Each work is listed under the surname used in the original publication. * equal contribution; † corresponding author.*
 ## Peer-Reviewed Journal Articles
 
-1. Kim YE, Kim M*, **Kim S***, Lee R*, Ujihara Y, Marquez-Wilkins EM, Jiang YH, Yang E, Kim H, Lee C, Park C†, Kim IH† (2025) Endothelial SHANK3 regulates tight junctions in the neonatal mouse blood-brain barrier through β-Catenin signaling. Nature Communications 16, 1407. [doi:10.1038/s41467-025-56720-1](https://doi.org/10.1038/s41467-025-56720-1)
-2. **Kimm S**, Kim JJ, Choi JS† (2023) The central amygdala modulates distinctive conflict-like behaviors in a naturalistic foraging task. Frontiers in Behavioral Neuroscience 17, 1212884. [doi:10.3389/fnbeh.2023.1212884](https://doi.org/10.3389/fnbeh.2023.1212884)
-3. **Kim S**, Kim YE, Song I, Ujihara Y, Kim N, Jiang YH, Yin HH, Lee TH, Kim IH† (2022) Neural circuit pathology driven by Shank3 mutation disrupts social behaviors. Cell Reports 39(10), 110906. [doi:10.1016/j.celrep.2022.110906](https://doi.org/10.1016/j.celrep.2022.110906) (Cover article)
-4. **Kim S***, Kim YE*, Kim IH† (2022) Simultaneous analysis of social behaviors and neural responses in mice using round social arena system. STAR Protocols 3(4), 101722. [doi:10.1016/j.xpro.2022.101722](https://doi.org/10.1016/j.xpro.2022.101722)
-5. Kim YE*, **Kim S***, Kim IH† (2022) Neural circuit-specific gene manipulation in mouse brain in vivo using split-intein-mediated split-Cre system. STAR Protocols 3(4), 101807. [doi:10.1016/j.xpro.2022.101807](https://doi.org/10.1016/j.xpro.2022.101807)
-6. Kim IH†, Kim N, **Kim S**, Toda K, Catavero CM, Courtland JL, Yin HH, Soderling S† (2020) Dysregulation of the synaptic cytoskeleton in the PFC drives neural circuit pathology, leading to social dysfunction. Cell Reports 32(4), 107965. [doi:10.1016/j.celrep.2020.107965](https://doi.org/10.1016/j.celrep.2020.107965)
-7. **Kimm S**, Choi JS† (2018) Sensory and motivational modulation of immediate and delayed defensive responses under dynamic threat. Journal of Neuroscience Methods 307, 84-94. [doi:10.1016/j.jneumeth.2018.06.023](https://doi.org/10.1016/j.jneumeth.2018.06.023)
-8. Lee JH, **Kimm S**, Han JS, Choi JS† (2018) Chasing as a model of psychogenic stress: characterization of physiological and behavioral responses. Stress 21(4), 323-332. [doi:10.1080/10253890.2018.1455090](https://doi.org/10.1080/10253890.2018.1455090)
+1. **Kim S†** (2026) AI-Enabled Animal Behavior Analysis for Translational Pharmacology and Therapeutic Discovery. Biomolecules & Therapeutics 34(6), 1331-1349. [doi:10.4062/biomolther.2026.157](https://doi.org/10.4062/biomolther.2026.157) (Review)
+2. Kim YE, Kim M*, **Kim S***, Lee R*, Ujihara Y, Marquez-Wilkins EM, Jiang YH, Yang E, Kim H, Lee C, Park C†, Kim IH† (2025) Endothelial SHANK3 regulates tight junctions in the neonatal mouse blood-brain barrier through β-Catenin signaling. Nature Communications 16, 1407. [doi:10.1038/s41467-025-56720-1](https://doi.org/10.1038/s41467-025-56720-1)
+3. **Kimm S**, Kim JJ, Choi JS† (2023) The central amygdala modulates distinctive conflict-like behaviors in a naturalistic foraging task. Frontiers in Behavioral Neuroscience 17, 1212884. [doi:10.3389/fnbeh.2023.1212884](https://doi.org/10.3389/fnbeh.2023.1212884)
+4. **Kim S**, Kim YE, Song I, Ujihara Y, Kim N, Jiang YH, Yin HH, Lee TH, Kim IH† (2022) Neural circuit pathology driven by Shank3 mutation disrupts social behaviors. Cell Reports 39(10), 110906. [doi:10.1016/j.celrep.2022.110906](https://doi.org/10.1016/j.celrep.2022.110906) (Cover article)
+5. **Kim S***, Kim YE*, Kim IH† (2022) Simultaneous analysis of social behaviors and neural responses in mice using round social arena system. STAR Protocols 3(4), 101722. [doi:10.1016/j.xpro.2022.101722](https://doi.org/10.1016/j.xpro.2022.101722)
+6. Kim YE*, **Kim S***, Kim IH† (2022) Neural circuit-specific gene manipulation in mouse brain in vivo using split-intein-mediated split-Cre system. STAR Protocols 3(4), 101807. [doi:10.1016/j.xpro.2022.101807](https://doi.org/10.1016/j.xpro.2022.101807)
+7. Kim IH†, Kim N, **Kim S**, Toda K, Catavero CM, Courtland JL, Yin HH, Soderling S† (2020) Dysregulation of the synaptic cytoskeleton in the PFC drives neural circuit pathology, leading to social dysfunction. Cell Reports 32(4), 107965. [doi:10.1016/j.celrep.2020.107965](https://doi.org/10.1016/j.celrep.2020.107965)
+8. **Kimm S**, Choi JS† (2018) Sensory and motivational modulation of immediate and delayed defensive responses under dynamic threat. Journal of Neuroscience Methods 307, 84-94. [doi:10.1016/j.jneumeth.2018.06.023](https://doi.org/10.1016/j.jneumeth.2018.06.023)
+9. Lee JH, **Kimm S**, Han JS, Choi JS† (2018) Chasing as a model of psychogenic stress: characterization of physiological and behavioral responses. Stress 21(4), 323-332. [doi:10.1080/10253890.2018.1455090](https://doi.org/10.1080/10253890.2018.1455090)
 
 ## Preprints & Manuscripts
 

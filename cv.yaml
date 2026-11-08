@@ -19,7 +19,7 @@
 # ---------------------------------------------------------------------------
 
 meta:
-  updated: "2026-09-17"
+  updated: "2026-11-08"
   author_note_en: >-
     Published under both “Kim” and “Kimm”. Each work is listed under the surname used
     in the original publication. * equal contribution; † corresponding author.
@@ -152,6 +152,25 @@ education:
 publications:
 
   journal:
+    - id: biomolther2026
+      year: 2026
+      authors: [Kim S]
+      corresponding: [Kim S]
+      me: Kim S
+      title: >-
+        AI-Enabled Animal Behavior Analysis for Translational Pharmacology and
+        Therapeutic Discovery
+      venue: Biomolecules & Therapeutics
+      volume: 34
+      issue: 6
+      pages: 1331-1349
+      doi: 10.4062/biomolther.2026.157
+      role_kr: 단독저자 (제1저자·교신저자)
+      note: Review
+      featured: true
+      # Published online 2026-10-30; issue date 2026-11-01. PMID: 42952211.
+      # Publisher full text and PubMed verified 2026-11-08.
+
     - id: natcomm2025
       year: 2025
       authors: [Kim YE, Kim M, Kim S, Lee R, Ujihara Y, Marquez-Wilkins EM,

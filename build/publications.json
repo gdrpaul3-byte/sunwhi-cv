@@ -1,8 +1,28 @@
 {
-  "generated": "2026-09-17",
+  "generated": "2026-11-08",
   "source": "https://github.com/gdrpaul3-byte/sunwhi-cv",
-  "count": 14,
+  "count": 15,
   "publications": [
+    {
+      "id": "biomolther2026",
+      "kind": "journal",
+      "year": 2026,
+      "title": "AI-Enabled Animal Behavior Analysis for Translational Pharmacology and Therapeutic Discovery",
+      "venue": "Biomolecules & Therapeutics",
+      "volume": 34,
+      "issue": 6,
+      "article": null,
+      "doi": "10.4062/biomolther.2026.157",
+      "url": "https://doi.org/10.4062/biomolther.2026.157",
+      "authors": [
+        "Kim S"
+      ],
+      "authors_display": "Kim S†",
+      "role_kr": "단독저자 (제1저자·교신저자)",
+      "note": "Review",
+      "featured": true,
+      "citation": "Kim S† (2026) AI-Enabled Animal Behavior Analysis for Translational Pharmacology and Therapeutic Discovery. Biomolecules & Therapeutics 34(6), 1331-1349. doi:10.4062/biomolther.2026.157 (Review)"
+    },
     {
       "id": "arxiv202608",
       "kind": "preprint",
